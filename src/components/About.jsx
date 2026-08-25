@@ -1,6 +1,12 @@
 import React from 'react';
 import './About.css';
 
+// Import local images from src/assets
+import aboutMainImg from '../assets/About.png';
+import pillarArtImg from '../assets/drawings.png';
+import pillarRedDayImg from '../assets/SunnyBearsredcolourday.png';
+import pillarOutdoorImg from '../assets/StudentsRunning.png';
+
 const About = () => {
   return (
     <section className="about-section" id="about">
@@ -116,8 +122,8 @@ const About = () => {
             {/* Main Classroom Image with Badge */}
             <div className="about-main-image-wrap">
               <img
-                src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80"
-                alt="Teacher interacting with preschool children playing blocks"
+                src={aboutMainImg}
+                alt="Sunny Bears Preschool Learning and Activity Environment"
                 className="about-main-img"
               />
               <div className="cloud-minds-badge">
@@ -133,8 +139,8 @@ const About = () => {
               <div className="pillar-card border-purple">
                 <div className="pillar-img-wrap">
                   <img
-                    src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=500&q=80"
-                    alt="Storytelling and reading"
+                    src={pillarArtImg}
+                    alt="Nurturing Environment and Creative Expression"
                   />
                 </div>
                 <h4 className="pillar-title text-purple">Nurturing Environment</h4>
@@ -148,8 +154,8 @@ const About = () => {
               <div className="pillar-card border-green">
                 <div className="pillar-img-wrap">
                   <img
-                    src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=500&q=80"
-                    alt="Holistic learning and painting"
+                    src={pillarRedDayImg}
+                    alt="Holistic learning and celebration activities"
                   />
                 </div>
                 <h4 className="pillar-title text-green">Holistic Learning</h4>
@@ -163,8 +169,8 @@ const About = () => {
               <div className="pillar-card border-orange">
                 <div className="pillar-img-wrap">
                   <img
-                    src="https://images.unsplash.com/photo-1472162072942-cd5147eb3902?auto=format&fit=crop&w=500&q=80"
-                    alt="Children playing outdoors"
+                    src={pillarOutdoorImg}
+                    alt="Children playing outdoors and building confidence"
                   />
                 </div>
                 <h4 className="pillar-title text-orange">Building Bright Futures</h4>

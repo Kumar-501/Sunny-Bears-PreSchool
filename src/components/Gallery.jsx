@@ -1,53 +1,64 @@
 import React, { useState } from 'react';
 import './Gallery.css';
 
+// Importing local images from assets
+import independenceDayImg from '../assets/IndependenceDayClassroom.png';
+import studentsRunningImg from '../assets/StudentsRunning.png';
+import redColourDayImg from '../assets/SunnyBearsredcolourday.png';
+import drawingsImg from '../assets/drawings.png';
+import superheroesImg from '../assets/Superheroes.png';
+import summerCampImg from '../assets/SummerCamp.png';
+import lunchTimeImg from '../assets/Sunnybearslunchtime.png';
+
 const GALLERY_IMAGES = [
   {
     id: 1,
-    title: 'Building Blocks & Creativity',
-    category: 'Playtime',
-    src: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=800&q=80',
+    title: 'Independence Day Classroom Celebration',
+    category: 'Celebration',
+    src: independenceDayImg,
     doodle: '⭐',
   },
   {
     id: 2,
-    title: 'Colorful Hand Painting Fun',
-    category: 'Art & Crafts',
-    src: 'https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=800&q=80',
-    doodle: '💖',
+    title: 'Outdoor Sports & Fun Games',
+    category: 'Activities',
+    src: studentsRunningImg,
+    doodle: '🏃‍♂️',
   },
   {
     id: 3,
-    title: 'Storytelling & Guided Reading',
-    category: 'Learning',
-    src: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80',
-    doodle: '🌸',
+    title: 'Sunny Bears Red Colour Day',
+    category: 'Celebration',
+    src: redColourDayImg,
+    doodle: '💖',
   },
   {
     id: 4,
-    title: 'Outdoor Playground Adventures',
-    category: 'Activities',
-    src: 'https://images.unsplash.com/photo-1472162072942-cd5147eb3902?auto=format&fit=crop&w=800&q=80',
+    title: 'Creative Art & Expression',
+    category: 'Art & Crafts',
+    src: drawingsImg,
+    doodle: '🎨',
   },
   {
     id: 5,
-    title: 'Watercolor Expressive Art',
-    category: 'Creativity',
-    src: 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=800&q=80',
+    title: 'Superheroes Fancy Dress Day',
+    category: 'Theme Day',
+    src: superheroesImg,
     doodle: '✨',
   },
   {
     id: 6,
-    title: 'Star of the Day Achievement',
-    category: 'Celebration',
-    src: 'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80',
+    title: 'Summer Camp Fun & Learning',
+    category: 'Camp Fun',
+    src: summerCampImg,
     doodle: '🧡',
   },
   {
     id: 7,
-    title: 'Exploring the World Globe',
-    category: 'Discovery',
-    src: 'https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80',
+    title: 'Sunny Bears Meal & Lunch Time',
+    category: 'Daily Routine',
+    src: lunchTimeImg,
+    doodle: '🌸',
   },
 ];
 
@@ -118,13 +129,13 @@ const Gallery = () => {
           </div>
           <h2 className="gallery-title">Happy Moments at Sunny Bears</h2>
           <p className="gallery-subtitle">
-            Glimpses of the laughter, learning and little victories that fill our classrooms every day.
+            Glimpses of the laughter, learning, and little victories that fill our classrooms every day.
           </p>
         </div>
 
         {/* Photo Grid Layout */}
         <div className="gallery-grid">
-          {/* Top Row: 3 Images */}
+          {/* Top Row: 3 Landscape Images */}
           <div className="gallery-row row-top">
             {GALLERY_IMAGES.slice(0, 3).map((item) => (
               <div
@@ -133,7 +144,7 @@ const Gallery = () => {
                 onClick={() => openModal(item)}
               >
                 <div className="card-image-wrap">
-                  <img src={item.src} alt={item.title} />
+                  <img src={item.src} alt={item.title} loading="lazy" />
                   <div className="card-overlay">
                     <span className="view-btn">🔍 View Photo</span>
                   </div>
@@ -143,7 +154,7 @@ const Gallery = () => {
             ))}
           </div>
 
-          {/* Bottom Row: 4 Images */}
+          {/* Bottom Row: 4 Landscape Images */}
           <div className="gallery-row row-bottom">
             {GALLERY_IMAGES.slice(3, 7).map((item) => (
               <div
@@ -152,7 +163,7 @@ const Gallery = () => {
                 onClick={() => openModal(item)}
               >
                 <div className="card-image-wrap">
-                  <img src={item.src} alt={item.title} />
+                  <img src={item.src} alt={item.title} loading="lazy" />
                   <div className="card-overlay">
                     <span className="view-btn">🔍 View Photo</span>
                   </div>
@@ -197,7 +208,9 @@ const Gallery = () => {
         <div className="gallery-lightbox" onClick={closeModal}>
           <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
             <button className="lightbox-close" onClick={closeModal}>×</button>
-            <img src={selectedImage.src} alt={selectedImage.title} />
+            <div className="lightbox-img-wrapper">
+              <img src={selectedImage.src} alt={selectedImage.title} />
+            </div>
             <div className="lightbox-caption">
               <h3>{selectedImage.title}</h3>
               <p>{selectedImage.category}</p>

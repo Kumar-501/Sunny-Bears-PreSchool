@@ -1,6 +1,9 @@
 import React from 'react';
 import './Hero.css';
 
+// Import local image from assets
+import independenceDayHeroImg from '../assets/IndependenceDayClassroom.png';
+
 const Hero = () => {
   return (
     <section className="hero-container" id="home">
@@ -92,8 +95,8 @@ const Hero = () => {
         <div className="hero-image-container">
           <div className="image-frame">
             <img
-              src="https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=1000&q=80"
-              alt="Happy Preschool Children Playing with Building Blocks"
+              src={independenceDayHeroImg}
+              alt="Sunny Bears Preschool Independence Day Classroom Celebration"
               className="hero-kids-image"
             />
           </div>

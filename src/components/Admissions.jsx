@@ -97,23 +97,58 @@ const Admissions = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({
-        parentName: '',
-        email: '',
-        phone: '',
-        childName: '',
-        childAge: '',
-        program: '',
-        contactTime: 'Any time',
-        message: '',
-        agree: false,
+
+    const payload = {
+      access_key: '4fd7c766-cfdc-4707-a3b8-63616d1aadbe', // Your Access Key
+      subject: `New Admission Enquiry for ${formData.childName}`,
+      from_name: 'Sunny Bears Admissions Form',
+      parentName: formData.parentName,
+      email: formData.email,
+      phone: formData.phone,
+      childName: formData.childName,
+      childAge: formData.childAge,
+      program: formData.program,
+      contactTime: formData.contactTime,
+      message: formData.message,
+    };
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify(payload),
       });
-    }, 4000);
+
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitted(true);
+        setTimeout(() => {
+          setSubmitted(false);
+          setFormData({
+            parentName: '',
+            email: '',
+            phone: '',
+            childName: '',
+            childAge: '',
+            program: '',
+            contactTime: 'Any time',
+            message: '',
+            agree: false,
+          });
+        }, 4000);
+      } else {
+        alert('Failed to send enquiry. Please call us directly at 9791751787.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Network error. Please try again or call 9791751787.');
+    }
   };
 
   const toggleFaq = (id) => {
