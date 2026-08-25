@@ -1,0 +1,308 @@
+/* About Section Styles */
+.about-section {
+  position: relative;
+  width: 100%;
+  background-color: var(--bg-color);
+  padding: 80px 24px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.about-container {
+  max-width: 1350px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Floating Doodles */
+.about-doodles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.doodle {
+  position: absolute;
+  opacity: 0.8;
+  font-size: 1.5rem;
+}
+
+.paper-plane { top: 35px; left: 45%; transform: rotate(15deg); }
+.star-1 { top: 120px; left: 20px; font-size: 1.2rem; }
+.star-2 { top: 380px; left: 410px; font-size: 1.3rem; }
+.heart-1 { top: 220px; left: 390px; font-size: 1.1rem; }
+.heart-2 { top: 40px; right: 280px; font-size: 1.2rem; }
+.paw-print { top: 440px; left: 15px; font-size: 1.4rem; opacity: 0.5; }
+
+/* Main 2-Column Grid Layout */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+/* LEFT COLUMN */
+.about-left-col {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.about-main-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  font-family: var(--font-heading);
+  line-height: 1.1;
+  margin: 0;
+}
+
+.title-us {
+  color: #ff4757;
+}
+
+.about-subtitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  font-family: var(--font-heading);
+  margin-top: 6px;
+}
+
+.about-description {
+  font-size: 1.08rem;
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
+/* Mission Card Callout */
+.mission-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: var(--bg-secondary);
+  border: 2px dashed var(--border-color);
+  padding: 20px 24px;
+  border-radius: 24px;
+}
+
+.mission-heart-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.mission-text {
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--text-color);
+  line-height: 1.55;
+}
+
+.highlight-love { color: #ff4757; font-weight: 700; }
+.highlight-creativity { color: #40916c; font-weight: 700; }
+.highlight-values { color: #0284c7; font-weight: 700; }
+
+/* Core Values Section */
+.core-values-wrapper {
+  margin-top: 8px;
+}
+
+.core-values-heading {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  font-family: var(--font-heading);
+  margin-bottom: 18px;
+}
+
+.core-values-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.value-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.value-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease;
+}
+
+.value-item:hover .value-icon {
+  transform: scale(1.1);
+}
+
+.circle-pink { background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%); }
+.circle-yellow { background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); }
+.circle-green { background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%); color: #1b4332; }
+.circle-blue { background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%); color: #03045e; }
+.circle-purple { background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%); color: #4c1d95; }
+
+.value-item span {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  line-height: 1.25;
+}
+
+/* RIGHT COLUMN */
+.about-right-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-main-image-wrap {
+  position: relative;
+  width: 100%;
+  border-radius: 36px;
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.1);
+  border: 5px solid #ffffff;
+  aspect-ratio: 16 / 9;
+}
+
+.about-main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.cloud-minds-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #0284c7;
+  color: #ffffff;
+  padding: 10px 18px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 6px 18px rgba(2, 132, 199, 0.35);
+}
+
+/* 3 Pillar Feature Cards */
+.about-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.pillar-card {
+  background-color: var(--card-bg);
+  border-radius: 20px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+  position: relative;
+  border: 2px solid transparent;
+  transition: transform 0.25s ease;
+}
+
+.pillar-card:hover {
+  transform: translateY(-4px);
+}
+
+.border-purple { border-color: #e9d5ff; }
+.border-green { border-color: #dcfce7; }
+.border-orange { border-color: #ffedd5; }
+
+.pillar-img-wrap {
+  width: 100%;
+  height: 110px;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.pillar-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pillar-title {
+  font-size: 0.98rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+}
+
+.text-purple { color: #8b5cf6; }
+.text-green { color: #10b981; }
+.text-orange { color: #f97316; }
+
+.pillar-desc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.pillar-heart {
+  align-self: center;
+  font-size: 1rem;
+  margin-top: 4px;
+}
+
+/* Responsive Breakdown */
+@media screen and (max-width: 992px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .about-section {
+    padding: 50px 16px;
+  }
+
+  .about-main-title {
+    font-size: 2.6rem;
+  }
+
+  .about-subtitle {
+    font-size: 1.15rem;
+  }
+
+  .core-values-grid {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .value-item {
+    flex: 1 1 30%;
+  }
+
+  .about-pillars-grid {
+    grid-template-columns: 1fr;
+  }
+}

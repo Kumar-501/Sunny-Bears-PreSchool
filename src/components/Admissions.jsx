@@ -1,0 +1,433 @@
+import React, { useState } from 'react';
+import './Admissions.css';
+
+const FAQ_ITEMS = [
+  {
+    id: 1,
+    question: 'What is the admission age at Sunny Bears Preschool?',
+    answer:
+      'Sunny Bears Preschool welcomes children for school programs between 2 and 6 years of age. Day care is available for little ones from 1 year onwards.',
+  },
+  {
+    id: 2,
+    question: 'Which programs are available?',
+    answer:
+      'We offer Playgroup (PG), Pre-KG, Lower Kindergarten (LKG), Upper Kindergarten (UKG), Day Care, Summer Camp, and Evening Tuition from KG to 8th standard.',
+  },
+  {
+    id: 3,
+    question: 'How can I apply for admission?',
+    answer:
+      'You can apply by filling out our online Admission Enquiry Form above or by calling us directly at 9791751787. Our admissions team will happily guide you through the next steps.',
+  },
+  {
+    id: 4,
+    question: 'Can parents visit the preschool?',
+    answer:
+      'Yes! We warmly invite parents to visit our campus located at 15C, Artha Royal Gardenia Phase 2, Raniammai 2nd Street, Sri Pachaiammai Nagar, Gerugambakkam, Chennai - 600128. Please contact us to schedule a tour.',
+  },
+  {
+    id: 5,
+    question: 'Is day care available?',
+    answer:
+      'Yes, daycare services are available from 1 year onwards with flexible care options. Our operating hours are Monday to Friday (8:30 AM – 7:00 PM) and Saturday (10:00 AM – 1:00 PM).',
+  },
+  {
+    id: 6,
+    question: 'What activities do children participate in?',
+    answer:
+      'Children engage in fun-filled activities including art, music, movement, storytelling, play-based learning, phonics, numbers, STEM toys, and supervised outdoor games.',
+  },
+  {
+    id: 7,
+    question: 'What is the location of Sunny Bears Preschool?',
+    answer:
+      'We are located at 15C, Artha Royal Gardenia Phase 2, Raniammai 2nd Street, Sri Pachaiammai Nagar, Gerugambakkam, Chennai, Tamil Nadu - 600128 (Phone: 9791751787).',
+  },
+];
+
+const TESTIMONIALS = [
+  {
+    id: 1,
+    quote:
+      'Sunny Bears has been a second home for my daughter. The teachers are extraordinarily patient, caring, and supportive. Her confidence has grown immensely!',
+    parentName: 'Priya R.',
+    subtext: 'PARENT OF A PLAY GROUP STUDENT',
+    rating: 5,
+  },
+  {
+    id: 2,
+    quote:
+      'The learning environment is so vibrant and safe. My son loves going to school every morning. Highly recommend Sunny Bears to all parents in Gerugambakkam!',
+    parentName: 'Karthik M.',
+    subtext: 'PARENT OF AN LKG STUDENT',
+    rating: 5,
+  },
+  {
+    id: 3,
+    quote:
+      'As working parents, finding a reliable day care was crucial for us. Sunny Bears provides clean facilities, wonderful activities, and complete peace of mind.',
+    parentName: 'Deepa & Vijay S.',
+    subtext: 'PARENT OF A DAY CARE CHILD',
+    rating: 5,
+  },
+];
+
+const Admissions = () => {
+  const [formData, setFormData] = useState({
+    parentName: '',
+    email: '',
+    phone: '',
+    childName: '',
+    childAge: '',
+    program: '',
+    contactTime: 'Any time',
+    message: '',
+    agree: false,
+  });
+
+  const [submitted, setSubmitted] = useState(false);
+  const [openFaq, setOpenFaq] = useState(1);
+
+  const handleInputChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === 'checkbox' ? checked : value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSubmitted(true);
+    setTimeout(() => {
+      setSubmitted(false);
+      setFormData({
+        parentName: '',
+        email: '',
+        phone: '',
+        childName: '',
+        childAge: '',
+        program: '',
+        contactTime: 'Any time',
+        message: '',
+        agree: false,
+      });
+    }, 4000);
+  };
+
+  const toggleFaq = (id) => {
+    setOpenFaq(openFaq === id ? null : id);
+  };
+
+  return (
+    <div className="admissions-root" id="admissions">
+      {/* SECTION 1: ADMISSION ENQUIRY FORM & HERO COPY */}
+      <section className="admissions-section" id="enquire">
+        <div className="admissions-container">
+          <div className="admissions-grid">
+            
+            {/* Left Column: Info & Details */}
+            <div className="admissions-left-col">
+              <span className="admissions-tag">ADMISSIONS OPEN 2026–27</span>
+              <h2 className="admissions-main-title">
+                Start Your Child's Sunny Journey
+              </h2>
+              <p className="admissions-description">
+                Fill in the form and our team will get in touch with you regarding admissions. We welcome children aged 2–6 years for our school programs, and little ones from 1 year onwards for day care.
+              </p>
+
+              <ul className="admissions-check-list">
+                <li>
+                  <span className="check-badge">✓</span>
+                  <span>Programs from Play Group to UKG</span>
+                </li>
+                <li>
+                  <span className="check-badge">✓</span>
+                  <span>Day care &amp; after-school care available</span>
+                </li>
+                <li>
+                  <span className="check-badge">✓</span>
+                  <span>Evening tuition for KG to 8th standard</span>
+                </li>
+                <li>
+                  <span className="check-badge">✓</span>
+                  <span>Friendly guidance to help you choose the right program</span>
+                </li>
+              </ul>
+
+              {/* Direct Call Box */}
+              <div className="direct-call-box">
+                <p className="call-box-title">Prefer to talk to us directly?</p>
+                <a href="tel:9791751787" className="call-box-btn">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2.2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                  </svg>
+                  <span>Call Us: 97917 51787</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Right Column: Admission Enquiry Form Card */}
+            <div className="admissions-form-card">
+              <h3 className="form-title">Admission Enquiry Form</h3>
+              <p className="form-subtitle">Fields marked * are required.</p>
+
+              {submitted ? (
+                <div className="form-success-message">
+                  <div className="success-icon">🎉</div>
+                  <h4>Thank You!</h4>
+                  <p>Your enquiry has been received. Our team will contact you shortly!</p>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="enquiry-form">
+                  <div className="form-row">
+                    <div className="form-group">
+                      <label>Parent / Guardian Name *</label>
+                      <input
+                        type="text"
+                        name="parentName"
+                        placeholder="Enter your name"
+                        value={formData.parentName}
+                        onChange={handleInputChange}
+                        required
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label>Email Address *</label>
+                      <input
+                        type="email"
+                        name="email"
+                        placeholder="your@email.com"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div className="form-row">
+                    <div className="form-group">
+                      <label>Phone Number *</label>
+                      <input
+                        type="tel"
+                        name="phone"
+                        placeholder="10-digit mobile number"
+                        value={formData.phone}
+                        onChange={handleInputChange}
+                        required
+                      />
+                    </div>
+                    <div className="form-group">
+                      <label>Child's Name *</label>
+                      <input
+                        type="text"
+                        name="childName"
+                        placeholder="Enter child's name"
+                        value={formData.childName}
+                        onChange={handleInputChange}
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div className="form-row">
+                    <div className="form-group">
+                      <label>Child's Age *</label>
+                      <select
+                        name="childAge"
+                        value={formData.childAge}
+                        onChange={handleInputChange}
+                        required
+                      >
+                        <option value="">Select age</option>
+                        <option value="1-2">1 to 2 Years</option>
+                        <option value="2-3">2 to 3 Years</option>
+                        <option value="3-4">3 to 4 Years</option>
+                        <option value="4-5">4 to 5 Years</option>
+                        <option value="5-6">5 to 6 Years</option>
+                        <option value="6+">Above 6 Years</option>
+                      </select>
+                    </div>
+
+                    <div className="form-group">
+                      <label>Program of Interest *</label>
+                      <select
+                        name="program"
+                        value={formData.program}
+                        onChange={handleInputChange}
+                        required
+                      >
+                        <option value="">Select program</option>
+                        <option value="Play Group">Play Group (2-3 Yrs)</option>
+                        <option value="Pre-KG">Pre-KG (3-4 Yrs)</option>
+                        <option value="LKG">LKG (4-5 Yrs)</option>
+                        <option value="UKG">UKG (5-6 Yrs)</option>
+                        <option value="Day Care">Day Care (1+ Yrs)</option>
+                        <option value="Summer Camp">Summer Camp (2+ Yrs)</option>
+                        <option value="Evening Tuition">Evening Tuition (KG - 8th Std)</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div className="form-group full-width">
+                    <label>Preferred Contact Time (optional)</label>
+                    <select
+                      name="contactTime"
+                      value={formData.contactTime}
+                      onChange={handleInputChange}
+                    >
+                      <option value="Any time">Any time</option>
+                      <option value="Morning (9 AM - 12 PM)">Morning (9 AM - 12 PM)</option>
+                      <option value="Afternoon (12 PM - 4 PM)">Afternoon (12 PM - 4 PM)</option>
+                      <option value="Evening (4 PM - 7 PM)">Evening (4 PM - 7 PM)</option>
+                    </select>
+                  </div>
+
+                  <div className="form-group full-width">
+                    <label>Additional Message (optional)</label>
+                    <textarea
+                      name="message"
+                      rows="3"
+                      placeholder="Tell us anything you would like us to know..."
+                      value={formData.message}
+                      onChange={handleInputChange}
+                    ></textarea>
+                  </div>
+
+                  <div className="form-checkbox-group">
+                    <input
+                      type="checkbox"
+                      id="agree"
+                      name="agree"
+                      checked={formData.agree}
+                      onChange={handleInputChange}
+                      required
+                    />
+                    <label htmlFor="agree">
+                      I agree to be contacted by Sunny Bears Preschool regarding my admission enquiry.
+                    </label>
+                  </div>
+
+                  <button type="submit" className="form-submit-btn">
+                    Submit Admission Enquiry
+                  </button>
+                </form>
+              )}
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 2: ADMISSION PROCESS - 4 SIMPLE STEPS */}
+      <section className="process-section">
+        <div className="process-container">
+          <div className="section-header-center">
+            <span className="sub-tag">ADMISSION PROCESS</span>
+            <h2 className="section-main-title">Four Simple Steps to Join Us</h2>
+          </div>
+
+          <div className="process-steps-wrapper">
+            <div className="step-card">
+              <div className="step-icon step-yellow">📋</div>
+              <span className="step-num">STEP 1</span>
+              <h4>Submit Enquiry</h4>
+              <p>Fill in the admission enquiry form online or contact our team directly.</p>
+            </div>
+
+            <div className="step-card">
+              <div className="step-icon step-blue">💬</div>
+              <span className="step-num">STEP 2</span>
+              <h4>Talk to Our Team</h4>
+              <p>Our team contacts the parent, answers questions, and shares program details.</p>
+            </div>
+
+            <div className="step-card">
+              <div className="step-icon step-green">🏫</div>
+              <span className="step-num">STEP 3</span>
+              <h4>Visit Sunny Bears</h4>
+              <p>Parents visit the campus to explore our safe and joyful learning environment.</p>
+            </div>
+
+            <div className="step-card">
+              <div className="step-icon step-pink">❇️</div>
+              <span className="step-num">STEP 4</span>
+              <h4>Begin The Journey</h4>
+              <p>Complete the admission process and welcome your child to Sunny Bears!</p>
+            </div>
+          </div>
+
+          <div className="process-cta-center">
+            <a href="#enquire" className="btn-process-cta">
+              Submit Admission Enquiry
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 3: PARENT TESTIMONIALS */}
+      <section className="testimonials-section">
+        <div className="testimonials-container">
+          <div className="section-header-center">
+            <span className="sub-tag">PARENT TESTIMONIALS</span>
+            <h2 className="section-main-title">Loved by Little Learners &amp; Their Families</h2>
+            <div className="rating-badge">⭐ 4.9 / 5 Rating based on Parent Reviews</div>
+          </div>
+
+          <div className="testimonials-grid">
+            {TESTIMONIALS.map((t) => (
+              <div key={t.id} className="testimonial-card">
+                <div className="quote-mark">“</div>
+                <div className="quote-box">
+                  <p>{t.quote}</p>
+                </div>
+                <div className="parent-info">
+                  <h5 className="parent-name">{t.parentName}</h5>
+                  <span className="parent-subtext">{t.subtext}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <p className="testimonial-footer-note">
+            Are you a Sunny Bears parent? We'd love to hear your story too! Share it with our team on your next visit.
+          </p>
+        </div>
+      </section>
+
+      {/* SECTION 4: FAQS ACCORDION */}
+      <section className="faqs-section" id="faqs">
+        <div className="faqs-container">
+          <div className="section-header-center">
+            <span className="sub-tag">FAQS</span>
+            <h2 className="section-main-title">Frequently Asked Questions</h2>
+          </div>
+
+          <div className="faqs-list">
+            {FAQ_ITEMS.map((faq) => (
+              <div
+                key={faq.id}
+                className={`faq-item ${openFaq === faq.id ? 'open' : ''}`}
+              >
+                <button className="faq-question-btn" onClick={() => toggleFaq(faq.id)}>
+                  <span>{faq.question}</span>
+                  <span className="faq-chevron">{openFaq === faq.id ? '▲' : '▼'}</span>
+                </button>
+                {openFaq === faq.id && (
+                  <div className="faq-answer-content">
+                    <p>{faq.answer}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+    </div>
+  );
+};
+
+export default Admissions;

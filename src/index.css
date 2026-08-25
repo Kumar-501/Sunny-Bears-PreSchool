@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@500;600;700&family=Nunito:wght@600;700;800&display=swap');
+
+/* Smooth Scroll Setup */
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 80px;
+}
+
+/* ===================================================
+   THEME DEFINITIONS & SYSTEM VARIABLES
+   =================================================== */
+
+:root,
+[data-theme="sunny-day"] {
+  --bg-color: #fffdf5;
+  --bg-secondary: #fff7e6;
+  --primary-color: #1e3a5f;
+  --secondary-color: #ff7a29;
+  --accent-color: #0284c7;
+  --text-color: #2c3e50;
+  --text-muted: #64748b;
+  --nav-bg: #fffdf5;
+  --card-bg: #ffffff;
+  --border-color: #38bdf8;
+  --hero-gradient: linear-gradient(135deg, #ff7a29 0%, #ffb703 100%);
+  --dropdown-bg: rgba(30, 58, 95, 0.95);
+  --dropdown-text: #ffffff;
+  --dropdown-active-bg: #ff7a29;
+  --dropdown-active-text: #ffffff;
+  --font-heading: 'Fredoka', 'Quicksand', sans-serif;
+  --font-body: 'Quicksand', 'Nunito', sans-serif;
+}
+
+/* 2. 🌈 Rainbow Play */
+[data-theme="rainbow-play"] {
+  --bg-color: #fafafe;
+  --bg-secondary: #f0f4ff;
+  --primary-color: #6c5ce7;
+  --secondary-color: #ff4757;
+  --accent-color: #ffa502;
+  --text-color: #2f3542;
+  --text-muted: #747d8c;
+  --nav-bg: #fafafe;
+  --card-bg: #ffffff;
+  --border-color: #ff4757;
+  --hero-gradient: linear-gradient(135deg, #ff4757 0%, #ffa502 50%, #2ed573 100%);
+  --dropdown-bg: rgba(47, 53, 66, 0.95);
+  --dropdown-text: #ffffff;
+  --dropdown-active-bg: linear-gradient(90deg, #ff4757, #6c5ce7);
+  --dropdown-active-text: #ffffff;
+}
+
+/* 3. 🧸 Teddy Bear */
+[data-theme="teddy-bear"] {
+  --bg-color: #faf5ef;
+  --bg-secondary: #f3e9dd;
+  --primary-color: #5c3d2e;
+  --secondary-color: #e07a5f;
+  --accent-color: #8d5b4c;
+  --text-color: #3d261c;
+  --text-muted: #7d6b5d;
+  --nav-bg: #faf5ef;
+  --card-bg: #ffffff;
+  --border-color: #e07a5f;
+  --hero-gradient: linear-gradient(135deg, #8d5b4c 0%, #e07a5f 100%);
+  --dropdown-bg: rgba(61, 38, 28, 0.95);
+  --dropdown-text: #ffffff;
+  --dropdown-active-bg: #e07a5f;
+  --dropdown-active-text: #ffffff;
+}
+
+/* 4. 🌿 Nature Garden */
+[data-theme="nature-garden"] {
+  --bg-color: #f4f9f4;
+  --bg-secondary: #e8f5e9;
+  --primary-color: #1b4332;
+  --secondary-color: #40916c;
+  --accent-color: #e9c46a;
+  --text-color: #2d4030;
+  --text-muted: #5c7560;
+  --nav-bg: #f4f9f4;
+  --card-bg: #ffffff;
+  --border-color: #52b788;
+  --hero-gradient: linear-gradient(135deg, #2d6a4f 0%, #52b788 100%);
+  --dropdown-bg: rgba(27, 67, 50, 0.95);
+  --dropdown-text: #ffffff;
+  --dropdown-active-bg: #40916c;
+  --dropdown-active-text: #ffffff;
+}
+
+/* 5. 🫧 Ocean Adventure */
+[data-theme="ocean-adventure"] {
+  --bg-color: #f0f8ff;
+  --bg-secondary: #e0f2fe;
+  --primary-color: #03045e;
+  --secondary-color: #0077b6;
+  --accent-color: #00b4d8;
+  --text-color: #1c2d42;
+  --text-muted: #55708c;
+  --nav-bg: #f0f8ff;
+  --card-bg: #ffffff;
+  --border-color: #00b4d8;
+  --hero-gradient: linear-gradient(135deg, #0077b6 0%, #90e0ef 100%);
+  --dropdown-bg: rgba(3, 4, 94, 0.95);
+  --dropdown-text: #ffffff;
+  --dropdown-active-bg: #0077b6;
+  --dropdown-active-text: #ffffff;
+}
+
+/* 6. 🦄 Magical Dreams */
+[data-theme="magical-dreams"] {
+  --bg-color: #faf5ff;
+  --bg-secondary: #f3e8ff;
+  --primary-color: #4c1d95;
+  --secondary-color: #d946ef;
+  --accent-color: #8b5cf6;
+  --text-color: #371b58;
+  --text-muted: #6b5585;
+  --nav-bg: #faf5ff;
+  --card-bg: #ffffff;
+  --border-color: #c084fc;
+  --hero-gradient: linear-gradient(135deg, #7c3aed 0%, #ec4899 100%);
+  --dropdown-bg: rgba(55, 27, 88, 0.95);
+  --dropdown-text: #ffffff;
+  --dropdown-active-bg: #d946ef;
+  --dropdown-active-text: #ffffff;
+}
+
+/* 7. 🍭 Candy Land */
+[data-theme="candy-land"] {
+  --bg-color: #fff1f2;
+  --bg-secondary: #ffe4e6;
+  --primary-color: #881337;
+  --secondary-color: #fb7185;
+  --accent-color: #a855f7;
+  --text-color: #4c0519;
+  --text-muted: #834e5c;
+  --nav-bg: #fff1f2;
+  --card-bg: #ffffff;
+  --border-color: #f43f5e;
+  --hero-gradient: linear-gradient(135deg, #fb7185 0%, #ffb703 100%);
+  --dropdown-bg: rgba(76, 5, 25, 0.95);
+  --dropdown-text: #ffffff;
+  --dropdown-active-bg: #fb7185;
+  --dropdown-active-text: #ffffff;
+}
+
+/* 8. 🌙 Moonlight */
+[data-theme="moonlight"] {
+  --bg-color: #0f172a;
+  --bg-secondary: #1e293b;
+  --primary-color: #f8fafc;
+  --secondary-color: #818cf8;
+  --accent-color: #fde047;
+  --text-color: #e2e8f0;
+  --text-muted: #94a3b8;
+  --nav-bg: #0f172a;
+  --card-bg: #1e293b;
+  --border-color: #6366f1;
+  --hero-gradient: linear-gradient(135deg, #4338ca 0%, #6366f1 100%);
+  --dropdown-bg: rgba(15, 23, 42, 0.98);
+  --dropdown-text: #ffffff;
+  --dropdown-active-bg: #6366f1;
+  --dropdown-active-text: #ffffff;
+}
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}

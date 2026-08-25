@@ -1,0 +1,308 @@
+/* Gallery Section Setup */
+.gallery-section {
+  position: relative;
+  width: 100%;
+  background-color: var(--bg-color);
+  padding: 80px 24px 70px 24px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.gallery-container {
+  max-width: 1350px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* Background Doodles */
+.gallery-doodles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.gallery-sun {
+  position: absolute;
+  top: 15px;
+  left: 25px;
+  opacity: 0.95;
+}
+
+.gallery-rainbow {
+  position: absolute;
+  top: 20px;
+  right: 60px;
+  opacity: 0.95;
+}
+
+.peeking-bear {
+  position: absolute;
+  top: 35px;
+  right: 25px;
+  transform: rotate(15deg);
+}
+
+/* Header Styling */
+.gallery-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 45px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.gallery-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #ff7a29;
+  font-weight: 800;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+}
+
+.gallery-title {
+  font-size: 3.3rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  font-family: var(--font-heading);
+  line-height: 1.15;
+}
+
+.gallery-subtitle {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+/* Grid Layout */
+.gallery-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.gallery-row {
+  display: grid;
+  gap: 24px;
+}
+
+.row-top {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.row-bottom {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Photo Cards */
+.gallery-card {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  background-color: var(--card-bg);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  border: 5px solid #ffffff;
+  cursor: pointer;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.gallery-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+}
+
+.card-image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.card-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.gallery-card:hover .card-image-wrap img {
+  transform: scale(1.08);
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 58, 95, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.gallery-card:hover .card-overlay {
+  opacity: 1;
+}
+
+.view-btn {
+  background-color: #ffffff;
+  color: var(--primary-color);
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: 800;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Floating Corner Doodles */
+.floating-doodle {
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  font-size: 1.5rem;
+  z-index: 3;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+}
+
+/* Bottom Left Sitting Bear */
+.sitting-teddy-graphic {
+  position: absolute;
+  bottom: -20px;
+  left: -15px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* Bottom Ground Items */
+.gallery-bottom-ground {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
+  margin-top: 40px;
+  font-size: 1.5rem;
+}
+
+/* Lightbox Modal */
+.gallery-lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 20px;
+  animation: fadeIn 0.25s ease;
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  background-color: var(--card-bg);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+.lightbox-content img {
+  width: 100%;
+  max-height: 70vh;
+  object-fit: cover;
+}
+
+.lightbox-caption {
+  padding: 20px 24px;
+  background-color: var(--card-bg);
+}
+
+.lightbox-caption h3 {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  font-family: var(--font-heading);
+}
+
+.lightbox-caption p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  border: none;
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.lightbox-close:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive Breakdown */
+@media screen and (max-width: 1100px) {
+  .row-top {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .row-bottom {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .gallery-section {
+    padding: 50px 16px;
+  }
+
+  .gallery-title {
+    font-size: 2.1rem;
+  }
+
+  .row-top,
+  .row-bottom {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .gallery-sun,
+  .gallery-rainbow,
+  .peeking-bear,
+  .sitting-teddy-graphic {
+    display: none;
+  }
+}

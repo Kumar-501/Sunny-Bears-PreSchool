@@ -1,0 +1,603 @@
+/* Section Root Setup */
+.admissions-root {
+  width: 100%;
+  background-color: var(--bg-color);
+  font-family: var(--font-body);
+}
+
+/* SECTION 1: ADMISSIONS FORM & HERO */
+.admissions-section {
+  padding: 70px 24px;
+  background-color: var(--bg-secondary);
+}
+
+.admissions-container {
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+.admissions-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+.admissions-left-col {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.admissions-tag {
+  color: #ff7a29;
+  font-weight: 800;
+  font-size: 0.82rem;
+  letter-spacing: 1.5px;
+}
+
+.admissions-main-title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  font-family: var(--font-heading);
+  line-height: 1.15;
+}
+
+.admissions-description {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+.admissions-check-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.admissions-check-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.check-badge {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: #52b788;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+/* Call Direct Box */
+.direct-call-box {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 24px;
+  border-radius: 20px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.call-box-title {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.call-box-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #ff7a29;
+  color: #ffffff;
+  padding: 10px 22px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 0.95rem;
+  align-self: flex-start;
+  transition: transform 0.2s ease;
+}
+
+.call-box-btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Form Card Styling */
+.admissions-form-card {
+  background-color: var(--card-bg);
+  padding: 36px 32px;
+  border-radius: 28px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.form-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  font-family: var(--font-heading);
+}
+
+.form-subtitle {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.enquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group.full-width {
+  width: 100%;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px 16px;
+  border-radius: 50px;
+  border: 1.5px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--bg-secondary);
+  color: var(--text-color);
+  font-size: 0.92rem;
+  font-family: var(--font-body);
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.form-group textarea {
+  border-radius: 16px;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #ff7a29;
+}
+
+.form-checkbox-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background-color: var(--bg-secondary);
+  padding: 12px 16px;
+  border-radius: 14px;
+  margin-top: 4px;
+}
+
+.form-checkbox-group input {
+  margin-top: 3px;
+  cursor: pointer;
+}
+
+.form-checkbox-group label {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.form-submit-btn {
+  background: linear-gradient(135deg, #ff7a29 0%, #e66617 100%);
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 50px;
+  border: none;
+  font-weight: 800;
+  font-size: 1rem;
+  font-family: var(--font-heading);
+  cursor: pointer;
+  margin-top: 8px;
+  box-shadow: 0 6px 18px rgba(255, 122, 41, 0.3);
+  transition: transform 0.2s ease;
+}
+
+.form-submit-btn:hover {
+  transform: translateY(-2px);
+}
+
+.form-success-message {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.success-icon { font-size: 3rem; margin-bottom: 10px; }
+.form-success-message h4 { font-size: 1.5rem; color: var(--primary-color); }
+
+/* SECTION 2: ADMISSION PROCESS */
+.process-section {
+  padding: 80px 24px;
+  background-color: var(--bg-color);
+}
+
+.process-container {
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+.section-header-center {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sub-tag {
+  color: #ff7a29;
+  font-weight: 800;
+  font-size: 0.82rem;
+  letter-spacing: 1.5px;
+}
+
+.section-main-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  font-family: var(--font-heading);
+}
+
+.process-steps-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  position: relative;
+}
+
+.step-card {
+  background-color: var(--card-bg);
+  border-radius: 20px;
+  padding: 24px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.step-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.step-yellow { background-color: #fef9c3; }
+.step-blue { background-color: #e0f2fe; }
+.step-green { background-color: #dcfce7; }
+.step-pink { background-color: #fce7f3; }
+
+.step-num {
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #ff7a29;
+  letter-spacing: 1px;
+}
+
+.step-card h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  font-family: var(--font-heading);
+}
+
+.step-card p {
+  font-size: 0.86rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+.process-cta-center {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.btn-process-cta {
+  display: inline-flex;
+  background-color: #ff7a29;
+  color: #ffffff;
+  padding: 12px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+
+/* SECTION 3: TESTIMONIALS */
+.testimonials-section {
+  padding: 80px 24px;
+  background-color: var(--bg-secondary);
+}
+
+.testimonials-container {
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+.rating-badge {
+  display: inline-block;
+  background-color: #fef9c3;
+  color: #854d0e;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-weight: 800;
+  font-size: 0.88rem;
+  margin-top: 6px;
+  align-self: center;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.testimonial-card {
+  background-color: var(--card-bg);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.quote-mark {
+  font-size: 3rem;
+  color: #facc15;
+  line-height: 1;
+}
+
+.quote-box p {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text-color);
+  font-style: italic;
+}
+
+.parent-info {
+  margin-top: auto;
+}
+
+.parent-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.parent-subtext {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #ff7a29;
+  letter-spacing: 0.5px;
+}
+
+.testimonial-footer-note {
+  text-align: center;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-top: 36px;
+}
+
+/* SECTION 4: FAQS ACCORDION */
+.faqs-section {
+  padding: 80px 24px;
+  background-color: var(--bg-color);
+}
+
+.faqs-container {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.faqs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.faq-item {
+  background-color: var(--card-bg);
+  border-radius: 18px;
+  border: 1.5px solid rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  transition: border-color 0.2s ease;
+}
+
+.faq-item.open {
+  border-color: #ff7a29;
+}
+
+.faq-question-btn {
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  font-family: var(--font-heading);
+  cursor: pointer;
+}
+
+.faq-chevron {
+  font-size: 0.8rem;
+  color: #ff7a29;
+  margin-left: 12px;
+}
+
+.faq-answer-content {
+  padding: 0 22px 20px 22px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+/* SECTION 5: CAMPUS LOCATION & HOURS BANNER */
+.location-footer-section {
+  padding: 60px 24px 80px 24px;
+  background-color: var(--bg-secondary);
+}
+
+.location-container {
+  max-width: 1350px;
+  margin: 0 auto;
+}
+
+.location-card {
+  background-color: var(--card-bg);
+  border-radius: 28px;
+  padding: 36px 40px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.location-info h3 {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+  font-family: var(--font-heading);
+  margin-bottom: 12px;
+}
+
+.address-text {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.contact-details p {
+  font-size: 0.95rem;
+  color: var(--text-color);
+  margin-bottom: 6px;
+}
+
+.contact-details a {
+  color: #0284c7;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.hours-info h4 {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  font-family: var(--font-heading);
+  margin-bottom: 12px;
+}
+
+.hours-info ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hours-info li {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.08);
+  padding-bottom: 6px;
+}
+
+.hours-info strong {
+  color: var(--primary-color);
+}
+
+.closed-tag {
+  color: #ef4444 !important;
+}
+
+/* Responsive Breakdown */
+@media screen and (max-width: 1024px) {
+  .admissions-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .process-steps-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .location-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .admissions-main-title,
+  .section-main-title {
+    font-size: 2.2rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .process-steps-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .location-card {
+    padding: 24px;
+  }
+}
