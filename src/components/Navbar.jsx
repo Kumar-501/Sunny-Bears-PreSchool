@@ -99,7 +99,7 @@ const Navbar = () => {
   return (
     <header className="navbar-header">
       <nav className="navbar-container">
-        {/* Brand Logo & Title set in Forte Font */}
+        {/* Brand Logo & Title with Spacing Gap */}
         <a href="#home" className="brand-container" onClick={(e) => handleNavClick(e, 'home')}>
           <div className="logo-icon">
             <img src={logoImg} alt="Sunny Bears Preschool Logo" className="brand-logo-img" />
@@ -112,7 +112,7 @@ const Navbar = () => {
                 <span className="letter-n1">N</span>
                 <span className="letter-n2">N</span>
                 <span className="letter-y">Y</span>
-              </span>{' '}
+              </span>
               <span className="word-bears-preschool">BEARS PRESCHOOL</span>
             </h1>
             <p className="brand-subtitle">JUMP • GIGGLE • GROW</p>

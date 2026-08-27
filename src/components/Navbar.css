@@ -43,17 +43,18 @@
   flex-direction: column;
 }
 
-/* Primary Forte Font Styling */
+/* Primary Forte Font Styling with Spacing Gap */
 .brand-title {
   margin: 0;
   font-size: 1.45rem;
   font-weight: 400;
   line-height: 1;
-  font-family: 'Forte', cursive, sans-serif; /* Explicitly using Forte */
+  font-family: 'Forte', cursive, sans-serif;
   letter-spacing: 0.5px;
   white-space: nowrap;
   display: flex;
   align-items: center;
+  gap: 8px; /* Adds physical gap between SUNNY and BEARS */
 }
 
 /* Multicolor SUNNY with Yellow Outline */
@@ -61,6 +62,7 @@
   font-family: 'Forte', cursive, sans-serif;
   display: inline-flex;
   font-weight: 400;
+  margin-right: 8px; /* Distinct gap separating SUNNY from BEARS */
   text-shadow: 
     1px 1px 0 #ffd700,
    -1px -1px 0 #ffd700,
