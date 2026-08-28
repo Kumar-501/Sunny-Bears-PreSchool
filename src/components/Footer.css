@@ -1,4 +1,7 @@
-/* Footer Base Setup */
+/* ============================================================
+   FOOTER BASE SETUP
+   ============================================================ */
+
 .footer-root {
   width: 100%;
   background-color: #1b365d;
@@ -13,6 +16,10 @@
   margin: 0 auto;
 }
 
+/* ============================================================
+   FOOTER GRID
+   ============================================================ */
+
 .footer-grid {
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
@@ -20,7 +27,10 @@
   padding-bottom: 40px;
 }
 
-/* Brand Column */
+/* ============================================================
+   BRAND COLUMN
+   ============================================================ */
+
 .footer-brand {
   display: flex;
   align-items: center;
@@ -41,54 +51,99 @@
   display: block;
 }
 
-/* Brand Title Styling Matching Navbar */
+/* ============================================================
+   BRAND TITLE
+   ============================================================ */
+
 .footer-brand-title h3 {
   margin: 0;
   font-size: 1.35rem;
   font-weight: 900;
   line-height: 1;
-  font-family: 'Forte', 'Fredoka', 'Bubblegum Sans', cursive, sans-serif;
+  font-family:
+    'Forte',
+    'Fredoka',
+    'Bubblegum Sans',
+    cursive,
+    sans-serif;
   letter-spacing: 0.5px;
   white-space: nowrap;
   display: flex;
   align-items: center;
 }
 
-/* Multicolor SUNNY with Yellow Outline */
+/* ============================================================
+   MULTICOLOR SUNNY
+   ============================================================ */
+
 .footer-brand-title .word-sunny {
-  font-family: 'Forte', 'Fredoka', cursive, sans-serif;
+  font-family:
+    'Forte',
+    'Fredoka',
+    cursive,
+    sans-serif;
+
   display: inline-flex;
   font-weight: 900;
-  text-shadow: 
+
+  text-shadow:
     1px 1px 0 #ffd700,
-   -1px -1px 0 #ffd700,
+    -1px -1px 0 #ffd700,
     1px -1px 0 #ffd700,
-   -1px 1px 0 #ffd700;
+    -1px 1px 0 #ffd700;
 }
 
-.footer-brand-title .letter-s { color: #ff3b30; }  /* Red */
-.footer-brand-title .letter-u { color: #8e44ad; }  /* Purple */
-.footer-brand-title .letter-n1 { color: #5c9eff; } /* Light Navy/Blue */
-.footer-brand-title .letter-n2 { color: #2ecc71; } /* Green */
-.footer-brand-title .letter-y { color: #38bdf8; }  /* Cyan Blue */
+.footer-brand-title .letter-s {
+  color: #ff3b30;
+}
 
-/* Red BEARS PRESCHOOL with Golden Yellow Outline */
+.footer-brand-title .letter-u {
+  color: #8e44ad;
+}
+
+.footer-brand-title .letter-n1 {
+  color: #5c9eff;
+}
+
+.footer-brand-title .letter-n2 {
+  color: #2ecc71;
+}
+
+.footer-brand-title .letter-y {
+  color: #38bdf8;
+}
+
+/* ============================================================
+   BEARS PRESCHOOL
+   ============================================================ */
+
 .footer-brand-title .word-bears-preschool {
-  font-family: 'Forte', 'Fredoka', cursive, sans-serif;
+  font-family:
+    'Forte',
+    'Fredoka',
+    cursive,
+    sans-serif;
+
   color: #ff4757;
   font-weight: 900;
   font-style: italic;
-  text-shadow: 
+
+  text-shadow:
     1.2px 1.2px 0 #ffd700,
-   -1.2px -1.2px 0 #ffd700,
+    -1.2px -1.2px 0 #ffd700,
     1.2px -1.2px 0 #ffd700,
-   -1.2px 1.2px 0 #ffd700,
+    -1.2px 1.2px 0 #ffd700,
     0px 1.2px 0 #ffd700,
     0px -1.2px 0 #ffd700,
     1.2px 0px 0 #ffd700,
-   -1.2px 0px 0 #ffd700;
+    -1.2px 0px 0 #ffd700;
+
   letter-spacing: 0.5px;
 }
+
+/* ============================================================
+   TAGLINE
+   ============================================================ */
 
 .footer-tagline {
   color: #ffc72c;
@@ -105,7 +160,10 @@
   margin-bottom: 18px;
 }
 
-/* Modern Social Icons Styling */
+/* ============================================================
+   SOCIAL ICONS
+   ============================================================ */
+
 .social-links {
   display: flex;
   gap: 14px;
@@ -115,13 +173,19 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
+
   background-color: rgba(255, 255, 255, 0.1);
+
   color: #ffffff;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   text-decoration: none;
+
   transition: all 0.3s ease;
+
   backdrop-filter: blur(4px);
 }
 
@@ -132,26 +196,42 @@
 
 .social-icon:hover {
   transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+
+  box-shadow:
+    0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 .social-icon:hover svg {
   transform: scale(1.1);
 }
 
-/* Instagram Hover Effect */
+/* Instagram */
+
 .social-icon.instagram:hover {
-  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+  background:
+    radial-gradient(
+      circle at 30% 107%,
+      #fdf497 0%,
+      #fdf497 5%,
+      #fd5949 45%,
+      #d6249f 60%,
+      #285aeb 90%
+    );
+
   color: #ffffff;
 }
 
-/* WhatsApp Hover Effect */
+/* WhatsApp */
+
 .social-icon.whatsapp:hover {
-  background-color: #25D366;
+  background-color: #25d366;
   color: #ffffff;
 }
 
-/* Navigation Columns */
+/* ============================================================
+   FOOTER NAVIGATION TITLES
+   ============================================================ */
+
 .footer-col-title {
   font-size: 1rem;
   font-weight: 800;
@@ -160,10 +240,15 @@
   margin-bottom: 18px;
 }
 
+/* ============================================================
+   FOOTER LINKS
+   ============================================================ */
+
 .footer-links {
   list-style: none;
   padding: 0;
   margin: 0;
+
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -173,18 +258,26 @@
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   font-size: 0.88rem;
-  transition: color 0.2s ease;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .footer-links a:hover {
   color: #ff7a29;
+  transform: translateX(2px);
 }
 
-/* Contact List with Modern SVG Icons */
+/* ============================================================
+   CONTACT LIST
+   ============================================================ */
+
 .footer-contact-info {
   list-style: none;
   padding: 0;
   margin: 0;
+
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -194,6 +287,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
+
   font-size: 0.88rem;
   color: rgba(255, 255, 255, 0.8);
 }
@@ -202,14 +296,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
   color: #ffc72c;
+
   flex-shrink: 0;
 }
 
 .footer-contact-info a {
   color: rgba(255, 255, 255, 0.8);
+
   text-decoration: none;
+
   word-break: break-all;
+
   transition: color 0.2s ease;
 }
 
@@ -217,24 +316,139 @@
   color: #ff7a29;
 }
 
-/* Bottom Bar */
+/* ============================================================
+   DEVELOPER CREDIT
+   ============================================================ */
+
+.footer-developer-credit {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+  padding: 18px 0 16px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  text-align: center;
+}
+
+.developer-credit-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  flex-wrap: wrap;
+
+  font-size: 0.78rem;
+}
+
+.developer-credit-label {
+  color: rgba(255, 255, 255, 0.52);
+}
+
+.developer-credit-link {
+  color: #ffc72c;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  position: relative;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.developer-credit-link::after {
+  content: '';
+
+  position: absolute;
+
+  left: 0;
+  bottom: -2px;
+
+  width: 100%;
+  height: 1px;
+
+  background-color: #ffc72c;
+
+  transform: scaleX(0);
+  transform-origin: center;
+
+  transition: transform 0.25s ease;
+}
+
+.developer-credit-link:hover {
+  color: #ff7a29;
+
+  transform: translateY(-1px);
+}
+
+.developer-credit-link:hover::after {
+  transform: scaleX(1);
+}
+
+.developer-credit-tagline {
+  color: rgba(255, 255, 255, 0.4);
+
+  font-size: 0.7rem;
+
+  letter-spacing: 0.35px;
+}
+
+/* ============================================================
+   BOTTOM COPYRIGHT BAR
+   ============================================================ */
+
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+
   padding-top: 20px;
+
   text-align: center;
+
   font-size: 0.8rem;
+
   color: rgba(255, 255, 255, 0.5);
 }
 
-/* Responsive Breakdown */
+.footer-bottom p {
+  margin: 0;
+}
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
 @media screen and (max-width: 992px) {
+
   .footer-grid {
     grid-template-columns: 1fr 1fr;
     gap: 32px;
   }
+
 }
 
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
 @media screen and (max-width: 640px) {
+
+  .footer-root {
+    padding:
+      45px
+      18px
+      20px;
+  }
+
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 28px;
@@ -243,4 +457,53 @@
   .footer-brand-title h3 {
     font-size: 1.1rem;
   }
+
+  .footer-about {
+    font-size: 0.82rem;
+  }
+
+  .footer-developer-credit {
+    padding:
+      16px
+      0
+      14px;
+  }
+
+  .developer-credit-line {
+    font-size: 0.75rem;
+  }
+
+  .developer-credit-tagline {
+    font-size: 0.67rem;
+  }
+
+}
+
+/* ============================================================
+   SMALL MOBILE
+   ============================================================ */
+
+@media screen and (max-width: 380px) {
+
+  .footer-brand {
+    align-items: flex-start;
+  }
+
+  .footer-logo-img {
+    height: 38px;
+  }
+
+  .footer-brand-title h3 {
+    font-size: 0.95rem;
+  }
+
+  .footer-tagline {
+    font-size: 0.75rem;
+  }
+
+  .developer-credit-line {
+    flex-direction: column;
+    gap: 2px;
+  }
+
 }

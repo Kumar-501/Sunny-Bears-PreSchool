@@ -281,4 +281,188 @@
     grid-template-columns: 1fr;
     gap: 18px;
   }
+}/* ============================================================
+   PROGRAMS SEO CONTENT
+   ============================================================ */
+
+.programs-seo-intro {
+  max-width: 850px;
+  margin: 16px auto 0;
+  color: var(--text-muted, #64748b);
+  font-size: 1rem;
+  line-height: 1.75;
+  text-align: center;
+}
+
+.programs-seo-content {
+  max-width: 1100px;
+  margin: 70px auto 20px;
+  padding: 55px 50px;
+  background: var(--card-bg, #ffffff);
+  border-radius: 28px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+}
+
+.programs-seo-content-inner {
+  max-width: 950px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.programs-seo-kicker {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #40916c;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.programs-seo-content h2 {
+  margin: 0 auto 20px;
+  color: var(--primary-color, #1e3a8a);
+  font-family: var(--font-heading, sans-serif);
+  font-size: 2rem;
+  line-height: 1.25;
+  font-weight: 800;
+}
+
+.programs-seo-content p {
+  max-width: 900px;
+  margin: 0 auto 16px;
+  color: var(--text-muted, #64748b);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.programs-seo-highlights {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 35px;
+  text-align: left;
+}
+
+.programs-seo-highlights > div {
+  padding: 22px 18px;
+  border-radius: 18px;
+  background: rgba(82, 183, 136, 0.07);
+}
+
+.programs-seo-highlights strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--primary-color, #1e3a8a);
+  font-size: 0.98rem;
+  line-height: 1.3;
+}
+
+.programs-seo-highlights span {
+  display: block;
+  color: var(--text-muted, #64748b);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.programs-seo-cta {
+  margin-top: 35px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.programs-seo-cta p {
+  margin-bottom: 15px;
+  color: var(--primary-color, #1e3a8a);
+  font-weight: 700;
+}
+
+.programs-seo-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 24px;
+  border-radius: 50px;
+  background: var(--secondary-color, #ff7a29);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.95rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.programs-seo-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
+}
+
+/* ============================================================
+   RESPONSIVE SEO CONTENT
+   ============================================================ */
+
+@media screen and (max-width: 900px) {
+  .programs-seo-content {
+    margin-top: 55px;
+    padding: 40px 28px;
+  }
+
+  .programs-seo-highlights {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .programs-seo-content h2 {
+    font-size: 1.75rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .programs-seo-intro {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .programs-seo-content {
+    margin-top: 40px;
+    padding: 32px 18px;
+    border-radius: 22px;
+  }
+
+  .programs-seo-content h2 {
+    font-size: 1.45rem;
+    line-height: 1.3;
+  }
+
+  .programs-seo-content p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .programs-seo-highlights {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 25px;
+  }
+
+  .programs-seo-highlights > div {
+    padding: 17px 15px;
+  }
+
+  .programs-seo-highlights strong {
+    font-size: 0.92rem;
+  }
+
+  .programs-seo-highlights span {
+    font-size: 0.78rem;
+  }
+
+  .programs-seo-cta {
+    margin-top: 28px;
+  }
+
+  .programs-seo-button {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 0.9rem;
+  }
 }

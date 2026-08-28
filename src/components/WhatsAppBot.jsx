@@ -2,11 +2,26 @@ import React, { useState, useRef, useEffect } from 'react';
 import './WhatsAppBot.css';
 
 const QUICK_QUESTIONS = [
-  { text: '🏫 What programs do you offer?', category: 'programs' },
-  { text: '👶 What is the admission age?', category: 'age' },
-  { text: '📍 Where are you located?', category: 'location' },
-  { text: '⏰ What are the school timings?', category: 'timings' },
-  { text: '📞 How can I contact admissions?', category: 'contact' },
+  {
+    text: '🏫 What programs do you offer?',
+    category: 'programs',
+  },
+  {
+    text: '👶 What is the admission age?',
+    category: 'age',
+  },
+  {
+    text: '📍 Where are you located?',
+    category: 'location',
+  },
+  {
+    text: '⏰ What are the school timings?',
+    category: 'timings',
+  },
+  {
+    text: '📞 How can I contact admissions?',
+    category: 'contact',
+  },
 ];
 
 const BOT_RESPONSES = {
@@ -54,7 +69,7 @@ const WhatsAppBot = () => {
 
   const messagesEndRef = useRef(null);
 
-  // Auto-scroll to the latest message
+  // Auto-scroll to latest message
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({
       behavior: 'smooth',
@@ -78,9 +93,9 @@ const WhatsAppBot = () => {
     Flow:
     Click Question
         ↓
-    Add user question immediately
+    Add user question
         ↓
-    Add bot answer immediately
+    Add bot answer
         ↓
     Hide question list
         ↓
@@ -112,13 +127,10 @@ const WhatsAppBot = () => {
       botMsg,
     ]);
 
-    // Hide all quick questions after one is selected
     setShowQuickQuestions(false);
   };
 
-  /*
-    Show quick questions again
-  */
+  // Show quick questions again
   const handleAskAnotherQuestion = () => {
     setShowQuickQuestions(true);
 
@@ -128,7 +140,7 @@ const WhatsAppBot = () => {
   };
 
   /*
-    Detect the correct response
+    Detect correct response
     for manually typed questions.
   */
   const getResponseCategory = (userQuery) => {
@@ -223,12 +235,6 @@ const WhatsAppBot = () => {
 
     setInputValue('');
 
-    /*
-      After sending a custom question,
-      keep quick questions hidden and
-      allow the user to click
-      "Ask Another Question".
-    */
     setShowQuickQuestions(false);
   };
 
@@ -241,6 +247,7 @@ const WhatsAppBot = () => {
         onClick={() => setIsOpen(!isOpen)}
         aria-label="Open WhatsApp Assistant"
         title="Chat with Sunny Bears"
+        type="button"
       >
         <svg
           viewBox="0 0 32 32"
@@ -323,6 +330,7 @@ const WhatsAppBot = () => {
               className="chat-close-btn"
               onClick={() => setIsOpen(false)}
               aria-label="Close chat"
+              type="button"
             >
               ×
             </button>
@@ -332,7 +340,7 @@ const WhatsAppBot = () => {
           {/* Scrollable Chat Area */}
           <div className="chat-messages-body">
 
-            {/* All Messages */}
+            {/* Messages */}
             {messages.map((message) => (
               <div
                 key={message.id}
@@ -387,7 +395,7 @@ const WhatsAppBot = () => {
               </div>
             )}
 
-            {/* Ask Another Question Button */}
+            {/* Ask Another Question */}
             {!showQuickQuestions && (
               <div className="ask-another-wrapper">
 
@@ -431,7 +439,10 @@ const WhatsAppBot = () => {
               type="text"
               placeholder="Type your question..."
               value={inputValue}
-              onChange={(e) => setInputValue(e.target.value)}
+              onChange={(e) =>
+                setInputValue(e.target.value)
+              }
+              aria-label="Type your question"
             />
 
             <button

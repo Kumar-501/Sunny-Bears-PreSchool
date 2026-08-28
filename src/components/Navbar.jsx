@@ -34,13 +34,21 @@ const Navbar = () => {
 
   const dropdownRef = useRef(null);
 
-  // Apply Theme attribute
+  /*
+   * ============================================================
+   * APPLY SELECTED THEME
+   * ============================================================
+   */
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', activeTheme);
     localStorage.setItem('sunny_bears_theme', activeTheme);
   }, [activeTheme]);
 
-  // Click outside listener for theme dropdown
+  /*
+   * ============================================================
+   * CLOSE THEME DROPDOWN WHEN CLICKING OUTSIDE
+   * ============================================================
+   */
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (
@@ -58,7 +66,16 @@ const Navbar = () => {
     };
   }, []);
 
-  // IntersectionObserver Scroll Spy
+  /*
+   * ============================================================
+   * INTERSECTION OBSERVER / SCROLL SPY
+   *
+   * This works on the normal homepage where all sections exist.
+   *
+   * On /best-preschool-in-chennai, those sections don't exist,
+   * so this observer simply observes nothing.
+   * ============================================================
+   */
   useEffect(() => {
     const observerOptions = {
       root: null,
@@ -73,11 +90,21 @@ const Navbar = () => {
 
           setActiveSection(sectionId);
 
-          window.history.replaceState(
-            null,
-            null,
-            `#${sectionId}`
-          );
+          /*
+           * Update hash only on the homepage.
+           * This prevents the SEO page URL from being changed
+           * unexpectedly.
+           */
+          if (
+            window.location.pathname === '/' ||
+            window.location.pathname === ''
+          ) {
+            window.history.replaceState(
+              null,
+              '',
+              `#${sectionId}`
+            );
+          }
         }
       });
     };
@@ -88,31 +115,75 @@ const Navbar = () => {
     );
 
     SECTIONS.forEach((id) => {
-      const el = document.getElementById(id);
+      const element = document.getElementById(id);
 
-      if (el) {
-        observer.observe(el);
+      if (element) {
+        observer.observe(element);
       }
     });
 
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+    };
   }, []);
 
+  /*
+   * ============================================================
+   * THEME SELECT
+   * ============================================================
+   */
   const handleThemeSelect = (themeId) => {
     setActiveTheme(themeId);
     setIsThemeDropdownOpen(false);
   };
 
-  // Smooth Scroll Helper Function
+  /*
+   * ============================================================
+   * NAVIGATION HELPER
+   *
+   * IMPORTANT FIX:
+   *
+   * If the requested section exists on the current page:
+   *     -> smooth scroll to it.
+   *
+   * If it does NOT exist:
+   *     -> navigate to homepage + requested hash.
+   *
+   * Example:
+   *
+   * From homepage:
+   *     /#about
+   *
+   * From:
+   *     /best-preschool-in-chennai
+   *
+   * Clicking About:
+   *     /#about
+   *
+   * This fixes the issue where clicking Navbar items was doing
+   * nothing on the Best Preschool SEO page.
+   * ============================================================
+   */
   const handleNavClick = (e, targetId) => {
     e.preventDefault();
 
     setIsMobileMenuOpen(false);
-    setActiveSection(targetId);
+    setIsThemeDropdownOpen(false);
 
+    /*
+     * Check if the target section exists on the current page.
+     */
     const element = document.getElementById(targetId);
 
+    /*
+     * ----------------------------------------------------------
+     * CASE 1:
+     * Section exists on current page
+     * ----------------------------------------------------------
+     */
     if (element) {
+      setActiveSection(targetId);
+
       const navbarHeight = 80;
 
       const elementPosition =
@@ -127,21 +198,61 @@ const Navbar = () => {
         behavior: 'smooth',
       });
 
-      window.history.pushState(
-        null,
-        null,
-        `#${targetId}`
-      );
+      /*
+       * Only update hash on homepage.
+       */
+      if (
+        window.location.pathname === '/' ||
+        window.location.pathname === ''
+      ) {
+        window.history.pushState(
+          null,
+          '',
+          `#${targetId}`
+        );
+      }
+
+      return;
     }
+
+    /*
+     * ----------------------------------------------------------
+     * CASE 2:
+     * Section does NOT exist on current page
+     *
+     * Example:
+     * /best-preschool-in-chennai
+     *
+     * Clicking:
+     * About Us
+     *
+     * Since #about isn't on this page, go to:
+     * /#about
+     * ----------------------------------------------------------
+     */
+
+    if (targetId === 'home') {
+      window.location.href = '/#home';
+      return;
+    }
+
+    window.location.href = `/#${targetId}`;
   };
 
+  /*
+   * ============================================================
+   * RENDER
+   * ============================================================
+   */
   return (
     <header className="navbar-header">
       <nav className="navbar-container">
 
-        {/* Brand Logo & Title */}
+        {/* =====================================================
+            BRAND LOGO & TITLE
+        ====================================================== */}
         <a
-          href="#home"
+          href="/#home"
           className="brand-container"
           onClick={(e) => handleNavClick(e, 'home')}
         >
@@ -154,10 +265,7 @@ const Navbar = () => {
           </div>
 
           <div className="brand-text">
-
-            {/* UPDATED BRAND TITLE */}
             <h1 className="brand-title">
-
               <span className="word-sunny">
                 <span className="letter-s">S</span>
                 <span className="letter-u">U</span>
@@ -169,17 +277,17 @@ const Navbar = () => {
               <span className="word-bears-preschool">
                 BEARS PRESCHOOL
               </span>
-
             </h1>
 
             <p className="brand-subtitle">
               JUMP • GIGGLE • GROW
             </p>
-
           </div>
         </a>
 
-        {/* Mobile Toggle Button */}
+        {/* =====================================================
+            MOBILE TOGGLE
+        ====================================================== */}
         <button
           className={`mobile-toggle ${
             isMobileMenuOpen ? 'open' : ''
@@ -189,13 +297,16 @@ const Navbar = () => {
           }
           aria-label="Toggle Navigation Menu"
           aria-expanded={isMobileMenuOpen}
+          type="button"
         >
           <span className="hamburger-line"></span>
           <span className="hamburger-line"></span>
           <span className="hamburger-line"></span>
         </button>
 
-        {/* Navigation Wrapper */}
+        {/* =====================================================
+            NAVIGATION WRAPPER
+        ====================================================== */}
         <div
           className={`nav-content ${
             isMobileMenuOpen ? 'active' : ''
@@ -203,7 +314,9 @@ const Navbar = () => {
         >
           <ul className="nav-menu">
 
-            {/* Home */}
+            {/* =================================================
+                HOME
+            ================================================== */}
             <li
               className={`nav-item ${
                 activeSection === 'home'
@@ -212,7 +325,7 @@ const Navbar = () => {
               }`}
             >
               <a
-                href="#home"
+                href="/#home"
                 onClick={(e) =>
                   handleNavClick(e, 'home')
                 }
@@ -221,7 +334,9 @@ const Navbar = () => {
               </a>
             </li>
 
-            {/* About */}
+            {/* =================================================
+                ABOUT
+            ================================================== */}
             <li
               className={`nav-item ${
                 activeSection === 'about'
@@ -230,7 +345,7 @@ const Navbar = () => {
               }`}
             >
               <a
-                href="#about"
+                href="/#about"
                 onClick={(e) =>
                   handleNavClick(e, 'about')
                 }
@@ -239,7 +354,9 @@ const Navbar = () => {
               </a>
             </li>
 
-            {/* Programs */}
+            {/* =================================================
+                PROGRAMS
+            ================================================== */}
             <li
               className={`nav-item ${
                 activeSection === 'programs'
@@ -248,7 +365,7 @@ const Navbar = () => {
               }`}
             >
               <a
-                href="#programs"
+                href="/#programs"
                 onClick={(e) =>
                   handleNavClick(e, 'programs')
                 }
@@ -257,7 +374,9 @@ const Navbar = () => {
               </a>
             </li>
 
-            {/* Why Sunny Bears */}
+            {/* =================================================
+                WHY SUNNY BEARS
+            ================================================== */}
             <li
               className={`nav-item ${
                 activeSection === 'why-sunny-bears'
@@ -266,7 +385,7 @@ const Navbar = () => {
               }`}
             >
               <a
-                href="#why-sunny-bears"
+                href="/#why-sunny-bears"
                 onClick={(e) =>
                   handleNavClick(
                     e,
@@ -278,7 +397,9 @@ const Navbar = () => {
               </a>
             </li>
 
-            {/* Gallery */}
+            {/* =================================================
+                GALLERY
+            ================================================== */}
             <li
               className={`nav-item ${
                 activeSection === 'gallery'
@@ -287,7 +408,7 @@ const Navbar = () => {
               }`}
             >
               <a
-                href="#gallery"
+                href="/#gallery"
                 onClick={(e) =>
                   handleNavClick(e, 'gallery')
                 }
@@ -296,7 +417,9 @@ const Navbar = () => {
               </a>
             </li>
 
-            {/* Admissions */}
+            {/* =================================================
+                ADMISSIONS
+            ================================================== */}
             <li
               className={`nav-item ${
                 activeSection === 'admissions'
@@ -305,7 +428,7 @@ const Navbar = () => {
               }`}
             >
               <a
-                href="#admissions"
+                href="/#admissions"
                 onClick={(e) =>
                   handleNavClick(e, 'admissions')
                 }
@@ -314,7 +437,9 @@ const Navbar = () => {
               </a>
             </li>
 
-            {/* Contact */}
+            {/* =================================================
+                CONTACT
+            ================================================== */}
             <li
               className={`nav-item ${
                 activeSection === 'contact'
@@ -323,7 +448,7 @@ const Navbar = () => {
               }`}
             >
               <a
-                href="#contact"
+                href="/#contact"
                 onClick={(e) =>
                   handleNavClick(e, 'contact')
                 }
@@ -334,10 +459,14 @@ const Navbar = () => {
 
           </ul>
 
-          {/* Action Buttons & Theme Switcher */}
+          {/* ===================================================
+              ACTION BUTTONS & THEME SWITCHER
+          ==================================================== */}
           <div className="nav-actions">
 
-            {/* Theme Selector */}
+            {/* =================================================
+                THEME SELECTOR
+            ================================================== */}
             <div
               className="theme-switcher-container"
               ref={dropdownRef}
@@ -395,7 +524,9 @@ const Navbar = () => {
                 </svg>
               </button>
 
-              {/* Theme Dropdown */}
+              {/* =================================================
+                  THEME DROPDOWN
+              ================================================== */}
               {isThemeDropdownOpen && (
                 <div className="theme-dropdown-menu">
 
@@ -436,7 +567,9 @@ const Navbar = () => {
               )}
             </div>
 
-            {/* Phone Button */}
+            {/* =================================================
+                PHONE BUTTON
+            ================================================== */}
             <a
               href="tel:9791751787"
               className="btn-phone"
@@ -458,9 +591,11 @@ const Navbar = () => {
               <span>97917 51787</span>
             </a>
 
-            {/* Enquire Now Button */}
+            {/* =================================================
+                ENQUIRE NOW
+            ================================================== */}
             <a
-              href="#enquire"
+              href="/#enquire"
               className="btn-enquire"
               onClick={(e) =>
                 handleNavClick(e, 'enquire')
