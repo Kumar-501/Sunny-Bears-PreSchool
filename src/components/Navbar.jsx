@@ -154,6 +154,8 @@ const Navbar = () => {
           </div>
 
           <div className="brand-text">
+
+            {/* UPDATED BRAND TITLE */}
             <h1 className="brand-title">
 
               <span className="word-sunny">
@@ -173,6 +175,7 @@ const Navbar = () => {
             <p className="brand-subtitle">
               JUMP • GIGGLE • GROW
             </p>
+
           </div>
         </a>
 
@@ -185,6 +188,7 @@ const Navbar = () => {
             setIsMobileMenuOpen(!isMobileMenuOpen)
           }
           aria-label="Toggle Navigation Menu"
+          aria-expanded={isMobileMenuOpen}
         >
           <span className="hamburger-line"></span>
           <span className="hamburger-line"></span>
@@ -199,6 +203,7 @@ const Navbar = () => {
         >
           <ul className="nav-menu">
 
+            {/* Home */}
             <li
               className={`nav-item ${
                 activeSection === 'home'
@@ -216,6 +221,7 @@ const Navbar = () => {
               </a>
             </li>
 
+            {/* About */}
             <li
               className={`nav-item ${
                 activeSection === 'about'
@@ -233,6 +239,7 @@ const Navbar = () => {
               </a>
             </li>
 
+            {/* Programs */}
             <li
               className={`nav-item ${
                 activeSection === 'programs'
@@ -250,6 +257,7 @@ const Navbar = () => {
               </a>
             </li>
 
+            {/* Why Sunny Bears */}
             <li
               className={`nav-item ${
                 activeSection === 'why-sunny-bears'
@@ -270,6 +278,7 @@ const Navbar = () => {
               </a>
             </li>
 
+            {/* Gallery */}
             <li
               className={`nav-item ${
                 activeSection === 'gallery'
@@ -287,6 +296,7 @@ const Navbar = () => {
               </a>
             </li>
 
+            {/* Admissions */}
             <li
               className={`nav-item ${
                 activeSection === 'admissions'
@@ -304,6 +314,7 @@ const Navbar = () => {
               </a>
             </li>
 
+            {/* Contact */}
             <li
               className={`nav-item ${
                 activeSection === 'contact'
@@ -340,6 +351,7 @@ const Navbar = () => {
                 }
                 title="Choose Theme"
                 aria-label="Choose Theme"
+                type="button"
               >
                 <svg
                   viewBox="0 0 24 24"
@@ -402,6 +414,7 @@ const Navbar = () => {
                       onClick={() =>
                         handleThemeSelect(t.id)
                       }
+                      type="button"
                     >
                       <span className="theme-icon">
                         {t.icon}

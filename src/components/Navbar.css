@@ -1,4 +1,7 @@
-/* Navbar Header Container */
+/* =========================================================
+   NAVBAR HEADER
+   ========================================================= */
+
 .navbar-header {
   width: 100%;
   background-color: var(--nav-bg);
@@ -17,18 +20,24 @@
   justify-content: space-between;
 }
 
-/* Brand Section */
+
+/* =========================================================
+   BRAND SECTION
+   ========================================================= */
+
 .brand-container {
   display: flex;
   align-items: center;
   gap: 10px;
   text-decoration: none;
+  min-width: 0;
 }
 
 .logo-icon {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .brand-logo-img {
@@ -41,11 +50,14 @@
 .brand-text {
   display: flex;
   flex-direction: column;
+  min-width: 0;
 }
 
-/* =========================================
-   FIXED BRAND TITLE SPACING
-   ========================================= */
+
+/* =========================================================
+   BRAND TITLE
+   FIXED: SUNNY  BEARS
+   ========================================================= */
 
 .brand-title {
   margin: 0;
@@ -53,23 +65,39 @@
   font-weight: 400;
   line-height: 1;
   font-family: 'Forte', cursive, sans-serif;
+
+  /*
+    Increased spacing between SUNNY and BEARS.
+    Previous: 2px
+    Updated: 7px
+  */
   letter-spacing: 0.5px;
   white-space: nowrap;
+
   display: flex;
   align-items: center;
 
-  /* Reduced gap between SUNNY and BEARS */
-  gap: 2px;
+  gap: 7px;
 }
 
-/* Multicolor SUNNY */
+
+/* =========================================================
+   SUNNY
+   ========================================================= */
+
 .word-sunny {
   font-family: 'Forte', cursive, sans-serif;
   display: inline-flex;
+  align-items: center;
   font-weight: 400;
 
-  /* Removed extra spacing */
+  /*
+    Keeps the letters of SUNNY together
+    while allowing space before BEARS.
+  */
   margin-right: 0;
+  letter-spacing: 0;
+  flex-shrink: 0;
 
   text-shadow:
     1px 1px 0 #ffd700,
@@ -77,6 +105,9 @@
     1px -1px 0 #ffd700,
     -1px 1px 0 #ffd700;
 }
+
+
+/* Individual SUNNY letters */
 
 .letter-s {
   color: #ff3b30;
@@ -98,7 +129,11 @@
   color: #0284c7;
 }
 
-/* BEARS PRESCHOOL */
+
+/* =========================================================
+   BEARS PRESCHOOL
+   ========================================================= */
+
 .word-bears-preschool {
   font-family: 'Forte', cursive, sans-serif;
   color: #d63031;
@@ -115,7 +150,14 @@
     -1.2px 0px 0 #ffd700;
 
   letter-spacing: 0.5px;
+
+  flex-shrink: 0;
 }
+
+
+/* =========================================================
+   BRAND SUBTITLE
+   ========================================================= */
 
 .brand-subtitle {
   margin: 2px 0 0 0;
@@ -128,7 +170,11 @@
   white-space: nowrap;
 }
 
-/* Navigation Links */
+
+/* =========================================================
+   NAVIGATION LINKS
+   ========================================================= */
+
 .nav-content {
   display: flex;
   align-items: center;
@@ -157,7 +203,11 @@
   color: var(--secondary-color);
 }
 
-/* Active link highlight styling */
+
+/* =========================================================
+   ACTIVE LINK
+   ========================================================= */
+
 .nav-item.active-link a {
   color: var(--secondary-color) !important;
   font-weight: 800;
@@ -165,14 +215,22 @@
   padding-bottom: 2px;
 }
 
-/* Actions Section */
+
+/* =========================================================
+   ACTIONS
+   ========================================================= */
+
 .nav-actions {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-/* Theme Switcher Button & Dropdown */
+
+/* =========================================================
+   THEME SWITCHER
+   ========================================================= */
+
 .theme-switcher-container {
   position: relative;
 }
@@ -264,7 +322,11 @@
   font-weight: bold;
 }
 
-/* Phone & Enquire Buttons */
+
+/* =========================================================
+   PHONE BUTTON
+   ========================================================= */
+
 .btn-phone {
   display: flex;
   align-items: center;
@@ -285,6 +347,11 @@
   transform: translateY(-1px);
 }
 
+
+/* =========================================================
+   ENQUIRE BUTTON
+   ========================================================= */
+
 .btn-enquire {
   display: flex;
   align-items: center;
@@ -300,6 +367,7 @@
   text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transition: all 0.2s ease-in-out;
+  white-space: nowrap;
 }
 
 .btn-enquire:hover {
@@ -307,7 +375,11 @@
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
 }
 
-/* Mobile Toggle Hamburger */
+
+/* =========================================================
+   MOBILE HAMBURGER
+   ========================================================= */
+
 .mobile-toggle {
   display: none;
   flex-direction: column;
@@ -341,6 +413,11 @@
   transform: translateY(-7px) rotate(-45deg);
 }
 
+
+/* =========================================================
+   ANIMATION
+   ========================================================= */
+
 @keyframes fadeInDown {
   from {
     opacity: 0;
@@ -353,14 +430,45 @@
   }
 }
 
-/* Responsive Breakdown */
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
 @media screen and (max-width: 1200px) {
   .brand-title {
     font-size: 1.25rem;
+    gap: 6px;
+  }
+
+  .nav-content {
+    gap: 14px;
+  }
+
+  .nav-menu {
+    gap: 14px;
   }
 }
 
+
+/* =========================================================
+   SMALL LAPTOP / TABLET
+   ========================================================= */
+
 @media screen and (max-width: 1024px) {
+  .navbar-container {
+    padding: 8px 18px;
+  }
+
+  .brand-title {
+    font-size: 1.15rem;
+    gap: 5px;
+  }
+
+  .brand-subtitle {
+    font-size: 0.55rem;
+  }
+
   .nav-menu {
     gap: 12px;
   }
@@ -368,9 +476,29 @@
   .nav-item a {
     font-size: 0.85rem;
   }
+
+  .btn-phone {
+    padding: 6px 10px;
+    font-size: 0.82rem;
+  }
+
+  .btn-enquire {
+    padding: 5px 14px;
+    font-size: 0.78rem;
+  }
 }
 
+
+/* =========================================================
+   MOBILE NAVIGATION
+   ========================================================= */
+
 @media screen and (max-width: 992px) {
+
+  .navbar-container {
+    padding: 7px 16px;
+  }
+
   .mobile-toggle {
     display: flex;
   }
@@ -402,7 +530,13 @@
     gap: 14px;
   }
 
+  .nav-item {
+    width: 100%;
+  }
+
   .nav-item a {
+    display: block;
+    width: fit-content;
     font-size: 0.95rem;
   }
 
@@ -416,6 +550,7 @@
   .btn-phone,
   .btn-enquire {
     width: 100%;
+    box-sizing: border-box;
   }
 
   .theme-dropdown-menu {
@@ -424,13 +559,119 @@
   }
 }
 
-@media screen and (max-width: 480px) {
-  .brand-title {
-    font-size: 1.05rem;
-    gap: 1px;
+
+/* =========================================================
+   MOBILE BRAND
+   ========================================================= */
+
+@media screen and (max-width: 600px) {
+
+  .navbar-container {
+    padding: 7px 14px;
+  }
+
+  .brand-container {
+    gap: 7px;
   }
 
   .brand-logo-img {
     height: 38px;
+  }
+
+  .brand-title {
+    font-size: 1.05rem;
+
+    /*
+      Mobile spacing between SUNNY and BEARS
+    */
+    gap: 5px;
+
+    letter-spacing: 0.3px;
+  }
+
+  .word-bears-preschool {
+    letter-spacing: 0.3px;
+  }
+
+  .brand-subtitle {
+    margin-top: 2px;
+    font-size: 0.5rem;
+    letter-spacing: 0.6px;
+  }
+
+  .mobile-toggle {
+    width: 27px;
+    height: 22px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 480px) {
+
+  .navbar-container {
+    padding: 7px 12px;
+  }
+
+  .brand-container {
+    gap: 6px;
+  }
+
+  .brand-logo-img {
+    height: 36px;
+  }
+
+  .brand-title {
+    font-size: 0.98rem;
+
+    /* Clear visible gap on small screens */
+    gap: 5px;
+  }
+
+  .brand-subtitle {
+    font-size: 0.48rem;
+    letter-spacing: 0.5px;
+  }
+
+  .mobile-toggle {
+    width: 26px;
+    height: 21px;
+  }
+}
+
+
+/* =========================================================
+   EXTRA SMALL MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 380px) {
+
+  .navbar-container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .brand-container {
+    gap: 5px;
+  }
+
+  .brand-logo-img {
+    height: 34px;
+  }
+
+  .brand-title {
+    font-size: 0.9rem;
+    gap: 4px;
+  }
+
+  .brand-subtitle {
+    font-size: 0.43rem;
+  }
+
+  .mobile-toggle {
+    width: 24px;
   }
 }
