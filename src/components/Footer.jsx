@@ -123,7 +123,7 @@ const Footer = () => {
                     <polyline points="22,6 12,13 2,6"></polyline>
                   </svg>
                 </span>
-                <a href="mailto:Sunnybearpreschool@gmail.com">Sunnybearpreschool@gmail.com</a>
+                <a href="mailto:sunnybearspreschool@gmail.com">sunnybearspreschool@gmail.com</a>
               </li>
               <li>
                 <span className="contact-icon">

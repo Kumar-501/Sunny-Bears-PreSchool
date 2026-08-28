@@ -1,322 +1,1154 @@
-/* Gallery Section Setup */
+/* ============================================================
+   GALLERY SECTION
+============================================================ */
+
 .gallery-section {
   position: relative;
+
   width: 100%;
-  background-color: var(--bg-color, #fafafa);
-  padding: 80px 24px 70px 24px;
-  box-sizing: border-box;
+
   overflow: hidden;
+
+  padding: 90px 24px 70px;
+
+  background: #fffaf0;
+
+  color: #1c2d42;
 }
+
+
+/* ============================================================
+   MAIN CONTAINER
+============================================================ */
 
 .gallery-container {
-  max-width: 1350px;
-  margin: 0 auto;
   position: relative;
+
   z-index: 2;
+
+  width: 100%;
+
+  max-width: 1380px;
+
+  margin: 0 auto;
 }
 
-/* Background Doodles */
+
+/* ============================================================
+   BACKGROUND DOODLES
+============================================================ */
+
 .gallery-doodles {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+
+  inset: 0;
+
+  z-index: 0;
+
   pointer-events: none;
-  z-index: 1;
 }
+
+
+/* ============================================================
+   SUN
+============================================================ */
 
 .gallery-sun {
   position: absolute;
-  top: 15px;
-  left: 25px;
-  opacity: 0.95;
+
+  top: 25px;
+
+  left: 30px;
+
+  width: 85px;
+
+  height: 85px;
+
+  animation: gallerySunFloat 5s ease-in-out infinite;
 }
 
-.gallery-rainbow {
-  position: absolute;
-  top: 20px;
-  right: 60px;
-  opacity: 0.95;
-}
 
-.peeking-bear {
-  position: absolute;
-  top: 35px;
-  right: 25px;
-  transform: rotate(15deg);
-}
+/* ============================================================
+   HEADER
+============================================================ */
 
-/* Header Styling */
 .gallery-header {
+  position: relative;
+
+  z-index: 3;
+
+  width: 100%;
+
+  max-width: 850px;
+
+  margin: 0 auto 45px;
+
   text-align: center;
-  max-width: 760px;
-  margin: 0 auto 45px auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
 }
+
+
+/* ============================================================
+   GALLERY TAG
+============================================================ */
 
 .gallery-tag {
   display: inline-flex;
+
   align-items: center;
-  gap: 8px;
-  color: #ff7a29;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  margin-bottom: 12px;
+
+  color: #ff6b35;
+
+  font-family:
+    var(--font-body),
+    'Quicksand',
+    'Nunito',
+    sans-serif;
+
+  font-size: 0.78rem;
+
   font-weight: 800;
-  font-size: 0.85rem;
+
   letter-spacing: 2px;
+
+  text-transform: uppercase;
 }
 
+.gallery-tag span:first-child,
+.gallery-tag span:last-child {
+  color: #ff9f1c;
+
+  font-size: 1rem;
+}
+
+
+/* ============================================================
+   TITLE
+============================================================ */
+
 .gallery-title {
-  font-size: 3.3rem;
+  margin: 0;
+
+  color: #1d426d;
+
+  font-family:
+    var(--font-heading),
+    'Fredoka',
+    'Nunito',
+    sans-serif;
+
+  font-size: clamp(
+    2.1rem,
+    4.5vw,
+    3.5rem
+  );
+
   font-weight: 800;
-  color: var(--primary-color, #1e3a8a);
-  font-family: var(--font-heading, sans-serif);
+
   line-height: 1.15;
 }
 
+
+/* ============================================================
+   SUBTITLE
+============================================================ */
+
 .gallery-subtitle {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: var(--text-muted, #64748b);
+  max-width: 750px;
+
+  margin: 15px auto 0;
+
+  color: #657792;
+
+  font-family:
+    var(--font-body),
+    'Quicksand',
+    'Nunito',
+    sans-serif;
+
+  font-size: 1rem;
+
+  line-height: 1.7;
 }
 
-/* Grid Layout Optimized for Landscape Images */
+
+/* ============================================================
+   NORMAL GALLERY GRID
+============================================================ */
+
 .gallery-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
+  position: relative;
 
-.gallery-row {
+  z-index: 3;
+
+  width: 100%;
+
   display: grid;
-  gap: 24px;
+
+  /*
+   * 4 images per row on desktop.
+   * All 17 images automatically flow into rows.
+   */
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 22px;
+
+  margin: 0 auto;
 }
 
-.row-top {
-  grid-template-columns: repeat(3, 1fr);
-}
 
-.row-bottom {
-  grid-template-columns: repeat(4, 1fr);
-}
+/* ============================================================
+   GALLERY CARD
+============================================================ */
 
-/* Photo Cards */
 .gallery-card {
   position: relative;
-  border-radius: 24px;
+
+  width: 100%;
+
+  min-width: 0;
+
   overflow: hidden;
-  background-color: var(--card-bg, #ffffff);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-  border: 5px solid #ffffff;
+
+  background: #ffffff;
+
+  border: 3px solid #ffffff;
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 8px 25px rgba(31, 52, 73, 0.10);
+
   cursor: pointer;
-  transition: transform 0.28s ease, box-shadow 0.28s ease;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
+
+
+/* ============================================================
+   CARD HOVER
+============================================================ */
 
 .gallery-card:hover {
-  transform: translateY(-6px) scale(1.01);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 18px 35px rgba(31, 52, 73, 0.16);
 }
 
-/* Landscape Aspect Ratio Framing (16:10 ratio for clear landscape display) */
+
+/* ============================================================
+   IMAGE WRAPPER
+============================================================ */
+
 .card-image-wrap {
   position: relative;
+
   width: 100%;
-  aspect-ratio: 16 / 10;
+
+  /*
+   * This is important.
+   * Every image gets the same card height.
+   */
+  aspect-ratio: 4 / 3;
+
   overflow: hidden;
-  background-color: #f1f5f9;
+
+  background: #eeeeee;
 }
+
+
+/* ============================================================
+   GALLERY IMAGE
+============================================================ */
 
 .card-image-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
   display: block;
-  transition: transform 0.4s ease;
+
+  width: 100%;
+
+  height: 100%;
+
+  /*
+   * Prevents portrait/landscape images
+   * from stretching the card.
+   */
+  object-fit: cover;
+
+  object-position: center;
+
+  transition:
+    transform 0.55s
+    cubic-bezier(0.16, 1, 0.3, 1),
+    filter 0.35s ease;
 }
 
-.gallery-card:hover .card-image-wrap img {
-  transform: scale(1.08);
+
+/* ============================================================
+   IMAGE HOVER ZOOM
+============================================================ */
+
+.gallery-card:hover
+.card-image-wrap img {
+  transform: scale(1.06);
+
+  filter: brightness(0.92);
 }
+
+
+/* ============================================================
+   IMAGE OVERLAY
+============================================================ */
 
 .card-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(30, 58, 95, 0.45);
+
+  inset: 0;
+
   display: flex;
+
   align-items: center;
+
   justify-content: center;
+
+  background:
+    rgba(7, 94, 84, 0.32);
+
   opacity: 0;
-  transition: opacity 0.25s ease;
+
+  transition:
+    opacity 0.3s ease;
 }
 
-.gallery-card:hover .card-overlay {
+
+.gallery-card:hover
+.card-overlay {
   opacity: 1;
 }
 
+
+/* ============================================================
+   VIEW PHOTO BUTTON
+============================================================ */
+
 .view-btn {
-  background-color: #ffffff;
-  color: var(--primary-color, #1e3a8a);
-  padding: 10px 20px;
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  padding: 10px 18px;
+
   border-radius: 50px;
+
+  background: #ffffff;
+
+  color: #075e54;
+
+  font-family:
+    var(--font-body),
+    'Quicksand',
+    'Nunito',
+    sans-serif;
+
+  font-size: 0.8rem;
+
   font-weight: 800;
-  font-size: 0.9rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.18);
+
+  transform:
+    translateY(12px);
+
+  transition:
+    transform 0.3s ease,
+    background 0.2s ease,
+    color 0.2s ease;
 }
 
-/* Floating Corner Doodles */
+
+.gallery-card:hover
+.view-btn {
+  transform:
+    translateY(0);
+}
+
+
+.view-btn:hover {
+  background: #075e54;
+
+  color: #ffffff;
+}
+
+
+.view-icon {
+  font-size: 0.85rem;
+}
+
+
+/* ============================================================
+   FLOATING DOODLE
+============================================================ */
+
 .floating-doodle {
   position: absolute;
-  top: -8px;
-  left: -8px;
-  font-size: 1.5rem;
-  z-index: 3;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.15));
+
+  top: 10px;
+
+  right: 10px;
+
+  z-index: 5;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 38px;
+
+  height: 38px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 255, 255, 0.95);
+
+  font-size: 1.15rem;
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.12);
+
+  pointer-events: none;
+
+  animation:
+    doodleFloat 3s ease-in-out infinite;
 }
 
-/* Bottom Left Sitting Bear */
-.sitting-teddy-graphic {
-  position: absolute;
-  bottom: -20px;
-  left: -15px;
-  z-index: 3;
+
+/* ============================================================
+   BOTTOM DECORATIONS
+============================================================ */
+
+.gallery-bottom-ground {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 70px;
+
+  margin-top: 25px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 50px;
+
   pointer-events: none;
 }
 
-/* Bottom Ground Items */
-.gallery-bottom-ground {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 36px;
-  margin-top: 40px;
-  font-size: 1.5rem;
+
+.ground-flower,
+.ground-plane {
+  font-size: 1.35rem;
+
+  animation:
+    groundDecorationFloat
+    4s ease-in-out infinite;
 }
 
-/* Lightbox Modal */
+
+.ground-plane {
+  animation-delay: 1s;
+}
+
+
+.ground-flower:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+
+.ground-flower:nth-child(4) {
+  animation-delay: 1.5s;
+}
+
+
+/* ============================================================
+   LIGHTBOX
+============================================================ */
+
 .gallery-lightbox {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(15, 23, 42, 0.85);
-  backdrop-filter: blur(8px);
+
+  inset: 0;
+
+  z-index: 9999;
+
   display: flex;
+
   align-items: center;
+
   justify-content: center;
-  z-index: 2000;
+
   padding: 20px;
-  animation: fadeIn 0.25s ease;
+
+  background:
+    rgba(8, 17, 29, 0.88);
+
+  backdrop-filter: blur(7px);
+
+  -webkit-backdrop-filter: blur(7px);
+
+  animation:
+    lightboxFadeIn 0.25s ease;
 }
+
+
+/* ============================================================
+   LIGHTBOX CONTENT
+============================================================ */
 
 .lightbox-content {
   position: relative;
-  max-width: 900px;
-  width: 100%;
-  background-color: var(--card-bg, #ffffff);
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+
+  width: min(
+    100%,
+    1050px
+  );
+
+  max-height: 92vh;
+
   display: flex;
+
   flex-direction: column;
+
+  overflow: hidden;
+
+  border-radius: 22px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.4);
+
+  animation:
+    lightboxScaleIn
+    0.3s
+    cubic-bezier(
+      0.16,
+      1,
+      0.3,
+      1
+    );
 }
 
-.lightbox-img-wrapper {
-  width: 100%;
-  max-height: 72vh;
-  background-color: #0f172a;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.lightbox-content img {
-  width: 100%;
-  max-height: 72vh;
-  object-fit: contain;
-}
-
-.lightbox-caption {
-  padding: 20px 24px;
-  background-color: var(--card-bg, #ffffff);
-}
-
-.lightbox-caption h3 {
-  font-size: 1.3rem;
-  color: var(--primary-color, #1e3a8a);
-  font-family: var(--font-heading, sans-serif);
-  margin-bottom: 4px;
-}
-
-.lightbox-caption p {
-  color: var(--text-muted, #64748b);
-  font-size: 0.95rem;
-}
+/* ============================================================
+   LIGHTBOX CLOSE
+============================================================ */
 
 .lightbox-close {
   position: absolute;
-  top: 15px;
-  right: 15px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.6);
-  color: #ffffff;
-  border: none;
-  font-size: 1.8rem;
-  line-height: 1;
-  cursor: pointer;
+
+  top: 14px;
+
+  right: 14px;
+
+  z-index: 20;
+
+  width: 42px;
+
+  height: 42px;
+
   display: flex;
+
   align-items: center;
+
   justify-content: center;
-  transition: background 0.2s ease;
-  z-index: 10;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background:
+    rgba(0, 0, 0, 0.60);
+
+  color: #ffffff;
+
+  font-size: 1.8rem;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
 }
+
 
 .lightbox-close:hover {
-  background: rgba(0, 0, 0, 0.9);
+  background:
+    rgba(0, 0, 0, 0.85);
+
+  transform:
+    rotate(90deg);
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+
+/* ============================================================
+   LIGHTBOX IMAGE
+============================================================ */
+
+.lightbox-img-wrapper {
+  width: 100%;
+
+  max-height: 76vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: hidden;
+
+  background: #111111;
 }
 
-/* Responsive Breakdown */
-@media screen and (max-width: 1100px) {
-  .row-top {
-    grid-template-columns: repeat(2, 1fr);
+
+.lightbox-img-wrapper img {
+  display: block;
+
+  width: 100%;
+
+  height: auto;
+
+  max-height: 76vh;
+
+  object-fit: contain;
+}
+
+
+/* ============================================================
+   LIGHTBOX CAPTION
+============================================================ */
+
+.lightbox-caption {
+  padding:
+    18px
+    24px
+    20px;
+
+  background: #ffffff;
+
+  text-align: center;
+}
+
+
+.lightbox-caption h3 {
+  margin: 0;
+
+  color: #1c2d42;
+
+  font-family:
+    var(--font-heading),
+    'Fredoka',
+    'Nunito',
+    sans-serif;
+
+  font-size: 1.25rem;
+
+  font-weight: 800;
+
+  line-height: 1.3;
+}
+
+
+.lightbox-caption p {
+  margin:
+    6px
+    0
+    0;
+
+  color: #075e54;
+
+  font-family:
+    var(--font-body),
+    'Quicksand',
+    'Nunito',
+    sans-serif;
+
+  font-size: 0.82rem;
+
+  font-weight: 700;
+}
+
+
+/* ============================================================
+   ANIMATIONS
+============================================================ */
+
+@keyframes gallerySunFloat {
+
+  0% {
+    transform:
+      translateY(0);
   }
-  .row-bottom {
-    grid-template-columns: repeat(2, 1fr);
+
+  50% {
+    transform:
+      translateY(-7px);
   }
+
+  100% {
+    transform:
+      translateY(0);
+  }
+
 }
 
-@media screen and (max-width: 640px) {
+
+@keyframes doodleFloat {
+
+  0% {
+    transform:
+      translateY(0)
+      rotate(-3deg);
+  }
+
+  50% {
+    transform:
+      translateY(-5px)
+      rotate(3deg);
+  }
+
+  100% {
+    transform:
+      translateY(0)
+      rotate(-3deg);
+  }
+
+}
+
+
+@keyframes groundDecorationFloat {
+
+  0% {
+    transform:
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      translateY(-6px);
+  }
+
+  100% {
+    transform:
+      translateY(0);
+  }
+
+}
+
+
+@keyframes lightboxFadeIn {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+}
+
+
+@keyframes lightboxScaleIn {
+
+  from {
+    opacity: 0;
+
+    transform:
+      scale(0.94)
+      translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      scale(1)
+      translateY(0);
+  }
+
+}
+
+
+/* ============================================================
+   TABLET
+============================================================ */
+
+@media screen and (max-width: 1000px) {
+
   .gallery-section {
-    padding: 50px 16px;
+    padding:
+      75px
+      18px
+      60px;
   }
+
+
+  .gallery-grid {
+
+    /*
+     * 2 columns on tablet
+     */
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+
+    gap: 18px;
+  }
+
 
   .gallery-title {
-    font-size: 2.1rem;
+    font-size:
+      clamp(
+        2rem,
+        5vw,
+        2.8rem
+      );
   }
 
-  .row-top,
-  .row-bottom {
-    grid-template-columns: 1fr;
+
+  .gallery-subtitle {
+    font-size: 0.92rem;
+  }
+
+
+  .gallery-sun {
+    left: 5px;
+
+    transform:
+      scale(0.8);
+
+    transform-origin:
+      top left;
+  }
+
+}
+
+
+/* ============================================================
+   MOBILE
+============================================================ */
+
+@media screen and (max-width: 600px) {
+
+  .gallery-section {
+    padding:
+      60px
+      12px
+      45px;
+  }
+
+
+  .gallery-header {
+    margin-bottom: 30px;
+
+    padding:
+      0
+      7px;
+  }
+
+
+  .gallery-tag {
+    font-size: 0.68rem;
+
+    letter-spacing:
+      1.5px;
+  }
+
+
+  .gallery-title {
+    font-size:
+      2rem;
+
+    line-height:
+      1.15;
+  }
+
+
+  .gallery-subtitle {
+    margin-top: 10px;
+
+    font-size:
+      0.84rem;
+
+    line-height:
+      1.6;
+  }
+
+
+  .gallery-grid {
+
+    /*
+     * 1 column on mobile
+     */
+    grid-template-columns:
+      1fr;
+
     gap: 16px;
   }
 
-  .gallery-sun,
-  .gallery-rainbow,
-  .peeking-bear,
-  .sitting-teddy-graphic {
-    display: none;
+
+  .gallery-card {
+    border-radius:
+      16px;
   }
+
+
+  .card-image-wrap {
+
+    /*
+     * Keeps mobile images consistent
+     */
+    aspect-ratio:
+      4 / 3;
+  }
+
+
+  .floating-doodle {
+
+    width: 33px;
+
+    height: 33px;
+
+    top: 8px;
+
+    right: 8px;
+
+    font-size:
+      1rem;
+  }
+
+
+  /*
+   * Touch devices
+   */
+  .gallery-card:active
+  .card-overlay {
+    opacity: 1;
+  }
+
+
+  .gallery-bottom-ground {
+
+    min-height: 55px;
+
+    gap: 25px;
+  }
+
+
+  .ground-flower,
+  .ground-plane {
+    font-size:
+      1.1rem;
+  }
+
+
+  /* ========================================================
+     MOBILE LIGHTBOX
+  ======================================================== */
+
+  .gallery-lightbox {
+    padding: 12px;
+  }
+
+
+  .lightbox-content {
+    width: 100%;
+
+    max-height: 90vh;
+
+    border-radius:
+      17px;
+  }
+
+
+  .lightbox-img-wrapper {
+    max-height:
+      70vh;
+  }
+
+
+  .lightbox-img-wrapper img {
+    max-height:
+      70vh;
+  }
+
+
+  .lightbox-caption {
+    padding:
+      14px
+      16px
+      16px;
+  }
+
+
+  .lightbox-caption h3 {
+    font-size:
+      1rem;
+  }
+
+
+  .lightbox-caption p {
+    font-size:
+      0.72rem;
+  }
+
+
+  .lightbox-close {
+    width: 36px;
+
+    height: 36px;
+
+    top: 9px;
+
+    right: 9px;
+
+    font-size:
+      1.5rem;
+  }
+
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+============================================================ */
+
+@media screen and (max-width: 400px) {
+
+  .gallery-section {
+    padding-left: 9px;
+
+    padding-right: 9px;
+  }
+
+
+  .gallery-title {
+    font-size:
+      1.7rem;
+  }
+
+
+  .gallery-subtitle {
+    font-size:
+      0.79rem;
+  }
+
+
+  .gallery-grid {
+    gap: 13px;
+  }
+
+
+  .gallery-card {
+    border-radius:
+      13px;
+
+    border-width:
+      2px;
+  }
+
+
+  .card-image-wrap {
+    aspect-ratio:
+      4 / 3;
+  }
+
+
+  .view-btn {
+    padding:
+      8px
+      14px;
+
+    font-size:
+      0.7rem;
+  }
+
+}
+
+
+/* ============================================================
+   ACCESSIBILITY
+============================================================ */
+
+.gallery-card:focus {
+  outline: none;
+}
+
+
+.gallery-card:focus-visible {
+  outline:
+    3px solid #075e54;
+
+  outline-offset:
+    3px;
+}
+
+
+.lightbox-close:focus-visible {
+  outline:
+    3px solid #ffffff;
+
+  outline-offset:
+    3px;
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .gallery-sun,
+  .floating-doodle,
+  .ground-flower,
+  .ground-plane {
+    animation: none;
+  }
+
+
+  .gallery-card,
+  .card-image-wrap img,
+  .card-overlay,
+  .view-btn,
+  .lightbox-content {
+    transition: none;
+  }
+
 }

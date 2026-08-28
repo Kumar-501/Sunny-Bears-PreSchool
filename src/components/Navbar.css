@@ -43,7 +43,10 @@
   flex-direction: column;
 }
 
-/* Primary Forte Font Styling with Spacing Gap */
+/* =========================================
+   FIXED BRAND TITLE SPACING
+   ========================================= */
+
 .brand-title {
   margin: 0;
   font-size: 1.45rem;
@@ -54,42 +57,63 @@
   white-space: nowrap;
   display: flex;
   align-items: center;
-  gap: 8px; /* Adds physical gap between SUNNY and BEARS */
+
+  /* Reduced gap between SUNNY and BEARS */
+  gap: 2px;
 }
 
-/* Multicolor SUNNY with Yellow Outline */
+/* Multicolor SUNNY */
 .word-sunny {
   font-family: 'Forte', cursive, sans-serif;
   display: inline-flex;
   font-weight: 400;
-  margin-right: 8px; /* Distinct gap separating SUNNY from BEARS */
-  text-shadow: 
+
+  /* Removed extra spacing */
+  margin-right: 0;
+
+  text-shadow:
     1px 1px 0 #ffd700,
-   -1px -1px 0 #ffd700,
+    -1px -1px 0 #ffd700,
     1px -1px 0 #ffd700,
-   -1px 1px 0 #ffd700;
+    -1px 1px 0 #ffd700;
 }
 
-.letter-s { color: #ff3b30; }  /* Red */
-.letter-u { color: #8e44ad; }  /* Purple */
-.letter-n1 { color: #1e3a5f; } /* Dark Blue */
-.letter-n2 { color: #2ecc71; } /* Green */
-.letter-y { color: #0284c7; }  /* Light Blue */
+.letter-s {
+  color: #ff3b30;
+}
 
-/* Red BEARS PRESCHOOL with Golden Yellow Outline */
+.letter-u {
+  color: #8e44ad;
+}
+
+.letter-n1 {
+  color: #1e3a5f;
+}
+
+.letter-n2 {
+  color: #2ecc71;
+}
+
+.letter-y {
+  color: #0284c7;
+}
+
+/* BEARS PRESCHOOL */
 .word-bears-preschool {
   font-family: 'Forte', cursive, sans-serif;
   color: #d63031;
   font-weight: 400;
-  text-shadow: 
+
+  text-shadow:
     1.2px 1.2px 0 #ffd700,
-   -1.2px -1.2px 0 #ffd700,
+    -1.2px -1.2px 0 #ffd700,
     1.2px -1.2px 0 #ffd700,
-   -1.2px 1.2px 0 #ffd700,
+    -1.2px 1.2px 0 #ffd700,
     0px 1.2px 0 #ffd700,
     0px -1.2px 0 #ffd700,
     1.2px 0px 0 #ffd700,
-   -1.2px 0px 0 #ffd700;
+    -1.2px 0px 0 #ffd700;
+
   letter-spacing: 0.5px;
 }
 
@@ -322,6 +346,7 @@
     opacity: 0;
     transform: translateY(-10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -339,6 +364,7 @@
   .nav-menu {
     gap: 12px;
   }
+
   .nav-item a {
     font-size: 0.85rem;
   }
@@ -401,5 +427,10 @@
 @media screen and (max-width: 480px) {
   .brand-title {
     font-size: 1.05rem;
+    gap: 1px;
+  }
+
+  .brand-logo-img {
+    height: 38px;
   }
 }

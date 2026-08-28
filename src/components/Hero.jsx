@@ -1,8 +1,8 @@
 import React from 'react';
 import './Hero.css';
 
-// Import local image from assets
-import independenceDayHeroImg from '../assets/IndependenceDayClassroom.png';
+// Import Gallery17 image from assets
+import gallery17HeroImg from '../assets/Gallery17.jpeg';
 
 const Hero = () => {
   return (
@@ -21,23 +21,17 @@ const Hero = () => {
             />
             <circle cx="43" cy="46" r="2.5" fill="#3D261C" />
             <circle cx="57" cy="46" r="2.5" fill="#3D261C" />
-            <path d="M44 54 Q50 58 56 54" stroke="#3D261C" strokeWidth="2.5" strokeLinecap="round" fill="none" />
+            <path
+              d="M44 54 Q50 58 56 54"
+              stroke="#3D261C"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              fill="none"
+            />
           </svg>
         </div>
 
-        {/* Floating Rainbow Top-Right */}
-        <div className="rainbow-decoration">
-          <svg viewBox="0 0 120 70" width="110" height="65" fill="none">
-            <path d="M10 60 A50 50 0 0 1 110 60" stroke="#FF5964" strokeWidth="6" strokeLinecap="round" />
-            <path d="M20 60 A40 40 0 0 1 100 60" stroke="#FFCA3A" strokeWidth="6" strokeLinecap="round" />
-            <path d="M30 60 A30 30 0 0 1 90 60" stroke="#8AC926" strokeWidth="6" strokeLinecap="round" />
-            <path d="M40 60 A20 20 0 0 1 80 60" stroke="#1982C4" strokeWidth="6" strokeLinecap="round" />
-            <circle cx="12" cy="60" r="10" fill="#FFFFFF" opacity="0.9" />
-            <circle cx="22" cy="56" r="12" fill="#FFFFFF" opacity="0.9" />
-            <circle cx="98" cy="56" r="12" fill="#FFFFFF" opacity="0.9" />
-            <circle cx="108" cy="60" r="10" fill="#FFFFFF" opacity="0.9" />
-          </svg>
-        </div>
+        {/* Rainbow decoration removed */}
       </div>
 
       {/* Main Hero Grid */}
@@ -72,31 +66,51 @@ const Hero = () => {
 
           <div className="hero-cta-group">
             <a href="#enquire" className="hero-btn-primary">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+              <svg
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
                 <path d="M12 20h9"></path>
                 <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
               </svg>
+
               <span>Enquire for Admission</span>
             </a>
 
             <a href="#programs" className="hero-btn-secondary">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+              <svg
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
                 <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
                 <line x1="16" y1="2" x2="16" y2="6"></line>
                 <line x1="8" y1="2" x2="8" y2="6"></line>
                 <line x1="3" y1="10" x2="21" y2="10"></line>
               </svg>
+
               <span>Explore Our Programs</span>
             </a>
           </div>
         </div>
 
-        {/* Right Column - Preschool Image & Floating Badge */}
+        {/* Right Column - Gallery17 Image & Floating Badge */}
         <div className="hero-image-container">
           <div className="image-frame">
             <img
-              src={independenceDayHeroImg}
-              alt="Sunny Bears Preschool Independence Day Classroom Celebration"
+              src={gallery17HeroImg}
+              alt="Sunny Bears Preschool children group activity"
               className="hero-kids-image"
             />
           </div>
@@ -109,6 +123,7 @@ const Hero = () => {
               <span className="dot">•</span>
               <span>Nurturing</span>
             </div>
+
             <div className="heart-icon">💛</div>
           </div>
         </div>
@@ -118,11 +133,21 @@ const Hero = () => {
       <div className="hero-features-bar">
         <div className="feature-item-card">
           <div className="feature-icon-wrapper circle-coral">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg
+              viewBox="0 0 24 24"
+              width="22"
+              height="22"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
               <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
               <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
             </svg>
           </div>
+
           <div className="feature-item-info">
             <h4>Programs for Ages 2–6</h4>
             <p>Play Group to UKG</p>
@@ -131,11 +156,21 @@ const Hero = () => {
 
         <div className="feature-item-card">
           <div className="feature-icon-wrapper circle-green">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg
+              viewBox="0 0 24 24"
+              width="22"
+              height="22"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
               <path d="M9 12l2 2 4-4"></path>
             </svg>
           </div>
+
           <div className="feature-item-info">
             <h4>Safe &amp; Caring Environment</h4>
             <p>Your child's safety is our priority</p>
@@ -144,13 +179,23 @@ const Hero = () => {
 
         <div className="feature-item-card">
           <div className="feature-icon-wrapper circle-yellow">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg
+              viewBox="0 0 24 24"
+              width="22"
+              height="22"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
               <circle cx="12" cy="12" r="10" />
               <path d="M8 14s1.5 2 4 2 4-2 4-2" />
               <line x1="9" y1="9" x2="9.01" y2="9" strokeWidth="3" />
               <line x1="15" y1="9" x2="15.01" y2="9" strokeWidth="3" />
             </svg>
           </div>
+
           <div className="feature-item-info">
             <h4>Fun Learning Activities</h4>
             <p>Learn through play &amp; explore</p>
@@ -159,13 +204,23 @@ const Hero = () => {
 
         <div className="feature-item-card">
           <div className="feature-icon-wrapper circle-purple">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg
+              viewBox="0 0 24 24"
+              width="22"
+              height="22"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
               <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
               <circle cx="9" cy="7" r="4"></circle>
               <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
               <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
             </svg>
           </div>
+
           <div className="feature-item-info">
             <h4>Caring &amp; Qualified Teachers</h4>
             <p>Experienced &amp; child-friendly staff</p>
@@ -174,11 +229,21 @@ const Hero = () => {
 
         <div className="feature-item-card">
           <div className="feature-icon-wrapper circle-blue">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg
+              viewBox="0 0 24 24"
+              width="22"
+              height="22"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
               <circle cx="12" cy="12" r="10"></circle>
               <polyline points="12 6 12 12 16 14"></polyline>
             </svg>
           </div>
+
           <div className="feature-item-info">
             <h4>Day Care &amp; After-School Care</h4>
             <p>Flexible care for working parents</p>
@@ -187,10 +252,20 @@ const Hero = () => {
 
         <div className="feature-item-card">
           <div className="feature-icon-wrapper circle-orange">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg
+              viewBox="0 0 24 24"
+              width="22"
+              height="22"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
               <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
             </svg>
           </div>
+
           <div className="feature-item-info">
             <h4>Admissions Open 2026–27</h4>
             <p>Limited seats. Enroll today!</p>
