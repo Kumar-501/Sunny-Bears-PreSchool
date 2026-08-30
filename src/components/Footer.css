@@ -91,8 +91,8 @@
    ============================================================ */
 
 .brand-title-gap {
-  width: 12px;
-  min-width: 12px;
+  width: 6px;
+  min-width: 6px;
   display: inline-block;
 }
 
@@ -813,8 +813,8 @@
   }
 
   .brand-title-gap {
-    width: 8px;
-    min-width: 8px;
+    width: 5px;
+    min-width: 5px;
   }
 
   .footer-about {
@@ -894,8 +894,8 @@
   }
 
   .brand-title-gap {
-    width: 6px;
-    min-width: 6px;
+    width: 4px;
+    min-width: 4px;
   }
 
   .footer-tagline {
@@ -943,8 +943,8 @@
   }
 
   .brand-title-gap {
-    width: 5px;
-    min-width: 5px;
+    width: 3px;
+    min-width: 3px;
   }
 
   .footer-about {

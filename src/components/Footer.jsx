@@ -437,44 +437,24 @@ const Footer = () => {
             <div className="footer-hours">
 
               <h5 className="footer-hours-title">
-                Opening Hours
+                Working Hours
               </h5>
 
               <div className="hours-list">
 
                 <div className="hours-row">
-                  <span>Sunday</span>
-                  <strong>Closed</strong>
-                </div>
-
-                <div className="hours-row">
-                  <span>Monday</span>
-                  <span>8:30 am–7 pm</span>
-                </div>
-
-                <div className="hours-row">
-                  <span>Tuesday</span>
-                  <span>8:30 am–7 pm</span>
-                </div>
-
-                <div className="hours-row">
-                  <span>Wednesday</span>
-                  <span>8:30 am–7 pm</span>
-                </div>
-
-                <div className="hours-row">
-                  <span>Thursday</span>
-                  <span>8:30 am–7 pm</span>
-                </div>
-
-                <div className="hours-row">
-                  <span>Friday</span>
-                  <span>8:30 am–7 pm</span>
+                  <span>Mon–Fri</span>
+                  <span>8:30 am–8 pm</span>
                 </div>
 
                 <div className="hours-row">
                   <span>Saturday</span>
-                  <span>10 am–1 pm</span>
+                  <span>9:30 am–1 pm</span>
+                </div>
+
+                <div className="hours-row">
+                  <span>Sunday</span>
+                  <strong>Holiday</strong>
                 </div>
 
               </div>

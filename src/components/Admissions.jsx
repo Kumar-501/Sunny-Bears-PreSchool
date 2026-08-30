@@ -544,17 +544,15 @@ const Admissions = () => {
                   </span>
                 </li>
 
-
                 <li>
                   <span className="check-badge">
                     ✓
                   </span>
 
                   <span>
-                    Extra-curricular activities
+                    Extracurricular activities
                   </span>
                 </li>
-
 
                 <li>
                   <span className="check-badge">

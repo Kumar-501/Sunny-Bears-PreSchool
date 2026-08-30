@@ -1,6 +1,15 @@
 import React, { useEffect } from 'react';
 import './Programs.css';
 
+import playGroupImage from '../assets/playgroup.jpg';
+import preKgImage from '../assets/prekg.jpg';
+import lkgImage from '../assets/lkg.jpg';
+import ukgImage from '../assets/ukg.jpg';
+import dayCareImage from '../assets/daycare.jpg';
+import summerCampImage from '../assets/summercamp (2).jpg';
+import eveningTuitionImage from '../assets/kg-8.jpg';
+import extraCurricularImage from '../assets/extracurricular.jpg';
+
 const PROGRAMS_DATA = [
   {
     id: 'play-group',
@@ -11,7 +20,7 @@ const PROGRAMS_DATA = [
     linkColor: 'link-yellow',
     borderColor: 'card-border-yellow',
     image:
-      'https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=800&q=80',
+      playGroupImage,
     alt:
       'Play Group children learning through play at Sunny Bears Preschool in Gerugambakkam, Chennai',
     description:
@@ -45,7 +54,7 @@ const PROGRAMS_DATA = [
     linkColor: 'link-blue',
     borderColor: 'card-border-blue',
     image:
-      'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80',
+      preKgImage,
     alt:
       'Pre-KG children participating in classroom activities at Sunny Bears Preschool Chennai',
     description:
@@ -79,7 +88,7 @@ const PROGRAMS_DATA = [
     linkColor: 'link-green',
     borderColor: 'card-border-green',
     image:
-      'https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=800&q=80',
+      lkgImage,
     alt:
       'LKG children learning language, phonics and numbers at Sunny Bears Preschool',
     description:
@@ -111,7 +120,7 @@ const PROGRAMS_DATA = [
     linkColor: 'link-pink',
     borderColor: 'card-border-pink',
     image:
-      'https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=800&q=80',
+      ukgImage,
     alt:
       'UKG children developing school readiness skills at Sunny Bears Preschool in Chennai',
     description:
@@ -143,7 +152,7 @@ const PROGRAMS_DATA = [
     linkColor: 'link-orange',
     borderColor: 'card-border-orange',
     image:
-      'https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&w=800&q=80',
+      dayCareImage,
     alt:
       'Children participating in supervised daycare activities at Sunny Bears Preschool Gerugambakkam',
     description:
@@ -174,7 +183,7 @@ const PROGRAMS_DATA = [
     linkColor: 'link-cyan',
     borderColor: 'card-border-cyan',
     image:
-      'https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&fit=crop&w=800&q=80',
+      summerCampImage,
     alt:
       'Children enjoying creative summer camp activities at Sunny Bears Preschool Chennai',
     description:
@@ -213,7 +222,7 @@ const PROGRAMS_DATA = [
     linkColor: 'link-purple',
     borderColor: 'card-border-purple',
     image:
-      'https://images.unsplash.com/photo-1472162072942-cd5147eb3902?auto=format&fit=crop&w=800&q=80',
+      eveningTuitionImage,
     alt:
       'Children receiving evening tuition and homework support at Sunny Bears',
     description:
@@ -245,7 +254,7 @@ const PROGRAMS_DATA = [
     linkColor: 'link-coral',
     borderColor: 'card-border-coral',
     image:
-      'https://images.unsplash.com/photo-1502086223501-7ea6ecd79368?auto=format&fit=crop&w=800&q=80',
+      extraCurricularImage,
     alt:
       'Children participating in art, music, movement and extracurricular activities at Sunny Bears Preschool',
     description:
