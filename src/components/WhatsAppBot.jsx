@@ -26,8 +26,7 @@ const QUICK_QUESTIONS = [
 
 const BOT_RESPONSES = {
   programs:
-    'We offer Playgroup (2–3 Yrs), Pre-KG (3–4 Yrs), LKG (4–5 Yrs), UKG (5–6 Yrs), Day Care (from 1 Yr onwards), Summer Camp, and Evening Tuition (KG to 8th Std)! 🎨',
-
+'We offer Playgroup (2–3 Yrs), Pre-KG (3–4 Yrs), LKG (4–5 Yrs), UKG (5–6 Yrs), Day Care (from 1 Yr onwards), Summer Camp, Evening Tuition (KG to 8th Std), and Extra-curricular Activities! 🎨',
   age:
     'School programs are for children aged 2 to 6 years. Day Care is available for little ones from 1 year onwards. Admissions for 2026–27 are currently OPEN! ⭐',
 

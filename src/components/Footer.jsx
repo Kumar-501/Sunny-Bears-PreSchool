@@ -69,7 +69,8 @@ const Footer = () => {
                     <span className="letter-y">Y</span>
                   </span>
 
-                  {' '}
+                  {/* Extra controlled gap */}
+                  <span className="brand-title-gap"></span>
 
                   <span className="word-bears-preschool">
                     BEARS PRESCHOOL
@@ -133,8 +134,61 @@ const Footer = () => {
                 </svg>
               </a>
 
+              {/* Facebook */}
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon facebook"
+                aria-label="Sunny Bears Preschool on Facebook"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073c0 6.019 4.388 11.003 10.125 11.927v-8.432H7.078v-3.495h3.047V9.41c0-3.024 1.792-4.695 4.533-4.695 1.312 0 2.686.235 2.686.235v2.973h-1.514c-1.491 0-1.956.93-1.956 1.887v2.263h3.328l-.532 3.495h-2.796V24C19.612 23.076 24 18.092 24 12.073z" />
+                </svg>
+              </a>
+
+              {/* Google */}
+              <a
+                href="https://share.google/D3q1r4Uz3keTMuS4g"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-icon google"
+                aria-label="Sunny Bears Preschool on Google"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill="#4285F4"
+                    d="M21.35 12.27c0-.79-.07-1.55-.2-2.27H12v4.3h5.24a4.48 4.48 0 0 1-1.94 2.94v2.45h3.14c1.84-1.69 2.91-4.18 2.91-7.42z"
+                  />
+                  <path
+                    fill="#34A853"
+                    d="M12 21.73c2.63 0 4.84-.87 6.45-2.35l-3.14-2.45c-.87.58-1.98.92-3.31.92-2.54 0-4.69-1.72-5.46-4.03H3.29v2.53A9.73 9.73 0 0 0 12 21.73z"
+                  />
+                  <path
+                    fill="#FBBC05"
+                    d="M6.54 13.82A5.85 5.85 0 0 1 6.23 12c0-.63.11-1.24.31-1.82V7.65H3.29A9.74 9.74 0 0 0 2.27 12c0 1.57.38 3.06 1.02 4.35l3.25-2.53z"
+                  />
+                  <path
+                    fill="#EA4335"
+                    d="M12 6.15c1.43 0 2.71.49 3.72 1.45l2.79-2.79C16.84 3.24 14.63 2.27 12 2.27a9.73 9.73 0 0 0-8.71 5.38l3.25 2.53C7.31 7.87 9.46 6.15 12 6.15z"
+                  />
+                </svg>
+              </a>
+
             </div>
           </div>
+
 
           {/* ==================================================
               COLUMN 2: QUICK LINKS
@@ -233,8 +287,11 @@ const Footer = () => {
             </ul>
           </div>
 
+
           {/* ==================================================
               COLUMN 3: PROGRAMS
+              These are now simple points/text.
+              No routing or page navigation.
           =================================================== */}
           <div className="footer-col">
 
@@ -242,55 +299,46 @@ const Footer = () => {
               Programs
             </h4>
 
-            <ul className="footer-links">
+            <ul className="footer-program-list">
 
               <li>
-                <a
-                  href="/programs#play-group"
-                >
-                  Play Group • Pre-KG
-                </a>
+                <span className="program-bullet"></span>
+                <span>Play Group • Pre-KG</span>
               </li>
 
               <li>
-                <a
-                  href="/programs#lkg"
-                >
-                  LKG • UKG
-                </a>
+                <span className="program-bullet"></span>
+                <span>LKG • UKG</span>
               </li>
 
               <li>
-                <a
-                  href="/programs#day-care"
-                >
-                  Day Care &amp; After-School Care
-                </a>
+                <span className="program-bullet"></span>
+                <span>Day Care &amp; After-School Care</span>
               </li>
 
               <li>
-                <a
-                  href="/programs#summer-camp"
-                >
-                  Summer Camp
-                </a>
+                <span className="program-bullet"></span>
+                <span>Summer Camp</span>
               </li>
 
               <li>
-                <a
-                  href="/programs#evening-tuition"
-                >
-                  Evening Tuition (KG–8th Std)
-                </a>
+                <span className="program-bullet"></span>
+                <span>Evening Tuition (KG–8th Std)</span>
+              </li>
+
+              <li>
+                <span className="program-bullet"></span>
+                <span>Extra-Curricular Activities</span>
               </li>
 
             </ul>
           </div>
 
+
           {/* ==================================================
               COLUMN 4: CONTACT INFORMATION
           =================================================== */}
-          <div className="footer-col">
+          <div className="footer-col footer-contact-column">
 
             <h4 className="footer-col-title">
               Contact
@@ -300,7 +348,6 @@ const Footer = () => {
 
               {/* Phone */}
               <li>
-
                 <span className="contact-icon">
                   <svg
                     width="16"
@@ -313,19 +360,18 @@ const Footer = () => {
                     strokeLinejoin="round"
                     aria-hidden="true"
                   >
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                   </svg>
                 </span>
 
                 <a href="tel:9791751787">
                   97917 51787
                 </a>
-
               </li>
+
 
               {/* Email */}
               <li>
-
                 <span className="contact-icon">
                   <svg
                     width="16"
@@ -338,24 +384,24 @@ const Footer = () => {
                     strokeLinejoin="round"
                     aria-hidden="true"
                   >
-                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                    <polyline points="22,6 12,13 2,6"></polyline>
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-1.1 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
                   </svg>
                 </span>
 
                 <a href="mailto:sunnybearspreschool@gmail.com">
                   sunnybearspreschool@gmail.com
                 </a>
-
               </li>
 
-              {/* Location */}
-              <li>
 
-                <span className="contact-icon">
+              {/* Address */}
+              <li className="contact-address-item">
+
+                <span className="contact-icon contact-address-icon">
                   <svg
-                    width="16"
-                    height="16"
+                    width="17"
+                    height="17"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -364,21 +410,124 @@ const Footer = () => {
                     strokeLinejoin="round"
                     aria-hidden="true"
                   >
-                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                    <circle cx="12" cy="10" r="3"></circle>
+                    <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z" />
+                    <circle
+                      cx="12"
+                      cy="10"
+                      r="3"
+                    />
                   </svg>
                 </span>
 
-                <span>
-                  Gerugambakkam, Chennai
+                <span className="contact-address">
+                  15C, Artha Royal Gardenia Phase2,
+                  Raniammal, 2nd St, Sri Pachaiammai Nagar,
+                  Periyapancheri, Gerugambakkam,
+                  Tamil Nadu 600128
                 </span>
 
               </li>
 
             </ul>
+
+
+            {/* ==================================================
+                OPENING HOURS
+            =================================================== */}
+            <div className="footer-hours">
+
+              <h5 className="footer-hours-title">
+                Opening Hours
+              </h5>
+
+              <div className="hours-list">
+
+                <div className="hours-row">
+                  <span>Sunday</span>
+                  <strong>Closed</strong>
+                </div>
+
+                <div className="hours-row">
+                  <span>Monday</span>
+                  <span>8:30 am–7 pm</span>
+                </div>
+
+                <div className="hours-row">
+                  <span>Tuesday</span>
+                  <span>8:30 am–7 pm</span>
+                </div>
+
+                <div className="hours-row">
+                  <span>Wednesday</span>
+                  <span>8:30 am–7 pm</span>
+                </div>
+
+                <div className="hours-row">
+                  <span>Thursday</span>
+                  <span>8:30 am–7 pm</span>
+                </div>
+
+                <div className="hours-row">
+                  <span>Friday</span>
+                  <span>8:30 am–7 pm</span>
+                </div>
+
+                <div className="hours-row">
+                  <span>Saturday</span>
+                  <span>10 am–1 pm</span>
+                </div>
+
+              </div>
+            </div>
+
+
+            {/* Google Location */}
+            <a
+              href="https://share.google/D3q1r4Uz3keTMuS4g"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-google-link"
+            >
+
+              <span className="google-link-icon">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill="#4285F4"
+                    d="M21.35 12.27c0-.79-.07-1.55-.2-2.27H12v4.3h5.24a4.48 4.48 0 0 1-1.94 2.94v2.45h3.14c1.84-1.69 2.91-4.18 2.91-7.42z"
+                  />
+
+                  <path
+                    fill="#34A853"
+                    d="M12 21.73c2.63 0 4.84-.87 6.45-2.35l-3.14-2.45c-.87.58-1.98.92-3.31.92-2.54 0-4.69-1.72-5.46-4.03H3.29v2.53A9.73 9.73 0 0 0 12 21.73z"
+                  />
+
+                  <path
+                    fill="#FBBC05"
+                    d="M6.54 13.82A5.85 5.85 0 0 1 6.23 12c0-.63.11-1.24.31-1.82V7.65H3.29A9.74 9.74 0 0 0 2.27 12c0 1.57.38 3.06 1.02 4.35l3.25-2.53z"
+                  />
+
+                  <path
+                    fill="#EA4335"
+                    d="M12 6.15c1.43 0 2.71.49 3.72 1.45l2.79-2.79C16.84 3.24 14.63 2.27 12 2.27a9.73 9.73 0 0 0-8.71 5.38l3.25 2.53C7.31 7.87 9.46 6.15 12 6.15z"
+                  />
+                </svg>
+              </span>
+
+              <span>
+                View us on Google
+              </span>
+
+            </a>
+
           </div>
 
         </div>
+
 
         {/* ==================================================
             DEVELOPER CREDIT
@@ -386,19 +535,21 @@ const Footer = () => {
         <div className="footer-developer-credit">
 
           <div className="developer-credit-line">
+
             <span className="developer-credit-label">
               Designed &amp; Developed by
             </span>
 
             <a
-              href="https://kumaravelan-portfolio.web.app/"
+              href="https://nest-of-codes-e4cl.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="developer-credit-link"
-              aria-label="Kumaravelan Developer Portfolio"
+              aria-label="Nest Of Codes"
             >
-              Kumaravelan K
+              Nest Of Codes
             </a>
+
           </div>
 
           <span className="developer-credit-tagline">
@@ -406,6 +557,7 @@ const Footer = () => {
           </span>
 
         </div>
+
 
         {/* ==================================================
             BOTTOM COPYRIGHT BAR

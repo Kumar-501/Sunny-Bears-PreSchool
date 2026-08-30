@@ -81,14 +81,14 @@ const About = () => {
 
                 <img
                   src={founderImg}
-                  alt="Sunny Bears Preschool Founder and Center Head"
+                  alt="Sunny Bears Preschool Founder and  Head"
                   className="founder-img"
                   loading="lazy"
                 />
 
                 <div className="founder-badge">
                   <span>
-                    Founder &amp; Center Head
+                    Founder &amp;  Head
                   </span>
                 </div>
 
@@ -140,7 +140,7 @@ const About = () => {
                 </p>
 
                 <p>
-                  As the Founder and Center Head, Mrs. Kayalvizhi
+                  As the Founder and  Head, Mrs. Kayalvizhi
                   Nandakumar believes that the early years of a
                   child lay the foundation for lifelong learning.
                   Her approach combines the principles of Montessori

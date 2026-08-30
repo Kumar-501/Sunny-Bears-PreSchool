@@ -1,8 +1,11 @@
-/* Contact Section Setup */
+/* ============================================================
+   CONTACT SECTION
+   ============================================================ */
+
 .contact-section {
   position: relative;
   width: 100%;
-  background-color: rgba(82, 183, 136, 0.15); /* Light Mint Accent */
+  background-color: rgba(82, 183, 136, 0.15);
   padding: 80px 24px;
   box-sizing: border-box;
 }
@@ -12,11 +15,16 @@
   margin: 0 auto;
 }
 
-/* Header Formatting */
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
 .contact-header {
   text-align: center;
   max-width: 700px;
   margin: 0 auto 50px auto;
+
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -35,15 +43,21 @@
   color: var(--primary-color);
   font-family: var(--font-heading);
   line-height: 1.15;
+  margin: 0;
 }
 
 .contact-subtitle {
   font-size: 1.08rem;
   line-height: 1.6;
   color: var(--text-muted);
+  margin: 0;
 }
 
-/* 3 Cards Grid */
+
+/* ============================================================
+   CONTACT CARDS
+   ============================================================ */
+
 .contact-cards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -54,118 +68,586 @@
 .contact-card {
   background-color: var(--card-bg);
   border-radius: 24px;
+
   padding: 32px 24px;
+
   text-align: center;
+
   display: flex;
   flex-direction: column;
   align-items: center;
+
   gap: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-  transition: transform 0.25s ease;
+
+  min-height: 280px;
+
+  box-sizing: border-box;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.04);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .contact-card:hover {
   transform: translateY(-5px);
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.08);
 }
+
+
+/* ============================================================
+   ICON
+   ============================================================ */
 
 .contact-icon-wrapper {
   width: 60px;
   height: 60px;
+  min-width: 60px;
+
   border-radius: 50%;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   margin-bottom: 4px;
+
+  flex-shrink: 0;
 }
 
-.circle-yellow { background-color: #fef08a; color: #d97706; }
-.circle-blue { background-color: #e0f2fe; color: #0284c7; }
-.circle-pink { background-color: #ffe4e6; color: #f43f5e; }
+.circle-yellow {
+  background-color: #fef08a;
+  color: #d97706;
+}
+
+.circle-blue {
+  background-color: #e0f2fe;
+  color: #0284c7;
+}
+
+.circle-pink {
+  background-color: #ffe4e6;
+  color: #f43f5e;
+}
+
+
+/* ============================================================
+   CARD TITLE
+   ============================================================ */
 
 .contact-card-title {
   font-size: 1.2rem;
+
   font-weight: 700;
+
   color: var(--primary-color);
+
   font-family: var(--font-heading);
+
+  margin: 0;
+
+  line-height: 1.3;
 }
+
+
+/* ============================================================
+   PHONE / EMAIL LINKS
+   ============================================================ */
 
 .contact-card-link {
   font-size: 1.05rem;
+
   font-weight: 700;
+
   color: #0284c7;
+
   text-decoration: none;
+
+  line-height: 1.5;
+
+  transition: color 0.2s ease;
 }
 
 .contact-card-link:hover {
+  color: #0369a1;
+
   text-decoration: underline;
 }
 
-.text-break {
-  word-break: break-all;
-  font-size: 0.95rem;
+
+/* ============================================================
+   EMAIL
+   ============================================================ */
+
+.email-link {
+  font-size: 0.98rem;
+
+  font-weight: 700;
+
+  color: #0284c7;
+
+  max-width: 100%;
+
+  word-break: break-word;
+
+  overflow-wrap: anywhere;
+
+  display: block;
 }
 
-.contact-address {
-  font-size: 0.88rem;
-  line-height: 1.5;
-  color: var(--text-muted);
+
+/* ============================================================
+   VISIT US CARD
+   ============================================================ */
+
+.contact-section .visit-card {
+  justify-content: flex-start;
+
+  min-height: 280px;
+
+  overflow: visible;
 }
 
-.landmark-tag {
+
+/* ============================================================
+   VISIT US ADDRESS
+   ============================================================ */
+
+/*
+   IMPORTANT:
+   The selector is intentionally very specific.
+   This prevents any global p/address styling from
+   hiding or overriding this text.
+*/
+
+.contact-section .visit-card .contact-address {
+  display: block !important;
+
+  visibility: visible !important;
+
+  opacity: 1 !important;
+
+  width: 100% !important;
+
+  max-width: 100% !important;
+
+  height: auto !important;
+
+  min-height: 70px;
+
+  margin: 8px 0 4px !important;
+
+  padding: 0 !important;
+
+  box-sizing: border-box;
+
+  color: #1261a0 !important;
+
+  font-size: 0.94rem !important;
+
+  font-weight: 600 !important;
+
+  line-height: 1.6 !important;
+
+  text-align: center;
+
+  white-space: normal !important;
+
+  word-break: normal;
+
+  overflow-wrap: break-word;
+
+  overflow: visible !important;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* ============================================================
+   LANDMARK
+   ============================================================ */
+
+.contact-section .visit-card .landmark-tag {
+  display: block !important;
+
+  visibility: visible !important;
+
+  opacity: 1 !important;
+
+  width: 100%;
+
+  margin-top: auto;
+
+  padding-top: 8px;
+
   font-size: 0.72rem;
+
   font-weight: 800;
+
   color: #ff7a29;
+
   letter-spacing: 0.5px;
-  margin-top: 4px;
+
+  line-height: 1.4;
+
+  text-align: center;
+
+  position: relative;
+
+  z-index: 2;
 }
 
-/* Map Frame */
+
+/* ============================================================
+   MAP
+   ============================================================ */
+
 .map-frame-wrapper {
   width: 100%;
+
   border-radius: 28px;
+
   overflow: hidden;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
-  border: 4px solid #ffffff;
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.08);
+
+  border:
+    4px solid #ffffff;
+
+  background-color: #ffffff;
 }
 
-/* Get Directions Button */
+.map-frame-wrapper iframe {
+  display: block;
+
+  width: 100%;
+
+  border: 0;
+}
+
+
+/* ============================================================
+   DIRECTIONS
+   ============================================================ */
+
 .directions-btn-wrapper {
   text-align: center;
+
   margin-top: 24px;
 }
 
 .btn-get-directions {
   display: inline-flex;
+
   align-items: center;
+
+  justify-content: center;
+
   gap: 8px;
-  background-color: var(--primary-color);
+
+  background-color:
+    var(--primary-color);
+
   color: #ffffff;
-  padding: 12px 28px;
+
+  padding:
+    12px 28px;
+
   border-radius: 50px;
+
   text-decoration: none;
+
   font-weight: 800;
+
   font-size: 0.95rem;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-  transition: transform 0.2s ease;
+
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.15);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .btn-get-directions:hover {
   transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 22px rgba(0, 0, 0, 0.18);
 }
 
-/* Responsive Breakdown */
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
 @media screen and (max-width: 992px) {
+
   .contact-cards-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
+
+  .contact-card {
+    min-height: 250px;
+  }
+
+  .contact-section .visit-card {
+    min-height: 250px;
+  }
+
+  .contact-section .visit-card .contact-address {
+    max-width: 650px !important;
+  }
 }
 
-@media screen and (max-width: 640px) {
+
+/* ============================================================
+   TABLET / SMALL LAPTOP
+   ============================================================ */
+
+@media screen and (max-width: 768px) {
+
   .contact-section {
-    padding: 50px 16px;
+    padding:
+      65px 20px;
   }
+
+  .contact-title {
+    font-size: 2.7rem;
+  }
+
+  .contact-subtitle {
+    font-size: 1rem;
+  }
+
+  .contact-card {
+    padding:
+      30px 22px;
+
+    min-height: 240px;
+  }
+
+  .contact-section .visit-card {
+    min-height: 240px;
+  }
+
+  .contact-section .visit-card .contact-address {
+    font-size: 0.94rem !important;
+
+    line-height: 1.55 !important;
+
+    max-width: 600px !important;
+  }
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media screen and (max-width: 640px) {
+
+  .contact-section {
+    padding:
+      50px 16px;
+  }
+
+  .contact-header {
+    margin-bottom: 35px;
+  }
+
+  .contact-tag {
+    font-size: 0.78rem;
+  }
+
   .contact-title {
     font-size: 2.2rem;
+    line-height: 1.2;
+  }
+
+  .contact-subtitle {
+    font-size: 0.94rem;
+    line-height: 1.55;
+  }
+
+  .contact-cards-grid {
+    gap: 18px;
+    margin-bottom: 28px;
+  }
+
+  .contact-card {
+    width: 100%;
+
+    min-height: 0;
+
+    padding:
+      28px 20px;
+
+    border-radius: 22px;
+  }
+
+  .contact-icon-wrapper {
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+  }
+
+  .contact-card-title {
+    font-size: 1.12rem;
+  }
+
+  .contact-card-link {
+    font-size: 1rem;
+  }
+
+  .email-link {
+    font-size: 0.9rem;
+  }
+
+
+  /* ==========================================================
+     MOBILE VISIT ADDRESS
+     ========================================================== */
+
+  .contact-section .visit-card {
+    min-height: 0;
+
+    overflow: visible;
+  }
+
+  .contact-section .visit-card .contact-address {
+    display: block !important;
+
+    visibility: visible !important;
+
+    opacity: 1 !important;
+
+    color: #1261a0 !important;
+
+    font-size: 0.9rem !important;
+
+    font-weight: 600 !important;
+
+    line-height: 1.55 !important;
+
+    min-height: auto;
+
+    height: auto !important;
+
+    margin:
+      8px 0 6px !important;
+  }
+
+  .contact-section .visit-card .landmark-tag {
+    margin-top: 6px;
+
+    font-size: 0.68rem;
+  }
+
+
+  /* MAP */
+
+  .map-frame-wrapper {
+    border-radius: 20px;
+
+    border-width: 3px;
+  }
+
+  .map-frame-wrapper iframe {
+    height: 300px;
+  }
+
+
+  /* DIRECTIONS */
+
+  .directions-btn-wrapper {
+    margin-top: 20px;
+  }
+
+  .btn-get-directions {
+    padding:
+      11px 24px;
+
+    font-size: 0.9rem;
+  }
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+   ============================================================ */
+
+@media screen and (max-width: 480px) {
+
+  .contact-section {
+    padding:
+      45px 14px;
+  }
+
+  .contact-title {
+    font-size: 2rem;
+  }
+
+  .contact-card {
+    padding:
+      26px 17px;
+  }
+
+  .contact-section .visit-card .contact-address {
+    font-size: 0.87rem !important;
+
+    line-height: 1.55 !important;
+  }
+
+  .contact-section .visit-card .landmark-tag {
+    font-size: 0.64rem;
+    letter-spacing: 0.35px;
+  }
+
+  .map-frame-wrapper iframe {
+    height: 280px;
+  }
+}
+
+
+/* ============================================================
+   VERY SMALL MOBILE
+   ============================================================ */
+
+@media screen and (max-width: 360px) {
+
+  .contact-title {
+    font-size: 1.8rem;
+  }
+
+  .contact-subtitle {
+    font-size: 0.88rem;
+  }
+
+  .contact-card {
+    padding:
+      24px 14px;
+  }
+
+  .contact-section .visit-card .contact-address {
+    font-size: 0.84rem !important;
+
+    line-height: 1.5 !important;
+  }
+
+  .email-link {
+    font-size: 0.84rem;
+  }
+
+  .contact-section .visit-card .landmark-tag {
+    font-size: 0.6rem;
   }
 }

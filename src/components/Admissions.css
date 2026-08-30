@@ -1,11 +1,18 @@
-/* Section Root Setup */
+/* ============================================================
+   ROOT
+   ============================================================ */
+
 .admissions-root {
   width: 100%;
   background-color: var(--bg-color);
   font-family: var(--font-body);
 }
 
-/* SECTION 1: ADMISSIONS FORM & HERO */
+
+/* ============================================================
+   ADMISSIONS SECTION
+   ============================================================ */
+
 .admissions-section {
   padding: 70px 24px;
   background-color: var(--bg-secondary);
@@ -29,133 +36,265 @@
   gap: 18px;
 }
 
+
+/* ============================================================
+   ADMISSIONS OPEN 2026–27
+   BOLD + INCREASED SIZE
+   ============================================================ */
+
 .admissions-tag {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+
   color: #ff7a29;
-  font-weight: 800;
-  font-size: 0.82rem;
-  letter-spacing: 1.5px;
+
+  /*
+   * Increased from the previous size.
+   */
+  font-size: 1.3rem;
+
+  /*
+   * Strong bold weight.
+   */
+  font-weight: 900;
+
+  /*
+   * Extra spacing makes the heading
+   * visually stronger.
+   */
+  letter-spacing: 2px;
+
+  line-height: 1.25;
+
+  margin-bottom: 2px;
+
+  text-transform: uppercase;
 }
+
+
+/* ============================================================
+   MAIN TITLE
+   ============================================================ */
 
 .admissions-main-title {
   font-size: 3.2rem;
+
   font-weight: 800;
+
   color: var(--primary-color);
+
   font-family: var(--font-heading);
+
   line-height: 1.15;
+
+  margin: 0;
 }
+
+
+/* ============================================================
+   DESCRIPTION
+   ============================================================ */
 
 .admissions-description {
   font-size: 1.05rem;
+
   line-height: 1.6;
+
   color: var(--text-muted);
+
+  margin: 0;
 }
+
+
+/* ============================================================
+   CHECK LIST
+   ============================================================ */
 
 .admissions-check-list {
   list-style: none;
+
   padding: 0;
+
   margin: 10px 0;
+
   display: flex;
+
   flex-direction: column;
+
   gap: 12px;
 }
 
 .admissions-check-list li {
   display: flex;
+
   align-items: center;
+
   gap: 12px;
+
   font-size: 0.98rem;
+
   font-weight: 700;
+
   color: var(--primary-color);
+
+  line-height: 1.45;
 }
 
 .check-badge {
   width: 22px;
+
   height: 22px;
+
   border-radius: 50%;
+
   background-color: #52b788;
+
   color: #ffffff;
+
   display: flex;
+
   align-items: center;
+
   justify-content: center;
+
   font-size: 0.78rem;
+
   font-weight: 800;
+
   flex-shrink: 0;
 }
 
-/* Call Direct Box */
+
+/* ============================================================
+   CALL BOX
+   ============================================================ */
+
 .direct-call-box {
   background-color: var(--primary-color);
+
   color: #ffffff;
+
   padding: 24px;
+
   border-radius: 20px;
+
   margin-top: 15px;
+
   display: flex;
+
   flex-direction: column;
+
   gap: 12px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.12);
 }
 
 .call-box-title {
   font-weight: 700;
+
   font-size: 1rem;
+
+  margin: 0;
 }
 
 .call-box-btn {
   display: inline-flex;
+
   align-items: center;
+
   gap: 8px;
+
   background-color: #ff7a29;
+
   color: #ffffff;
+
   padding: 10px 22px;
+
   border-radius: 50px;
+
   text-decoration: none;
+
   font-weight: 800;
+
   font-size: 0.95rem;
+
   align-self: flex-start;
-  transition: transform 0.2s ease;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .call-box-btn:hover {
   transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 18px rgba(255, 122, 41, 0.3);
 }
 
-/* Form Card Styling */
+
+/* ============================================================
+   FORM CARD
+   ============================================================ */
+
 .admissions-form-card {
   background-color: var(--card-bg);
+
   padding: 36px 32px;
+
   border-radius: 28px;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(0, 0, 0, 0.04);
+
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.08);
+
+  border:
+    1px solid rgba(0, 0, 0, 0.04);
 }
 
 .form-title {
   font-size: 1.8rem;
+
   font-weight: 800;
+
   color: var(--primary-color);
+
   font-family: var(--font-heading);
+
+  margin: 0;
 }
 
 .form-subtitle {
   font-size: 0.85rem;
+
   color: var(--text-muted);
-  margin-bottom: 24px;
+
+  margin:
+    8px 0 24px;
 }
 
 .enquiry-form {
   display: flex;
+
   flex-direction: column;
+
   gap: 16px;
 }
 
 .form-row {
   display: grid;
+
   grid-template-columns: 1fr 1fr;
+
   gap: 16px;
 }
 
 .form-group {
   display: flex;
+
   flex-direction: column;
+
   gap: 6px;
 }
 
@@ -165,289 +304,807 @@
 
 .form-group label {
   font-size: 0.85rem;
+
   font-weight: 700;
+
   color: var(--primary-color);
+
+  line-height: 1.35;
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
   padding: 12px 16px;
+
   border-radius: 50px;
-  border: 1.5px solid rgba(0, 0, 0, 0.1);
+
+  border:
+    1.5px solid rgba(0, 0, 0, 0.1);
+
   background-color: var(--bg-secondary);
+
   color: var(--text-color);
+
   font-size: 0.92rem;
+
   font-family: var(--font-body);
+
   outline: none;
-  transition: border-color 0.2s ease;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .form-group textarea {
   border-radius: 16px;
+
   resize: vertical;
+
+  min-height: 90px;
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
   border-color: #ff7a29;
+
+  box-shadow:
+    0 0 0 3px rgba(255, 122, 41, 0.08);
 }
+
+
+/* ============================================================
+   CHECKBOX
+   ============================================================ */
 
 .form-checkbox-group {
   display: flex;
+
   align-items: flex-start;
+
   gap: 10px;
+
   background-color: var(--bg-secondary);
+
   padding: 12px 16px;
+
   border-radius: 14px;
+
   margin-top: 4px;
 }
 
 .form-checkbox-group input {
   margin-top: 3px;
+
   cursor: pointer;
+
+  flex-shrink: 0;
 }
 
 .form-checkbox-group label {
   font-size: 0.82rem;
+
   color: var(--text-muted);
+
   line-height: 1.4;
+
   cursor: pointer;
 }
 
+
+/* ============================================================
+   SUBMIT BUTTON
+   ============================================================ */
+
 .form-submit-btn {
-  background: linear-gradient(135deg, #ff7a29 0%, #e66617 100%);
+  background:
+    linear-gradient(
+      135deg,
+      #ff7a29 0%,
+      #e66617 100%
+    );
+
   color: #ffffff;
+
   padding: 14px 28px;
+
   border-radius: 50px;
+
   border: none;
+
   font-weight: 800;
+
   font-size: 1rem;
+
   font-family: var(--font-heading);
+
   cursor: pointer;
+
   margin-top: 8px;
-  box-shadow: 0 6px 18px rgba(255, 122, 41, 0.3);
-  transition: transform 0.2s ease;
+
+  box-shadow:
+    0 6px 18px rgba(255, 122, 41, 0.3);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
 }
 
 .form-submit-btn:hover {
   transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 24px rgba(255, 122, 41, 0.35);
 }
 
-.form-success-message {
-  text-align: center;
-  padding: 40px 20px;
+.form-submit-btn:disabled {
+  opacity: 0.7;
+
+  cursor: not-allowed;
+
+  transform: none !important;
 }
 
-.success-icon { font-size: 3rem; margin-bottom: 10px; }
-.form-success-message h4 { font-size: 1.5rem; color: var(--primary-color); }
 
-/* SECTION 2: ADMISSION PROCESS */
+/* ============================================================
+   OPTIONAL LABEL
+   ============================================================ */
+
+.optional-label {
+  font-size: 0.82em;
+
+  font-weight: 500;
+
+  opacity: 0.7;
+}
+
+
+/* ============================================================
+   PROCESS SECTION
+   ============================================================ */
+
 .process-section {
   padding: 80px 24px;
+
   background-color: var(--bg-color);
 }
 
 .process-container {
   max-width: 1350px;
+
   margin: 0 auto;
 }
 
 .section-header-center {
   text-align: center;
+
   max-width: 700px;
-  margin: 0 auto 50px auto;
+
+  margin: 0 auto 50px;
+
   display: flex;
+
   flex-direction: column;
+
   gap: 8px;
 }
 
 .sub-tag {
   color: #ff7a29;
+
   font-weight: 800;
+
   font-size: 0.82rem;
+
   letter-spacing: 1.5px;
 }
 
 .section-main-title {
   font-size: 3rem;
+
   font-weight: 800;
+
   color: var(--primary-color);
+
   font-family: var(--font-heading);
+
+  margin: 0;
+
+  line-height: 1.15;
 }
+
+
+/* ============================================================
+   PROCESS CARDS
+   ============================================================ */
 
 .process-steps-wrapper {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
   gap: 24px;
-  position: relative;
 }
 
 .step-card {
   background-color: var(--card-bg);
+
   border-radius: 20px;
+
   padding: 24px 20px;
+
   text-align: center;
+
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
+
   gap: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
-  border: 1px solid rgba(0, 0, 0, 0.04);
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.04);
+
+  border:
+    1px solid rgba(0, 0, 0, 0.04);
 }
 
 .step-icon {
   width: 54px;
+
   height: 54px;
+
   border-radius: 50%;
+
   display: flex;
+
   align-items: center;
+
   justify-content: center;
+
   font-size: 1.5rem;
 }
 
-.step-yellow { background-color: #fef9c3; }
-.step-blue { background-color: #e0f2fe; }
-.step-green { background-color: #dcfce7; }
-.step-pink { background-color: #fce7f3; }
+.step-yellow {
+  background-color: #fef9c3;
+}
+
+.step-blue {
+  background-color: #e0f2fe;
+}
+
+.step-green {
+  background-color: #dcfce7;
+}
+
+.step-pink {
+  background-color: #fce7f3;
+}
 
 .step-num {
   font-size: 0.75rem;
+
   font-weight: 800;
+
   color: #ff7a29;
+
   letter-spacing: 1px;
 }
 
 .step-card h4 {
   font-size: 1.1rem;
+
   font-weight: 700;
+
   color: var(--primary-color);
+
   font-family: var(--font-heading);
+
+  margin: 0;
 }
 
 .step-card p {
   font-size: 0.86rem;
+
   color: var(--text-muted);
+
   line-height: 1.45;
+
+  margin: 0;
 }
 
 .process-cta-center {
   text-align: center;
+
   margin-top: 40px;
 }
 
 .btn-process-cta {
   display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
   background-color: #ff7a29;
+
   color: #ffffff;
+
   padding: 12px 28px;
+
   border-radius: 50px;
-  text-decoration: none;
+
+  border: none;
+
   font-weight: 800;
+
   font-size: 0.95rem;
+
+  font-family: inherit;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
-/* SECTION 3: TESTIMONIALS */
+.btn-process-cta:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px rgba(255, 122, 41, 0.25);
+}
+
+
+/* ============================================================
+   TESTIMONIALS
+   ============================================================ */
+
 .testimonials-section {
   padding: 80px 24px;
+
   background-color: var(--bg-secondary);
+
+  overflow: hidden;
 }
 
 .testimonials-container {
   max-width: 1350px;
+
   margin: 0 auto;
 }
 
 .rating-badge {
   display: inline-block;
+
   background-color: #fef9c3;
+
   color: #854d0e;
+
   padding: 6px 16px;
+
   border-radius: 50px;
+
   font-weight: 800;
+
   font-size: 0.88rem;
+
   margin-top: 6px;
+
   align-self: center;
 }
 
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+
+/* ============================================================
+   CAROUSEL
+   ============================================================ */
+
+.testimonials-carousel {
+  position: relative;
+
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  margin-top: 10px;
 }
+
+.testimonial-viewport {
+  width: 100%;
+
+  overflow: hidden;
+
+  border-radius: 26px;
+}
+
+.testimonial-track {
+  display: flex;
+
+  width: 100%;
+
+  transition:
+    transform 0.65s
+    cubic-bezier(
+      0.4,
+      0,
+      0.2,
+      1
+    );
+
+  will-change: transform;
+}
+
+.testimonial-page {
+  min-width: 100%;
+
+  width: 100%;
+
+  box-sizing: border-box;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 22px;
+
+  padding: 5px;
+}
+
+
+/* ============================================================
+   TESTIMONIAL CARD
+   ============================================================ */
 
 .testimonial-card {
+  min-width: 0;
+
+  min-height: 360px;
+
   background-color: var(--card-bg);
+
   border-radius: 24px;
-  padding: 24px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+
+  padding: 26px 24px;
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.06);
+
+  border:
+    1px solid rgba(0, 0, 0, 0.04);
+
   display: flex;
+
   flex-direction: column;
-  gap: 16px;
+
+  gap: 15px;
+
+  box-sizing: border-box;
 }
 
-.quote-mark {
-  font-size: 3rem;
-  color: #facc15;
-  line-height: 1;
+
+/* ============================================================
+   REVIEW HEADER
+   ============================================================ */
+
+.testimonial-review-header {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  width: 100%;
 }
 
-.quote-box p {
-  font-size: 0.92rem;
-  line-height: 1.6;
-  color: var(--text-color);
-  font-style: italic;
+.testimonial-avatar {
+  width: 48px;
+
+  height: 48px;
+
+  min-width: 48px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #ffffff;
+
+  font-size: 1.05rem;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
 }
 
-.parent-info {
-  margin-top: auto;
+.avatar-purple {
+  background-color: #7654b7;
+}
+
+.avatar-red {
+  background-color: #c63b16;
+}
+
+.avatar-green {
+  background-color: #69a33e;
+}
+
+.avatar-slate {
+  background-color: #405560;
+}
+
+.avatar-pink {
+  background-color: #c96c93;
+}
+
+.avatar-akila {
+  background-color: #5b7183;
+}
+
+.testimonial-user-info {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 2px;
 }
 
 .parent-name {
   font-size: 1rem;
+
   font-weight: 700;
-  color: var(--primary-color);
+
+  color: var(--text-color);
+
+  margin: 0;
+
+  line-height: 1.3;
 }
 
-.parent-subtext {
-  font-size: 0.7rem;
-  font-weight: 800;
-  color: #ff7a29;
-  letter-spacing: 0.5px;
+.google-review-menu {
+  margin-left: auto;
+
+  color: #202124;
+
+  font-size: 1.7rem;
+
+  line-height: 1;
+
+  transform: translateY(-3px);
+}
+
+
+/* ============================================================
+   STARS
+   ============================================================ */
+
+.testimonial-rating-row {
+  display: flex;
+
+  align-items: center;
+
+  margin-top: 3px;
+}
+
+.testimonial-stars {
+  color: #fbbc04;
+
+  font-size: 1.22rem;
+
+  letter-spacing: 1px;
+
+  line-height: 1;
+}
+
+
+/* ============================================================
+   REVIEW CONTENT
+   ============================================================ */
+
+.quote-box {
+  flex: 1;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  overflow: hidden;
+}
+
+.quote-box p {
+  font-size: 0.93rem;
+
+  line-height: 1.58;
+
+  color: var(--text-color);
+
+  margin: 0;
+
+  font-style: normal;
+
+  display: -webkit-box;
+
+  -webkit-box-orient: vertical;
+
+  -webkit-line-clamp: 10;
+
+  line-clamp: 10;
+
+  overflow: hidden;
+}
+
+
+/* ============================================================
+   ARROWS
+   ============================================================ */
+
+.testimonial-arrow {
+  width: 48px;
+
+  height: 48px;
+
+  min-width: 48px;
+
+  border-radius: 50%;
+
+  border:
+    1px solid rgba(0, 0, 0, 0.08);
+
+  background-color: var(--card-bg);
+
+  color: var(--primary-color);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 2rem;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease;
+
+  flex-shrink: 0;
+
+  z-index: 3;
+}
+
+.testimonial-arrow:hover {
+  transform: scale(1.06);
+
+  background-color: #ff7a29;
+
+  color: #ffffff;
+}
+
+
+/* ============================================================
+   DOTS
+   ============================================================ */
+
+.testimonial-dots {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  margin-top: 24px;
+}
+
+.testimonial-dot {
+  width: 9px;
+
+  height: 9px;
+
+  padding: 0;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background-color:
+    rgba(27, 54, 93, 0.22);
+
+  cursor: pointer;
+
+  transition:
+    width 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.testimonial-dot.active {
+  width: 28px;
+
+  border-radius: 20px;
+
+  background-color: #ff7a29;
 }
 
 .testimonial-footer-note {
   text-align: center;
+
   font-size: 0.88rem;
+
   color: var(--text-muted);
-  margin-top: 36px;
+
+  margin:
+    30px auto 0;
+
+  max-width: 700px;
+
+  line-height: 1.5;
 }
 
-/* SECTION 4: FAQS ACCORDION */
+
+/* ============================================================
+   FAQ
+   ============================================================ */
+
 .faqs-section {
   padding: 80px 24px;
+
   background-color: var(--bg-color);
 }
 
 .faqs-container {
   max-width: 850px;
+
   margin: 0 auto;
 }
 
 .faqs-list {
   display: flex;
+
   flex-direction: column;
+
   gap: 14px;
 }
 
 .faq-item {
   background-color: var(--card-bg);
+
   border-radius: 18px;
-  border: 1.5px solid rgba(0, 0, 0, 0.05);
+
+  border:
+    1.5px solid rgba(0, 0, 0, 0.05);
+
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-  transition: border-color 0.2s ease;
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.03);
 }
 
 .faq-item.open {
@@ -456,178 +1113,96 @@
 
 .faq-question-btn {
   width: 100%;
+
   background: transparent;
+
   border: none;
+
   padding: 18px 22px;
+
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
+
   text-align: left;
+
   font-size: 1.05rem;
+
   font-weight: 700;
+
   color: var(--primary-color);
+
   font-family: var(--font-heading);
+
   cursor: pointer;
 }
 
 .faq-chevron {
   font-size: 0.8rem;
+
   color: #ff7a29;
+
   margin-left: 12px;
+
+  flex-shrink: 0;
 }
 
 .faq-answer-content {
-  padding: 0 22px 20px 22px;
+  padding:
+    0 22px 20px;
+
   font-size: 0.95rem;
+
   line-height: 1.6;
+
   color: var(--text-muted);
 }
 
-/* SECTION 5: CAMPUS LOCATION & HOURS BANNER */
-.location-footer-section {
-  padding: 60px 24px 80px 24px;
-  background-color: var(--bg-secondary);
+.faq-answer-content p {
+  margin: 0;
 }
 
-.location-container {
-  max-width: 1350px;
-  margin: 0 auto;
-}
 
-.location-card {
-  background-color: var(--card-bg);
-  border-radius: 28px;
-  padding: 36px 40px;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 40px;
-  align-items: center;
-}
-
-.location-info h3 {
-  font-size: 1.6rem;
-  color: var(--primary-color);
-  font-family: var(--font-heading);
-  margin-bottom: 12px;
-}
-
-.address-text {
-  font-size: 0.95rem;
-  color: var(--text-muted);
-  line-height: 1.6;
-  margin-bottom: 12px;
-}
-
-.contact-details p {
-  font-size: 0.95rem;
-  color: var(--text-color);
-  margin-bottom: 6px;
-}
-
-.contact-details a {
-  color: #0284c7;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.hours-info h4 {
-  font-size: 1.2rem;
-  color: var(--primary-color);
-  font-family: var(--font-heading);
-  margin-bottom: 12px;
-}
-
-.hours-info ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.hours-info li {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.92rem;
-  color: var(--text-muted);
-  border-bottom: 1px dashed rgba(0, 0, 0, 0.08);
-  padding-bottom: 6px;
-}
-
-.hours-info strong {
-  color: var(--primary-color);
-}
-
-.closed-tag {
-  color: #ef4444 !important;
-}
-
-/* Responsive Breakdown */
-@media screen and (max-width: 1024px) {
-  .admissions-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .process-steps-wrapper {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .testimonials-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .location-card {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media screen and (max-width: 640px) {
-  .admissions-main-title,
-  .section-main-title {
-    font-size: 2.2rem;
-  }
-
-  .form-row {
-    grid-template-columns: 1fr;
-  }
-
-  .process-steps-wrapper {
-    grid-template-columns: 1fr;
-  }
-
-  .location-card {
-    padding: 24px;
-  }
-}/* =========================================
-   SUCCESS APPLICATION POPUP
-========================================= */
+/* ============================================================
+   SUCCESS POPUP
+   ============================================================ */
 
 .admission-success-overlay {
   position: fixed;
+
   inset: 0;
+
   z-index: 5000;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   padding: 20px;
 
-  background: rgba(10, 30, 45, 0.55);
+  background:
+    rgba(10, 30, 45, 0.55);
+
   backdrop-filter: blur(5px);
 
-  animation: successOverlayFade 0.25s ease;
+  animation:
+    successOverlayFade
+    0.25s ease;
 }
 
 .admission-success-popup {
   position: relative;
 
   width: 100%;
+
   max-width: 440px;
 
-  padding: 42px 32px 34px;
+  padding:
+    42px 32px 34px;
 
   background: #ffffff;
 
@@ -636,72 +1211,85 @@
   text-align: center;
 
   box-shadow:
-    0 25px 70px rgba(0, 0, 0, 0.25);
+    0 25px 70px
+    rgba(0, 0, 0, 0.25);
 
-  animation: successPopupScale 0.3s
-    cubic-bezier(0.16, 1, 0.3, 1);
+  animation:
+    successPopupScale
+    0.3s
+    cubic-bezier(
+      0.16,
+      1,
+      0.3,
+      1
+    );
 }
 
 .success-popup-close {
   position: absolute;
 
   top: 14px;
+
   right: 18px;
 
   width: 36px;
+
   height: 36px;
 
   border: none;
+
   border-radius: 50%;
 
   background: #f2f4f5;
+
   color: #1c2d42;
 
   font-size: 1.7rem;
+
   line-height: 1;
 
   cursor: pointer;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
-
-  transition: all 0.2s ease;
-}
-
-.success-popup-close:hover {
-  background: #e2e7e9;
-  transform: rotate(90deg);
 }
 
 .success-popup-icon {
   width: 78px;
+
   height: 78px;
 
-  margin: 0 auto 20px;
+  margin:
+    0 auto 20px;
 
   border-radius: 50%;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   background: #25b86b;
+
   color: #ffffff;
 
   font-size: 2.5rem;
-  font-weight: 800;
 
-  box-shadow:
-    0 10px 30px rgba(37, 184, 107, 0.3);
+  font-weight: 800;
 }
 
 .admission-success-popup h3 {
-  margin: 0 0 14px;
+  margin:
+    0 0 14px;
 
   color: #1c2d42;
 
   font-size: 1.65rem;
+
   font-weight: 800;
 
   line-height: 1.3;
@@ -731,67 +1319,33 @@
   padding: 13px 20px;
 
   border: none;
+
   border-radius: 50px;
 
-  background: var(--hero-gradient, linear-gradient(135deg, #ff7a3d, #ffb703));
+  background:
+    linear-gradient(
+      135deg,
+      #ff7a3d,
+      #ffb703
+    );
 
   color: #ffffff;
 
   font-size: 0.95rem;
+
   font-weight: 800;
 
   cursor: pointer;
 
-  transition: all 0.25s ease;
-
   box-shadow:
-    0 8px 20px rgba(255, 122, 61, 0.25);
-}
-
-.success-popup-btn:hover {
-  transform: translateY(-2px);
-
-  box-shadow:
-    0 12px 25px rgba(255, 122, 61, 0.35);
+    0 8px 20px
+    rgba(255, 122, 61, 0.25);
 }
 
 
-/* =========================================
-   OPTIONAL LABEL
-========================================= */
-
-.optional-label {
-  font-size: 0.82em;
-  font-weight: 500;
-  opacity: 0.7;
-}
-
-
-/* =========================================
-   SUBMIT BUTTON LOADING STATE
-========================================= */
-
-.form-submit-btn:disabled {
-  opacity: 0.7;
-  cursor: not-allowed;
-  transform: none !important;
-}
-
-
-/* =========================================
-   PROCESS CTA BUTTON FIX
-========================================= */
-
-.btn-process-cta {
-  border: none;
-  cursor: pointer;
-  font-family: inherit;
-}
-
-
-/* =========================================
-   POPUP ANIMATIONS
-========================================= */
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
 
 @keyframes successOverlayFade {
   from {
@@ -804,100 +1358,478 @@
 }
 
 @keyframes successPopupScale {
+
   from {
     opacity: 0;
-    transform: scale(0.85) translateY(20px);
+
+    transform:
+      scale(0.85)
+      translateY(20px);
   }
 
   to {
     opacity: 1;
-    transform: scale(1) translateY(0);
+
+    transform:
+      scale(1)
+      translateY(0);
   }
+
 }
 
 
-/* =========================================
-   RESPONSIVE - TABLET
-========================================= */
+/* ============================================================
+   TABLET
+   ============================================================ */
 
-@media screen and (max-width: 768px) {
-  .admission-success-popup {
-    max-width: 420px;
+@media screen and (max-width: 1024px) {
 
-    padding:
-      38px
-      24px
-      28px;
+  .admissions-grid {
+    grid-template-columns: 1fr;
 
-    border-radius: 24px;
+    gap: 40px;
   }
 
-  .success-popup-icon {
-    width: 70px;
-    height: 70px;
+  .process-steps-wrapper {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
 
+
+  .testimonial-page {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .testimonial-page
+  .testimonial-card:nth-child(3) {
+    display: none;
+  }
+
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media screen and (max-width: 768px) {
+
+  .admissions-section {
+    padding:
+      55px 20px;
+  }
+
+
+  /*
+   * ADMISSIONS OPEN
+   * Still larger and bold on tablet.
+   */
+
+  .admissions-tag {
+    font-size: 1.12rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+  }
+
+
+  .admissions-main-title,
+  .section-main-title {
+    font-size: 2.5rem;
+  }
+
+
+  .admissions-form-card {
+    padding:
+      30px 24px;
+  }
+
+
+  .testimonials-section {
+    padding:
+      65px 18px;
+  }
+
+
+  .testimonial-page {
+    gap: 16px;
+  }
+
+
+  .testimonial-card {
+    padding:
+      24px 20px;
+
+    min-height: 360px;
+  }
+
+
+  .testimonial-arrow {
+    width: 42px;
+
+    height: 42px;
+
+    min-width: 42px;
+  }
+
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media screen and (max-width: 640px) {
+
+  .admissions-section {
+    padding:
+      45px 18px;
+  }
+
+
+  /*
+   * MOBILE ADMISSION TEXT
+   */
+
+  .admissions-tag {
+    font-size: 1rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1.2px;
+
+    line-height: 1.35;
+  }
+
+
+  .admissions-main-title,
+  .section-main-title {
     font-size: 2.2rem;
   }
 
-  .admission-success-popup h3 {
-    font-size: 1.4rem;
+
+  .admissions-description {
+    font-size: 0.96rem;
   }
 
-  .admission-success-popup p {
-    font-size: 0.92rem;
-  }
-}
 
-
-/* =========================================
-   RESPONSIVE - MOBILE
-========================================= */
-
-@media screen and (max-width: 480px) {
-  .admission-success-overlay {
-    padding: 16px;
+  .form-row {
+    grid-template-columns: 1fr;
   }
 
-  .admission-success-popup {
+
+  .admissions-form-card {
     padding:
-      34px
-      20px
-      24px;
+      26px 18px;
 
     border-radius: 22px;
   }
 
-  .success-popup-close {
-    top: 10px;
-    right: 10px;
 
-    width: 34px;
-    height: 34px;
+  .form-title {
+    font-size: 1.55rem;
   }
+
+
+  /* PROCESS */
+
+  .process-section {
+    padding:
+      60px 18px;
+  }
+
+  .process-steps-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* TESTIMONIALS */
+
+  .testimonials-section {
+    padding:
+      60px 14px;
+  }
+
+
+  .testimonial-page {
+    grid-template-columns:
+      repeat(1, minmax(0, 1fr));
+
+    gap: 0;
+  }
+
+
+  .testimonial-page
+  .testimonial-card:nth-child(2),
+  .testimonial-page
+  .testimonial-card:nth-child(3) {
+    display: none;
+  }
+
+
+  .testimonial-card {
+    min-height: 350px;
+
+    padding:
+      22px 18px;
+
+    border-radius: 20px;
+  }
+
+
+  .testimonial-avatar {
+    width: 44px;
+
+    height: 44px;
+
+    min-width: 44px;
+  }
+
+
+  .parent-name {
+    font-size: 0.94rem;
+  }
+
+
+  .testimonial-stars {
+    font-size: 1rem;
+  }
+
+
+  .quote-box p {
+    font-size: 0.88rem;
+
+    line-height: 1.55;
+
+    -webkit-line-clamp: 12;
+
+    line-clamp: 12;
+  }
+
+
+  .testimonial-arrow {
+    width: 36px;
+
+    height: 36px;
+
+    min-width: 36px;
+
+    font-size: 1.6rem;
+  }
+
+
+  /* FAQ */
+
+  .faqs-section {
+    padding:
+      60px 18px;
+  }
+
+
+  .faq-question-btn {
+    padding:
+      16px 18px;
+
+    font-size: 0.95rem;
+  }
+
+
+  .faq-answer-content {
+    padding:
+      0 18px 18px;
+
+    font-size: 0.88rem;
+  }
+
+
+  /* POPUP */
+
+  .admission-success-overlay {
+    padding: 16px;
+  }
+
+
+  .admission-success-popup {
+    padding:
+      34px 20px 24px;
+
+    border-radius: 22px;
+  }
+
 
   .success-popup-icon {
     width: 64px;
-    height: 64px;
 
-    margin-bottom: 16px;
+    height: 64px;
 
     font-size: 2rem;
   }
+
 
   .admission-success-popup h3 {
     font-size: 1.25rem;
   }
 
-  .admission-success-popup p {
-    font-size: 0.88rem;
-    line-height: 1.55;
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+   ============================================================ */
+
+@media screen and (max-width: 480px) {
+
+  .admissions-main-title,
+  .section-main-title {
+    font-size: 2rem;
   }
 
-  .success-popup-btn {
-    margin-top: 22px;
 
-    padding: 12px 18px;
+  .admissions-tag {
+    font-size: 0.92rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+  }
+
+
+  .direct-call-box {
+    padding: 20px;
+
+    border-radius: 18px;
+  }
+
+
+  .call-box-btn {
+    width: 100%;
+
+    justify-content: center;
+
+    box-sizing: border-box;
+  }
+
+
+  .testimonial-card {
+    min-height: 365px;
+
+    padding:
+      20px 16px;
+  }
+
+
+  .testimonial-arrow {
+    width: 32px;
+
+    height: 32px;
+
+    min-width: 32px;
+
+    font-size: 1.45rem;
+  }
+
+
+  .testimonial-review-header {
+    gap: 10px;
+  }
+
+
+  .testimonial-avatar {
+    width: 40px;
+
+    height: 40px;
+
+    min-width: 40px;
 
     font-size: 0.9rem;
   }
+
+
+  .parent-name {
+    font-size: 0.88rem;
+  }
+
+
+  .quote-box p {
+    font-size: 0.84rem;
+
+    line-height: 1.5;
+  }
+
+
+  .testimonial-stars {
+    font-size: 0.92rem;
+  }
+
+}
+
+
+/* ============================================================
+   VERY SMALL MOBILE
+   ============================================================ */
+
+@media screen and (max-width: 360px) {
+
+  .admissions-section {
+    padding:
+      38px 14px;
+  }
+
+
+  .admissions-tag {
+    font-size: 0.85rem;
+
+    font-weight: 900;
+
+    letter-spacing: 0.8px;
+  }
+
+
+  .admissions-main-title,
+  .section-main-title {
+    font-size: 1.8rem;
+  }
+
+
+  .admissions-form-card {
+    padding:
+      22px 14px;
+  }
+
+
+  .testimonials-carousel {
+    gap: 3px;
+  }
+
+
+  .testimonial-arrow {
+    width: 29px;
+
+    height: 29px;
+
+    min-width: 29px;
+
+    font-size: 1.3rem;
+  }
+
+
+  .testimonial-card {
+    padding:
+      18px 14px;
+
+    min-height: 380px;
+  }
+
+
+  .testimonial-stars {
+    font-size: 0.82rem;
+  }
+
+
+  .quote-box p {
+    font-size: 0.82rem;
+  }
+
 }
