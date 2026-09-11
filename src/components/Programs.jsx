@@ -26,6 +26,9 @@ const PROGRAMS_DATA = [
     linkColor: 'link-yellow',
     borderColor: 'card-border-yellow',
     image: playGroupImage,
+    // Where the important part of the photo sits, so cropping never
+    // cuts off faces. Tweak per-photo if a picture still looks off.
+    imagePosition: 'center',
     alt:
       'Play Group children learning through play at Sunny Bears Preschool in Gerugambakkam, Chennai',
     description:
@@ -59,6 +62,7 @@ const PROGRAMS_DATA = [
     linkColor: 'link-blue',
     borderColor: 'card-border-blue',
     image: preKgImage,
+    imagePosition: 'center',
     alt:
       'Pre-KG children participating in classroom activities at Sunny Bears Preschool Chennai',
     description:
@@ -92,6 +96,7 @@ const PROGRAMS_DATA = [
     linkColor: 'link-green',
     borderColor: 'card-border-green',
     image: lkgImage,
+    imagePosition: 'top',
     alt:
       'LKG children learning language, phonics and numbers at Sunny Bears Preschool',
     description:
@@ -123,6 +128,7 @@ const PROGRAMS_DATA = [
     linkColor: 'link-pink',
     borderColor: 'card-border-pink',
     image: ukgImage,
+    imagePosition: 'top',
     alt:
       'UKG children developing school readiness skills at Sunny Bears Preschool in Chennai',
     description:
@@ -154,6 +160,7 @@ const PROGRAMS_DATA = [
     linkColor: 'link-orange',
     borderColor: 'card-border-orange',
     image: dayCareImage,
+    imagePosition: 'center',
     alt:
       'Children participating in supervised daycare activities at Sunny Bears Preschool Gerugambakkam',
     description:
@@ -184,6 +191,7 @@ const PROGRAMS_DATA = [
     linkColor: 'link-cyan',
     borderColor: 'card-border-cyan',
     image: summerCampImage,
+    imagePosition: 'top',
     alt:
       'Children enjoying creative summer camp activities at Sunny Bears Preschool Chennai',
     description:
@@ -222,6 +230,7 @@ const PROGRAMS_DATA = [
     linkColor: 'link-purple',
     borderColor: 'card-border-purple',
     image: eveningTuitionImage,
+    imagePosition: 'center',
     alt:
       'Children receiving evening tuition and homework support at Sunny Bears',
     description:
@@ -253,6 +262,7 @@ const PROGRAMS_DATA = [
     linkColor: 'link-coral',
     borderColor: 'card-border-coral',
     image: extraCurricularImage,
+    imagePosition: 'top',
     alt:
       'Children participating in art, music, movement and extracurricular activities at Sunny Bears Preschool',
     description:
@@ -595,6 +605,7 @@ const Programs = () => {
                     alt={prog.alt}
                     loading="lazy"
                     decoding="async"
+                    style={{ objectPosition: prog.imagePosition || 'center' }}
                   />
                 ) : (
                   <div

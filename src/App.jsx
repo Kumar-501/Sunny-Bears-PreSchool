@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+import AdmissionBanner from './components/Admissionbanner';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Footer from './components/Footer';
@@ -12,6 +13,12 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App">
+
+        {/* =====================================================
+            ADMISSION BANNER
+            Sits above the navbar on every page/route.
+        ====================================================== */}
+        <AdmissionBanner />
 
         <Routes>
 
