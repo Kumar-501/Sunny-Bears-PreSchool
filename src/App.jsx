@@ -14,12 +14,6 @@ function App() {
     <BrowserRouter>
       <div className="App">
 
-        {/* =====================================================
-            ADMISSION BANNER
-            Sits above the navbar on every page/route.
-        ====================================================== */}
-        <AdmissionBanner />
-
         <Routes>
 
           {/* =====================================================
@@ -30,6 +24,13 @@ function App() {
             element={
               <>
                 <Navbar />
+
+                {/* =====================================================
+                    ADMISSION BANNER
+                    Sits directly below the navbar.
+                ====================================================== */}
+                <AdmissionBanner />
+
                 <Home />
                 <Footer />
                 <WhatsAppBot />
@@ -46,6 +47,7 @@ function App() {
             element={
               <>
                 <Navbar />
+                <AdmissionBanner />
                 <BestPreschoolInChennai />
                 <Footer />
                 <WhatsAppBot />

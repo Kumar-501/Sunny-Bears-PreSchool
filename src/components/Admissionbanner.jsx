@@ -4,11 +4,11 @@ import './Admissionbanner.css';
 /**
  * AdmissionBanner
  * A continuously scrolling ticker announcing admissions,
- * meant to sit above the main navbar (very top of the page).
+ * meant to sit below the main navbar.
  *
  * Usage:
- *   <AdmissionBanner />
  *   <Navbar />
+ *   <AdmissionBanner />
  *   <Hero />
  */
 
