@@ -5,10 +5,9 @@ import './Gallery.css';
  * Gallery16.jpeg -> Used in About Us / Founder section
  * Gallery17.jpeg -> Used in Hero section
  *
- * Gallery page uses the remaining 17 images:
+ * Gallery page uses the remaining images:
  * Gallery01 - Gallery15
- * Gallery18
- * Gallery19
+ * Gallery18 - Gallery26
  */
 
 // ============================================================
@@ -32,6 +31,13 @@ import gallery14Img from '../assets/Gallery14.jpeg';
 import gallery15Img from '../assets/Gallery15.jpeg';
 import gallery18Img from '../assets/Gallery18.jpeg';
 import gallery19Img from '../assets/Gallery19.jpeg';
+import gallery20Img from '../assets/Gallery20.jpeg';
+import gallery21Img from '../assets/Gallery21.jpeg';
+import gallery22Img from '../assets/Gallery22.jpeg';
+import gallery23Img from '../assets/Gallery23.jpeg';
+import gallery24Img from '../assets/Gallery24.jpeg';
+import gallery25Img from '../assets/Gallery25.jpeg';
+import gallery26Img from '../assets/Gallery26.jpeg';
 
 // ============================================================
 // GALLERY DATA
@@ -156,6 +162,55 @@ const GALLERY_IMAGES = [
     category: 'School Life',
     src: gallery19Img,
     doodle: '🌼',
+  },
+  {
+    id: 20,
+    title: 'Little Learners Exploring',
+    category: 'Learning',
+    src: gallery20Img,
+    doodle: '🧩',
+  },
+  {
+    id: 21,
+    title: 'Storytime at Sunny Bears',
+    category: 'Classroom',
+    src: gallery21Img,
+    doodle: '📖',
+  },
+  {
+    id: 22,
+    title: 'Outdoor Play & Fun',
+    category: 'Activities',
+    src: gallery22Img,
+    doodle: '🌤️',
+  },
+  {
+    id: 23,
+    title: 'Art & Craft Time',
+    category: 'Activities',
+    src: gallery23Img,
+    doodle: '✂️',
+  },
+  {
+    id: 24,
+    title: 'Music & Movement',
+    category: 'Activities',
+    src: gallery24Img,
+    doodle: '🎵',
+  },
+  {
+    id: 25,
+    title: 'Sunny Bears Friendship Moments',
+    category: 'Memories',
+    src: gallery25Img,
+    doodle: '🤗',
+  },
+  {
+    id: 26,
+    title: 'Growing Together at Sunny Bears',
+    category: 'School Life',
+    src: gallery26Img,
+    doodle: '🌻',
   },
 ];
 
@@ -298,7 +353,7 @@ const Gallery = () => {
 
         {/* ====================================================
             NORMAL IMAGE GRID
-            ALL 17 IMAGES ARE DISPLAYED HERE
+            ALL IMAGES ARE DISPLAYED HERE
         ==================================================== */}
 
         <div className="gallery-grid">

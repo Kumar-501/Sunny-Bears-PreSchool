@@ -1,14 +1,20 @@
 import React, { useEffect } from 'react';
 import './Programs.css';
 
-import playGroupImage from '../assets/playgroup.jpg';
-import preKgImage from '../assets/prekg.jpg';
-import lkgImage from '../assets/lkg.jpg';
-import ukgImage from '../assets/ukg.jpg';
-import dayCareImage from '../assets/daycare.jpg';
-import summerCampImage from '../assets/summercamp (2).jpg';
-import eveningTuitionImage from '../assets/kg-8.jpg';
-import extraCurricularImage from '../assets/extracurricular.jpg';
+/*
+ * ============================================================
+ * PROGRAM IMAGES
+ * ============================================================
+ */
+
+import playGroupImage from '../assets/playgroup.jpeg';
+import preKgImage from '../assets/prekgprogrm.jpeg';
+import lkgImage from '../assets/lkgprograms.jpeg';
+import ukgImage from '../assets/ukgprograms.jpeg';
+import dayCareImage from '../assets/daycareprograms.jpeg';
+import summerCampImage from '../assets/summercampprograms.jpeg';
+import eveningTuitionImage from '../assets/eveningtutionprograam.jpeg';
+import extraCurricularImage from '../assets/Extracurricular.jpeg';
 
 const PROGRAMS_DATA = [
   {
@@ -19,8 +25,7 @@ const PROGRAMS_DATA = [
     iconColor: 'icon-yellow',
     linkColor: 'link-yellow',
     borderColor: 'card-border-yellow',
-    image:
-      playGroupImage,
+    image: playGroupImage,
     alt:
       'Play Group children learning through play at Sunny Bears Preschool in Gerugambakkam, Chennai',
     description:
@@ -53,8 +58,7 @@ const PROGRAMS_DATA = [
     iconColor: 'icon-blue',
     linkColor: 'link-blue',
     borderColor: 'card-border-blue',
-    image:
-      preKgImage,
+    image: preKgImage,
     alt:
       'Pre-KG children participating in classroom activities at Sunny Bears Preschool Chennai',
     description:
@@ -87,8 +91,7 @@ const PROGRAMS_DATA = [
     iconColor: 'icon-green',
     linkColor: 'link-green',
     borderColor: 'card-border-green',
-    image:
-      lkgImage,
+    image: lkgImage,
     alt:
       'LKG children learning language, phonics and numbers at Sunny Bears Preschool',
     description:
@@ -119,8 +122,7 @@ const PROGRAMS_DATA = [
     iconColor: 'icon-pink',
     linkColor: 'link-pink',
     borderColor: 'card-border-pink',
-    image:
-      ukgImage,
+    image: ukgImage,
     alt:
       'UKG children developing school readiness skills at Sunny Bears Preschool in Chennai',
     description:
@@ -151,8 +153,7 @@ const PROGRAMS_DATA = [
     iconColor: 'icon-orange',
     linkColor: 'link-orange',
     borderColor: 'card-border-orange',
-    image:
-      dayCareImage,
+    image: dayCareImage,
     alt:
       'Children participating in supervised daycare activities at Sunny Bears Preschool Gerugambakkam',
     description:
@@ -182,8 +183,7 @@ const PROGRAMS_DATA = [
     iconColor: 'icon-cyan',
     linkColor: 'link-cyan',
     borderColor: 'card-border-cyan',
-    image:
-      summerCampImage,
+    image: summerCampImage,
     alt:
       'Children enjoying creative summer camp activities at Sunny Bears Preschool Chennai',
     description:
@@ -221,8 +221,7 @@ const PROGRAMS_DATA = [
     iconColor: 'icon-purple',
     linkColor: 'link-purple',
     borderColor: 'card-border-purple',
-    image:
-      eveningTuitionImage,
+    image: eveningTuitionImage,
     alt:
       'Children receiving evening tuition and homework support at Sunny Bears',
     description:
@@ -253,8 +252,7 @@ const PROGRAMS_DATA = [
     iconColor: 'icon-coral',
     linkColor: 'link-coral',
     borderColor: 'card-border-coral',
-    image:
-      extraCurricularImage,
+    image: extraCurricularImage,
     alt:
       'Children participating in art, music, movement and extracurricular activities at Sunny Bears Preschool',
     description:
@@ -591,12 +589,37 @@ const Programs = () => {
 
               {/* Program Photo */}
               <div className="program-image-frame">
-                <img
-                  src={prog.image}
-                  alt={prog.alt}
-                  loading="lazy"
-                  decoding="async"
-                />
+                {prog.image ? (
+                  <img
+                    src={prog.image}
+                    alt={prog.alt}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                ) : (
+                  <div
+                    className="program-image-placeholder"
+                    role="img"
+                    aria-label={prog.alt}
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      width="40"
+                      height="40"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden="true"
+                    >
+                      <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                      <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                      <path d="M21 15l-5-5L5 21"></path>
+                    </svg>
+                    <span>Image coming soon</span>
+                  </div>
+                )}
               </div>
 
               {/* Description */}

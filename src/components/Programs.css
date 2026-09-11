@@ -93,7 +93,7 @@
 }
 
 .programs-main-title {
-  font-size: 3.4rem;
+  font-size: clamp(1.9rem, 4.2vw, 3.4rem);
   font-weight: 800;
   color: var(--primary-color);
   font-family: var(--font-heading);
@@ -105,7 +105,7 @@
 .title-orange { color: #ff7a29; }
 
 .programs-subtitle {
-  font-size: 1.1rem;
+  font-size: clamp(0.92rem, 1.6vw, 1.1rem);
   line-height: 1.6;
   color: var(--text-muted);
 }
@@ -129,6 +129,7 @@
   border: 2px solid transparent;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   position: relative;
+  min-width: 0;
 }
 
 .program-card:hover {
@@ -150,6 +151,7 @@
 .card-top-header {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 10px;
   width: 100%;
 }
@@ -181,6 +183,8 @@
   font-family: var(--font-heading);
   flex-grow: 1;
   line-height: 1.25;
+  min-width: 0;
+  word-break: break-word;
 }
 
 .age-badge {
@@ -205,12 +209,38 @@
   height: 140px;
   border-radius: 16px;
   overflow: hidden;
+  background: #f1f5f9;
 }
 
 .program-image-frame img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Image Placeholder (shown until real photo is set) */
+.program-image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: #94a3b8;
+  background: repeating-linear-gradient(
+    45deg,
+    #f1f5f9,
+    #f1f5f9 10px,
+    #e8edf3 10px,
+    #e8edf3 20px
+  );
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 8px;
 }
 
 .program-card-desc {
@@ -253,35 +283,177 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 40px;
   margin-top: 45px;
   font-size: 1.6rem;
 }
 
-/* Responsive Breakdown */
-@media screen and (max-width: 1200px) {
+/* ============================================================
+   RESPONSIVE BREAKPOINTS
+   ============================================================ */
+
+/* Large desktop / wide monitors */
+@media screen and (min-width: 1600px) {
+  .programs-container {
+    max-width: 1480px;
+  }
+
   .programs-grid {
-    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+}
+
+/* Small desktop / laptop: keep 4 columns but tighten spacing */
+@media screen and (max-width: 1400px) {
+  .programs-grid {
+    gap: 20px;
+  }
+}
+
+/* Large tablet / small laptop: 3 columns */
+@media screen and (max-width: 1200px) and (min-width: 901px) {
+  .programs-grid {
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
 
   .abc-blocks { display: none; }
 }
 
+/* Tablet: 2 columns */
+@media screen and (max-width: 900px) {
+  .programs-section {
+    padding: 65px 20px 50px;
+  }
+
+  .programs-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .abc-blocks { display: none; }
+
+  .programs-header {
+    margin-bottom: 40px;
+  }
+}
+
+/* Large mobile / small tablet portrait */
+@media screen and (max-width: 760px) {
+  .programs-header {
+    max-width: 92%;
+    gap: 10px;
+  }
+
+  .program-image-frame {
+    height: 150px;
+  }
+
+  .prog-doodle.heart { display: none; }
+}
+
+/* Mobile: single column */
 @media screen and (max-width: 640px) {
   .programs-section {
     padding: 50px 16px;
   }
 
   .programs-main-title {
-    font-size: 2.2rem;
+    font-size: clamp(1.7rem, 7vw, 2.2rem);
+  }
+
+  .programs-subtitle {
+    font-size: 0.92rem;
   }
 
   .programs-grid {
     grid-template-columns: 1fr;
     gap: 18px;
   }
-}/* ============================================================
+
+  .program-card {
+    padding: 18px;
+    border-radius: 20px;
+  }
+
+  .program-image-frame {
+    height: 180px;
+  }
+
+  .program-card-title {
+    font-size: 1.05rem;
+  }
+
+  .programs-bottom-ground {
+    gap: 24px;
+    margin-top: 32px;
+    font-size: 1.3rem;
+  }
+
+  .prog-doodle.plane,
+  .prog-doodle.star {
+    display: none;
+  }
+}
+
+/* Small mobile */
+@media screen and (max-width: 420px) {
+  .programs-section {
+    padding: 45px 12px;
+  }
+
+  .programs-top-tag {
+    font-size: 0.75rem;
+  }
+
+  .programs-main-title {
+    font-size: 1.6rem;
+  }
+
+  .card-top-header {
+    gap: 8px;
+  }
+
+  .program-icon-wrap {
+    width: 34px;
+    height: 34px;
+  }
+
+  .age-badge {
+    font-size: 0.64rem;
+    padding: 4px 10px;
+  }
+
+  .program-image-frame {
+    height: 160px;
+  }
+
+  .program-card-desc {
+    font-size: 0.84rem;
+  }
+
+  .program-link {
+    font-size: 0.86rem;
+  }
+}
+
+/* Very small mobile */
+@media screen and (max-width: 340px) {
+  .programs-main-title {
+    font-size: 1.4rem;
+  }
+
+  .program-image-frame {
+    height: 140px;
+  }
+
+  .program-card {
+    padding: 14px;
+  }
+}
+
+/* ============================================================
    PROGRAMS SEO CONTENT
    ============================================================ */
 
@@ -464,5 +636,28 @@
     width: 100%;
     box-sizing: border-box;
     font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .programs-seo-content {
+    padding: 26px 14px;
+    border-radius: 18px;
+  }
+
+  .programs-seo-content h2 {
+    font-size: 1.3rem;
+  }
+}
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  .program-card,
+  .program-link .arrow,
+  .programs-seo-button {
+    transition: none;
   }
 }

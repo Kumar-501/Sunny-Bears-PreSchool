@@ -191,8 +191,10 @@
   display: grid;
 
   /*
-   * 4 images per row on desktop.
-   * All 17 images automatically flow into rows.
+   * 4 images per row on large desktop.
+   * All images automatically flow into rows.
+   * Breakpoints below progressively reduce column
+   * count so cards never get too narrow or too wide.
    */
   grid-template-columns:
     repeat(4, minmax(0, 1fr));
@@ -456,6 +458,8 @@
   align-items: center;
 
   justify-content: center;
+
+  flex-wrap: wrap;
 
   gap: 50px;
 
@@ -804,6 +808,54 @@
 
 
 /* ============================================================
+   LARGE DESKTOP / WIDE SCREENS
+   (keeps cards from stretching too wide on ultra-wide monitors)
+============================================================ */
+
+@media screen and (min-width: 1600px) {
+
+  .gallery-container {
+    max-width: 1520px;
+  }
+
+  .gallery-grid {
+    gap: 26px;
+  }
+
+}
+
+
+/* ============================================================
+   SMALL DESKTOP / LAPTOP
+============================================================ */
+
+@media screen and (max-width: 1300px) {
+
+  .gallery-section {
+    padding:
+      80px
+      20px
+      65px;
+  }
+
+  .gallery-grid {
+
+    /*
+     * 3 columns on small desktop / large tablet
+     */
+    grid-template-columns:
+      repeat(
+        3,
+        minmax(0, 1fr)
+      );
+
+    gap: 20px;
+  }
+
+}
+
+
+/* ============================================================
    TABLET
 ============================================================ */
 
@@ -855,6 +907,27 @@
 
     transform-origin:
       top left;
+  }
+
+}
+
+
+/* ============================================================
+   LARGE MOBILE / SMALL TABLET (PORTRAIT)
+============================================================ */
+
+@media screen and (max-width: 760px) {
+
+  .gallery-header {
+    max-width: 92%;
+  }
+
+  .gallery-grid {
+    gap: 16px;
+  }
+
+  .lightbox-content {
+    width: 96%;
   }
 
 }
@@ -1097,6 +1170,64 @@
 
     font-size:
       0.7rem;
+  }
+
+}
+
+
+/* ============================================================
+   VERY SMALL MOBILE
+============================================================ */
+
+@media screen and (max-width: 340px) {
+
+  .gallery-title {
+    font-size: 1.5rem;
+  }
+
+  .floating-doodle {
+    width: 28px;
+    height: 28px;
+    font-size: 0.85rem;
+  }
+
+  .lightbox-caption h3 {
+    font-size: 0.92rem;
+  }
+
+}
+
+
+/* ============================================================
+   SHORT / LANDSCAPE VIEWPORTS
+   (phones in landscape, small laptops with short height)
+============================================================ */
+
+@media screen and (max-height: 500px) and (orientation: landscape) {
+
+  .gallery-lightbox {
+    padding: 10px;
+  }
+
+  .lightbox-content {
+    max-height: 96vh;
+  }
+
+  .lightbox-img-wrapper,
+  .lightbox-img-wrapper img {
+    max-height: 60vh;
+  }
+
+  .lightbox-caption {
+    padding: 10px 16px 12px;
+  }
+
+  .lightbox-caption h3 {
+    font-size: 0.95rem;
+  }
+
+  .lightbox-caption p {
+    font-size: 0.7rem;
   }
 
 }
