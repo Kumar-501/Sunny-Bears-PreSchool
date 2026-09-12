@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import './Admissions.css';
 
+import monkeyImage from '../assets/monkey.webp';
+import giraffeImage from '../assets/girafee.webp';
+
 const FAQ_ITEMS = [
   {
     id: 1,
@@ -1321,6 +1324,32 @@ const Admissions = () => {
         className="faqs-section"
         id="faqs"
       >
+
+        {/* ========================================================
+            DECORATIVE ANIMALS
+            Monkey on the left + giraffe on the right.
+            Decorative only - no existing functionality is changed.
+            ======================================================== */}
+
+        <div
+          className="faq-animal faq-animal-monkey"
+          aria-hidden="true"
+        >
+          <img
+            src={monkeyImage}
+            alt=""
+          />
+        </div>
+
+        <div
+          className="faq-animal faq-animal-giraffe"
+          aria-hidden="true"
+        >
+          <img
+            src={giraffeImage}
+            alt=""
+          />
+        </div>
 
         <div className="faqs-container">
 

@@ -39,6 +39,10 @@ import gallery24Img from '../assets/Gallery24.jpeg';
 import gallery25Img from '../assets/Gallery25.jpeg';
 import gallery26Img from '../assets/Gallery26.jpeg';
 
+// Decorative animals for the Gallery page
+import elephantImage from '../assets/elephant.webp';
+import lionImage from '../assets/lion.webp';
+
 // ============================================================
 // GALLERY DATA
 // ============================================================
@@ -265,6 +269,36 @@ const Gallery = () => {
       ====================================================== */}
 
       <div className="gallery-doodles">
+
+        {/* ==================================================
+            LEFT SIDE - ELEPHANT
+            Decorative only; does not affect gallery clicks.
+        ================================================== */}
+
+        <div
+          className="gallery-animal gallery-animal-elephant"
+          aria-hidden="true"
+        >
+          <img
+            src={elephantImage}
+            alt=""
+          />
+        </div>
+
+        {/* ==================================================
+            RIGHT SIDE - LION
+            Decorative only; does not affect gallery clicks.
+        ================================================== */}
+
+        <div
+          className="gallery-animal gallery-animal-lion"
+          aria-hidden="true"
+        >
+          <img
+            src={lionImage}
+            alt=""
+          />
+        </div>
 
         {/* Top-Left Sun */}
         <div className="gallery-sun" aria-hidden="true">

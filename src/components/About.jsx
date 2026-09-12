@@ -9,10 +9,17 @@ import './About.css';
 import founderImg from '../assets/Gallery16.jpeg';
 
 // Use existing Gallery images for the three About Us cards.
-// These files already exist in your Gallery.
 import nurturingEnvironmentImg from '../assets/Gallery01.jpeg';
 import holisticLearningImg from '../assets/Gallery02.jpeg';
 import buildingBrightFuturesImg from '../assets/Gallery03.jpeg';
+
+// ============================================================
+// ABOUT PAGE ANIMAL DECORATIONS
+// ============================================================
+
+import tigerImage from '../assets/tiger.webp';
+import monkeyImage from '../assets/monkey.webp';
+import giraffeImage from '../assets/girafee.webp';
 
 // ============================================================
 // ABOUT COMPONENT
@@ -23,16 +30,63 @@ const About = () => {
     <section className="about-section" id="about">
 
       {/* ======================================================
-          BACKGROUND FLOATING DOODLES
+          BACKGROUND FLOATING DOODLES + ANIMALS
       ====================================================== */}
 
       <div className="about-doodles">
+
+        {/* ==================================================
+            LEFT SIDE - TIGER
+        ================================================== */}
+
+        <div className="about-animal about-animal-tiger">
+          <img
+            src={tigerImage}
+            alt=""
+            aria-hidden="true"
+          />
+        </div>
+
+        {/* ==================================================
+            LEFT SIDE - MONKEY
+        ================================================== */}
+
+        <div className="about-animal about-animal-monkey">
+          <img
+            src={monkeyImage}
+            alt=""
+            aria-hidden="true"
+          />
+        </div>
+
+        {/* ==================================================
+            RIGHT SIDE - GIRAFFE
+        ================================================== */}
+
+        <div className="about-animal about-animal-giraffe">
+          <img
+            src={giraffeImage}
+            alt=""
+            aria-hidden="true"
+          />
+        </div>
+
+        {/* ==================================================
+            EXISTING DECORATIVE DOODLES
+        ================================================== */}
+
         <span className="doodle paper-plane">✈️</span>
+
         <span className="doodle star-1">⭐</span>
+
         <span className="doodle star-2">✨</span>
+
         <span className="doodle heart-1">💖</span>
+
         <span className="doodle heart-2">💕</span>
+
         <span className="doodle paw-print">🐾</span>
+
       </div>
 
       <div className="about-container">
@@ -81,14 +135,14 @@ const About = () => {
 
                 <img
                   src={founderImg}
-                  alt="Sunny Bears Preschool Founder and  Head"
+                  alt="Sunny Bears Preschool Founder and Head"
                   className="founder-img"
                   loading="lazy"
                 />
 
                 <div className="founder-badge">
                   <span>
-                    Founder &amp;  Head
+                    Founder &amp; Head
                   </span>
                 </div>
 
@@ -118,11 +172,13 @@ const About = () => {
             <div className="founder-content-col">
 
               <div className="founder-section-tag">
+
                 <span className="star-icon">
                   🌟
                 </span>
 
                 MEET OUR FOUNDER
+
               </div>
 
               <blockquote className="founder-highlight-quote">
@@ -140,7 +196,7 @@ const About = () => {
                 </p>
 
                 <p>
-                  As the Founder and  Head, Mrs. Kayalvizhi
+                  As the Founder and Head, Mrs. Kayalvizhi
                   Nandakumar believes that the early years of a
                   child lay the foundation for lifelong learning.
                   Her approach combines the principles of Montessori

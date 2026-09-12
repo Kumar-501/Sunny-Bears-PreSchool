@@ -1,4 +1,5 @@
 /* About Section Styles */
+
 .about-section {
   position: relative;
   width: 100%;
@@ -7,6 +8,10 @@
   box-sizing: border-box;
   overflow: hidden;
 }
+
+/* ============================================================
+   ABOUT CONTAINER
+   ============================================================ */
 
 .about-container {
   max-width: 1350px;
@@ -18,7 +23,10 @@
   gap: 48px;
 }
 
-/* Floating Doodles */
+/* ============================================================
+   FLOATING DOODLES
+   ============================================================ */
+
 .about-doodles {
   position: absolute;
   top: 0;
@@ -29,20 +37,112 @@
   z-index: 1;
 }
 
+/* Existing doodles */
+
 .doodle {
   position: absolute;
   opacity: 0.8;
   font-size: 1.5rem;
 }
 
-.paper-plane { top: 35px; left: 45%; transform: rotate(15deg); }
-.star-1 { top: 120px; left: 20px; font-size: 1.2rem; }
-.star-2 { top: 380px; left: 410px; font-size: 1.3rem; }
-.heart-1 { top: 220px; left: 390px; font-size: 1.1rem; }
-.heart-2 { top: 40px; right: 280px; font-size: 1.2rem; }
-.paw-print { top: 440px; left: 15px; font-size: 1.4rem; opacity: 0.5; }
+.paper-plane {
+  top: 35px;
+  left: 45%;
+  transform: rotate(15deg);
+}
 
-/* Top Header Box */
+.star-1 {
+  top: 120px;
+  left: 20px;
+  font-size: 1.2rem;
+}
+
+.star-2 {
+  top: 380px;
+  left: 410px;
+  font-size: 1.3rem;
+}
+
+.heart-1 {
+  top: 220px;
+  left: 390px;
+  font-size: 1.1rem;
+}
+
+.heart-2 {
+  top: 40px;
+  right: 280px;
+  font-size: 1.2rem;
+}
+
+.paw-print {
+  top: 440px;
+  left: 15px;
+  font-size: 1.4rem;
+  opacity: 0.5;
+}
+
+/* ============================================================
+   ABOUT PAGE ANIMAL DECORATIONS
+   These animals belong ONLY to the About page.
+   ============================================================ */
+
+.about-animal {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+}
+
+.about-animal img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* ============================================================
+   TIGER
+   Left side of About heading
+   ============================================================ */
+
+.about-animal-tiger {
+  width: 145px;
+  left: 15px;
+  top: 175px;
+  transform: rotate(-4deg);
+}
+
+/* ============================================================
+   MONKEY
+   Left side lower decorative space
+   ============================================================ */
+
+.about-animal-monkey {
+  width: 120px;
+  left: 75px;
+  top: 360px;
+  transform: rotate(3deg);
+}
+
+/* ============================================================
+   GIRAFFE
+   Right side of About heading
+   ============================================================ */
+
+.about-animal-giraffe {
+  width: 155px;
+  right: 20px;
+  top: 150px;
+  transform: rotate(4deg);
+}
+
+/* ============================================================
+   TOP HEADER BOX
+   ============================================================ */
+
 .about-header-box {
   display: flex;
   flex-direction: column;
@@ -106,6 +206,7 @@
 /* ============================================================
    FOUNDER CARD SECTION
    ============================================================ */
+
 .founder-card-wrapper {
   width: 100%;
 }
@@ -123,6 +224,7 @@
 }
 
 /* Left Column - Founder Image & Credentials */
+
 .founder-image-col {
   display: flex;
   flex-direction: column;
@@ -198,7 +300,10 @@
   margin-top: 4px;
 }
 
-/* Right Column - Founder Message & Vision */
+/* ============================================================
+   RIGHT COLUMN - FOUNDER MESSAGE & VISION
+   ============================================================ */
+
 .founder-content-col {
   display: flex;
   flex-direction: column;
@@ -241,12 +346,19 @@
   margin: 0;
 }
 
-/* Vision Box */
+/* ============================================================
+   VISION BOX
+   ============================================================ */
+
 .founder-vision-box {
   display: flex;
   align-items: flex-start;
   gap: 14px;
-  background: linear-gradient(135deg, rgba(2, 132, 199, 0.06) 0%, rgba(255, 71, 87, 0.06) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(2, 132, 199, 0.06) 0%,
+    rgba(255, 71, 87, 0.06) 100%
+  );
   border: 1.5px dashed #0284c7;
   padding: 16px 20px;
   border-radius: 20px;
@@ -286,6 +398,7 @@
 /* ============================================================
    CORE VALUES SECTION
    ============================================================ */
+
 .core-values-wrapper {
   display: flex;
   flex-direction: column;
@@ -341,11 +454,48 @@
   transition: transform 0.25s ease;
 }
 
-.circle-pink { background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%); }
-.circle-yellow { background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); }
-.circle-green { background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%); color: #1b4332; }
-.circle-blue { background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%); color: #03045e; }
-.circle-purple { background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%); color: #4c1d95; }
+.circle-pink {
+  background: linear-gradient(
+    135deg,
+    #ff758c 0%,
+    #ff7eb3 100%
+  );
+}
+
+.circle-yellow {
+  background: linear-gradient(
+    135deg,
+    #f6d365 0%,
+    #fda085 100%
+  );
+}
+
+.circle-green {
+  background: linear-gradient(
+    135deg,
+    #84fab0 0%,
+    #8fd3f4 100%
+  );
+  color: #1b4332;
+}
+
+.circle-blue {
+  background: linear-gradient(
+    135deg,
+    #89f7fe 0%,
+    #66a6ff 100%
+  );
+  color: #03045e;
+}
+
+.circle-purple {
+  background: linear-gradient(
+    135deg,
+    #a1c4fd 0%,
+    #c2e9fb 100%
+  );
+  color: #4c1d95;
+}
 
 .value-item span {
   font-size: 0.85rem;
@@ -357,6 +507,7 @@
 /* ============================================================
    PILLAR CARDS SECTION
    ============================================================ */
+
 .about-pillars-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -381,9 +532,17 @@
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
 }
 
-.border-purple { border-color: #e9d5ff; }
-.border-green { border-color: #dcfce7; }
-.border-orange { border-color: #ffedd5; }
+.border-purple {
+  border-color: #e9d5ff;
+}
+
+.border-green {
+  border-color: #dcfce7;
+}
+
+.border-orange {
+  border-color: #ffedd5;
+}
 
 .pillar-img-wrap {
   width: 100%;
@@ -406,9 +565,17 @@
   margin: 0;
 }
 
-.text-purple { color: #8b5cf6; }
-.text-green { color: #10b981; }
-.text-orange { color: #f97316; }
+.text-purple {
+  color: #8b5cf6;
+}
+
+.text-green {
+  color: #10b981;
+}
+
+.text-orange {
+  color: #f97316;
+}
 
 .pillar-desc {
   font-size: 0.85rem;
@@ -426,7 +593,9 @@
 /* ============================================================
    RESPONSIVE BREAKDOWN
    ============================================================ */
+
 @media screen and (max-width: 1024px) {
+
   .founder-card {
     grid-template-columns: 320px 1fr;
     gap: 30px;
@@ -436,9 +605,35 @@
   .about-main-title {
     font-size: 2.8rem;
   }
+
+  /* About animals */
+
+  .about-animal-tiger {
+    width: 110px;
+    left: 5px;
+    top: 180px;
+  }
+
+  .about-animal-monkey {
+    width: 90px;
+    left: 30px;
+    top: 365px;
+  }
+
+  .about-animal-giraffe {
+    width: 120px;
+    right: 5px;
+    top: 165px;
+  }
+
 }
 
+/* ============================================================
+   TABLET
+   ============================================================ */
+
 @media screen and (max-width: 868px) {
+
   .founder-card {
     grid-template-columns: 1fr;
     gap: 28px;
@@ -463,9 +658,37 @@
   .about-pillars-grid {
     grid-template-columns: 1fr;
   }
+
+  /* ========================================================
+     MOBILE/TABLET ANIMALS
+     ======================================================== */
+
+  .about-animal-tiger {
+    width: 78px;
+    left: -8px;
+    top: 190px;
+  }
+
+  .about-animal-monkey {
+    width: 68px;
+    left: 5px;
+    top: 410px;
+  }
+
+  .about-animal-giraffe {
+    width: 82px;
+    right: -8px;
+    top: 185px;
+  }
+
 }
 
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
 @media screen and (max-width: 640px) {
+
   .about-section {
     padding: 50px 16px;
   }
@@ -485,4 +708,27 @@
   .value-item {
     flex: 1 1 100%;
   }
+
+  /* ========================================================
+     SMALLER ANIMAL DECORATIONS
+     ======================================================== */
+
+  .about-animal-tiger {
+    width: 58px;
+    left: -12px;
+    top: 175px;
+  }
+
+  .about-animal-monkey {
+    width: 52px;
+    left: -8px;
+    top: 390px;
+  }
+
+  .about-animal-giraffe {
+    width: 62px;
+    right: -10px;
+    top: 170px;
+  }
+
 }

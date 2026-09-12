@@ -1074,9 +1074,68 @@
    ============================================================ */
 
 .faqs-section {
+  position: relative;
+
   padding: 80px 24px;
 
   background-color: var(--bg-color);
+
+  overflow: hidden;
+}
+
+/* ============================================================
+   FAQ DECORATIVE ANIMALS
+   Monkey on the left + giraffe on the right.
+   ============================================================ */
+
+.faq-animal {
+  position: absolute;
+
+  z-index: 1;
+
+  pointer-events: none;
+
+  user-select: none;
+}
+
+.faq-animal img {
+  display: block;
+
+  width: 100%;
+
+  height: auto;
+
+  object-fit: contain;
+
+  pointer-events: none;
+
+  user-select: none;
+}
+
+.faq-animal-monkey {
+  width: 145px;
+
+  left: 18px;
+
+  top: 105px;
+
+  transform: rotate(-2deg);
+}
+
+.faq-animal-giraffe {
+  width: 145px;
+
+  right: 18px;
+
+  top: 105px;
+
+  transform: rotate(2deg);
+}
+
+.faqs-section .faqs-container {
+  position: relative;
+
+  z-index: 2;
 }
 
 .faqs-container {
@@ -1379,6 +1438,28 @@
 
 
 /* ============================================================
+   FAQ ANIMALS - TABLET
+   ============================================================ */
+
+@media screen and (max-width: 1024px) {
+  .faq-animal-monkey {
+    width: 105px;
+
+    left: 4px;
+
+    top: 115px;
+  }
+
+  .faq-animal-giraffe {
+    width: 105px;
+
+    right: 4px;
+
+    top: 115px;
+  }
+}
+
+/* ============================================================
    TABLET
    ============================================================ */
 
@@ -1408,6 +1489,28 @@
 
 }
 
+
+/* ============================================================
+   FAQ ANIMALS - MOBILE
+   ============================================================ */
+
+@media screen and (max-width: 768px) {
+  .faq-animal-monkey {
+    width: 75px;
+
+    left: -8px;
+
+    top: 125px;
+  }
+
+  .faq-animal-giraffe {
+    width: 75px;
+
+    right: -8px;
+
+    top: 125px;
+  }
+}
 
 /* ============================================================
    TABLET
@@ -1476,6 +1579,28 @@
 
 }
 
+
+/* ============================================================
+   FAQ ANIMALS - SMALL MOBILE
+   ============================================================ */
+
+@media screen and (max-width: 640px) {
+  .faq-animal-monkey {
+    width: 58px;
+
+    left: -10px;
+
+    top: 120px;
+  }
+
+  .faq-animal-giraffe {
+    width: 58px;
+
+    right: -10px;
+
+    top: 120px;
+  }
+}
 
 /* ============================================================
    MOBILE

@@ -1,0 +1,275 @@
+/* =========================================================
+   SUNNY BEARS - ANIMAL DECORATIONS
+   Decorative transparent animal illustrations
+   ========================================================= */
+
+.animal-decorations {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 2;
+}
+
+/* Common animal styling */
+
+.animal-decoration {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  will-change: transform;
+}
+
+.animal-decoration img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* =========================================================
+   TIGER
+   Left side - upper/middle area
+   ========================================================= */
+
+.animal-tiger {
+  width: 115px;
+  left: 12px;
+  top: 30%;
+  transform: rotate(-4deg);
+  animation: animalFloatOne 5s ease-in-out infinite;
+}
+
+/* =========================================================
+   GIRAFFE
+   Right side - upper area
+   ========================================================= */
+
+.animal-giraffe {
+  width: 125px;
+  right: 18px;
+  top: 20%;
+  transform: rotate(4deg);
+  animation: animalFloatTwo 6s ease-in-out infinite;
+}
+
+/* =========================================================
+   MONKEY
+   Left side - lower area
+   ========================================================= */
+
+.animal-monkey {
+  width: 105px;
+  left: 20px;
+  top: 68%;
+  transform: rotate(3deg);
+  animation: animalFloatThree 5.5s ease-in-out infinite;
+}
+
+/* =========================================================
+   ZEBRA
+   Right side - middle/lower area
+   ========================================================= */
+
+.animal-zebra {
+  width: 120px;
+  right: 12px;
+  top: 48%;
+  transform: rotate(-3deg);
+  animation: animalFloatOne 6.5s ease-in-out infinite;
+}
+
+/* =========================================================
+   ELEPHANT
+   Left side - lower-middle
+   ========================================================= */
+
+.animal-elephant {
+  width: 125px;
+  left: 8px;
+  top: 83%;
+  transform: rotate(-2deg);
+  animation: animalFloatTwo 5.8s ease-in-out infinite;
+}
+
+/* =========================================================
+   LION
+   Right side - lower area
+   ========================================================= */
+
+.animal-lion {
+  width: 120px;
+  right: 15px;
+  top: 75%;
+  transform: rotate(3deg);
+  animation: animalFloatThree 6s ease-in-out infinite;
+}
+
+/* =========================================================
+   FLOATING ANIMATIONS
+   ========================================================= */
+
+@keyframes animalFloatOne {
+  0%,
+  100% {
+    margin-top: 0;
+  }
+
+  50% {
+    margin-top: -10px;
+  }
+}
+
+@keyframes animalFloatTwo {
+  0%,
+  100% {
+    margin-top: 0;
+  }
+
+  50% {
+    margin-top: 8px;
+  }
+}
+
+@keyframes animalFloatThree {
+  0%,
+  100% {
+    margin-top: 0;
+  }
+
+  50% {
+    margin-top: -7px;
+  }
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+  .animal-tiger {
+    width: 90px;
+    left: 5px;
+  }
+
+  .animal-giraffe {
+    width: 100px;
+    right: 5px;
+  }
+
+  .animal-monkey {
+    width: 85px;
+    left: 5px;
+  }
+
+  .animal-zebra {
+    width: 95px;
+    right: 5px;
+  }
+
+  .animal-elephant {
+    width: 100px;
+    left: 3px;
+  }
+
+  .animal-lion {
+    width: 95px;
+    right: 5px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .animal-decorations {
+    z-index: 1;
+  }
+
+  .animal-tiger {
+    width: 65px;
+    left: -2px;
+    top: 28%;
+  }
+
+  .animal-giraffe {
+    width: 70px;
+    right: -3px;
+    top: 18%;
+  }
+
+  .animal-monkey {
+    width: 62px;
+    left: -3px;
+    top: 61%;
+  }
+
+  .animal-zebra {
+    width: 68px;
+    right: -3px;
+    top: 45%;
+  }
+
+  .animal-elephant {
+    width: 70px;
+    left: -3px;
+    top: 80%;
+  }
+
+  .animal-lion {
+    width: 68px;
+    right: -3px;
+    top: 72%;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+  .animal-tiger {
+    width: 52px;
+    left: -8px;
+  }
+
+  .animal-giraffe {
+    width: 58px;
+    right: -8px;
+  }
+
+  .animal-monkey {
+    width: 50px;
+    left: -8px;
+  }
+
+  .animal-zebra {
+    width: 55px;
+    right: -8px;
+  }
+
+  .animal-elephant {
+    width: 58px;
+    left: -8px;
+  }
+
+  .animal-lion {
+    width: 55px;
+    right: -8px;
+  }
+}
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .animal-decoration {
+    animation: none;
+  }
+}

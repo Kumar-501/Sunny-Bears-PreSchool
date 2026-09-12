@@ -9,7 +9,7 @@ import './Programs.css';
 
 import playGroupImage from '../assets/playgroup.jpeg';
 import preKgImage from '../assets/prekgprogrm.jpeg';
-import lkgImage from '../assets/lkgprograms.jpeg';
+import lkgImage from '../assets/lkgpro.jpeg';
 import ukgImage from '../assets/ukgprograms.jpeg';
 import dayCareImage from '../assets/daycareprograms.jpeg';
 import summerCampImage from '../assets/summercampprograms.jpeg';
@@ -95,7 +95,10 @@ const PROGRAMS_DATA = [
     iconColor: 'icon-green',
     linkColor: 'link-green',
     borderColor: 'card-border-green',
+
+    // UPDATED LKG IMAGE
     image: lkgImage,
+
     imagePosition: 'top',
     alt:
       'LKG children learning language, phonics and numbers at Sunny Bears Preschool',
@@ -296,6 +299,7 @@ const Programs = () => {
    * The homepage keeps its own metadata.
    * ============================================================
    */
+
   useEffect(() => {
     const isProgramsPage =
       window.location.pathname === '/programs' ||
@@ -350,6 +354,7 @@ const Programs = () => {
    * Added only for the dedicated /programs page.
    * ============================================================
    */
+
   useEffect(() => {
     const isProgramsPage =
       window.location.pathname === '/programs' ||
@@ -406,6 +411,7 @@ const Programs = () => {
    * the standalone Programs page navigate correctly.
    * ============================================================
    */
+
   const getEnquiryLink = () => {
     const isProgramsPage =
       window.location.pathname === '/programs' ||
@@ -426,6 +432,7 @@ const Programs = () => {
       {/* =====================================================
           BACKGROUND DECORATIVE DOODLES
       ====================================================== */}
+
       <div className="programs-doodles">
         <div className="doodle-sun">
           <svg
@@ -506,6 +513,7 @@ const Programs = () => {
         {/* ===================================================
             SEO / PAGE HEADER
         ==================================================== */}
+
         <div className="programs-header">
 
           <div className="programs-top-tag">
@@ -568,6 +576,7 @@ const Programs = () => {
         {/* ===================================================
             PROGRAMS GRID
         ==================================================== */}
+
         <div className="programs-grid">
           {PROGRAMS_DATA.map((prog) => (
             <article
@@ -576,6 +585,7 @@ const Programs = () => {
               id={isProgramsPage ? prog.id : undefined}
             >
               {/* Card Header Info */}
+
               <div className="card-top-header">
                 <div
                   className={`program-icon-wrap ${prog.iconColor}`}
@@ -598,6 +608,7 @@ const Programs = () => {
               </div>
 
               {/* Program Photo */}
+
               <div className="program-image-frame">
                 {prog.image ? (
                   <img
@@ -605,7 +616,10 @@ const Programs = () => {
                     alt={prog.alt}
                     loading="lazy"
                     decoding="async"
-                    style={{ objectPosition: prog.imagePosition || 'center' }}
+                    style={{
+                      objectPosition:
+                        prog.imagePosition || 'center',
+                    }}
                   />
                 ) : (
                   <div
@@ -624,21 +638,34 @@ const Programs = () => {
                       strokeLinejoin="round"
                       aria-hidden="true"
                     >
-                      <rect x="3" y="3" width="18" height="18" rx="2"></rect>
-                      <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                      <rect
+                        x="3"
+                        y="3"
+                        width="18"
+                        height="18"
+                        rx="2"
+                      ></rect>
+                      <circle
+                        cx="8.5"
+                        cy="8.5"
+                        r="1.5"
+                      ></circle>
                       <path d="M21 15l-5-5L5 21"></path>
                     </svg>
+
                     <span>Image coming soon</span>
                   </div>
                 )}
               </div>
 
               {/* Description */}
+
               <p className="program-card-desc">
                 {prog.description}
               </p>
 
               {/* Action Link */}
+
               <a
                 href={getEnquiryLink()}
                 className={`program-link ${prog.linkColor}`}
@@ -664,6 +691,7 @@ const Programs = () => {
         {/* ===================================================
             SEO SUPPORTING CONTENT
         ==================================================== */}
+
         {isProgramsPage && (
           <section
             className="programs-seo-content"
@@ -774,7 +802,9 @@ const Programs = () => {
         {/* ===================================================
             BOTTOM DECORATIVE FLOWERS & GROUND BAR
         ==================================================== */}
+
         <div className="programs-bottom-ground">
+
           <div
             className="flower-item"
             aria-hidden="true"
@@ -795,6 +825,7 @@ const Programs = () => {
           >
             🌸
           </div>
+
         </div>
 
       </div>
